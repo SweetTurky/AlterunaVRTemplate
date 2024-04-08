@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Alteruna;
 
 public class MenuManagerS1 : MonoBehaviour
 {
+    public Multiplayer multiplayerManager;
+
     // Audio clips to play during the game intro
     public AudioClip[] introAudioClips;
 
@@ -21,7 +24,7 @@ public class MenuManagerS1 : MonoBehaviour
         StartCoroutine(PlayIntroAudio());
 
         // Wait for the intro duration
-        StartCoroutine(Outro());
+        //StartCoroutine(Outro());
     }
 
     IEnumerator PlayIntroAudio()
@@ -66,6 +69,6 @@ public class MenuManagerS1 : MonoBehaviour
     void LoadNextScene()
     {
         // Load the next scene (you can specify the scene name or index here)
-        SceneManager.LoadScene("XR Interaction");
+        multiplayerManager.LoadScene("XR Interaction");
     }
 }
