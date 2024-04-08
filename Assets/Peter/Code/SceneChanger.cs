@@ -11,16 +11,16 @@ public class SceneChanger : MonoBehaviour
     
     void Start()
     {
-        StartCoroutine(StartScene());
+        StartCoroutine(StartOfScene());
     }
 
-    IEnumerator StartScene()
+    IEnumerator StartOfScene()
     {
         FadeToBlack();
-        yield return new WaitForSeconds(20); // Venter 5 sekunder inden fade
+       // yield return new WaitForSeconds(20); // Venter 5 sekunder inden fade
         yield return new WaitForSeconds(fadeDuration);
         // Skift scene her
-        SceneManager.LoadScene("PeterXRInteraction");
+       // SceneManager.LoadScene("PeterXRInteraction");
         
         yield return null;
     }
@@ -45,10 +45,10 @@ public class SceneChanger : MonoBehaviour
         image.color = endColor;
     }
 
-    void ChangeScene()
+    /*void ChangeScene()
     {
         SceneManager.LoadScene();
-    }
+    }*/
     
 }
 
