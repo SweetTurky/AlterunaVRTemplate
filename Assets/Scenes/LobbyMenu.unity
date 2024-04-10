@@ -797,6 +797,52 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e07eccb5e6f459d886de95044adb1d9, type: 3}
+--- !u!1 &223644412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 223644413}
+  - component: {fileID: 223644414}
+  m_Layer: 0
+  m_Name: XR Interaction Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &223644413
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223644412}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.8414167, y: 0.97236973, z: 2.1680276}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4134505310327263383}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &223644414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223644412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83e4e6cca11330d4088d729ab4fc9d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
 --- !u!1 &235184210
 GameObject:
   m_ObjectHideFlags: 0
@@ -1504,10 +1550,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d62efe1473d8c5428d78f0ff9e75158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneToLoad: Koncert
   multiplayerManager: {fileID: 978248252}
   introAudioClips:
   - {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  outroDuration: 5
+  outroDuration: 10
 --- !u!4 &542324654
 Transform:
   m_ObjectHideFlags: 0
@@ -2010,6 +2057,12 @@ MonoBehaviour:
   OnUnpossessed:
     m_PersistentCalls:
       m_Calls: []
+--- !u!4 &729832037 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
+    type: 3}
+  m_PrefabInstance: {fileID: 9014170783776458979}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &747394775 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8982851401174954329, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
@@ -2822,19 +2875,7 @@ MonoBehaviour:
       m_Calls: []
   OnOtherUserJoined:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4422659091385753189}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   OnOtherUserLeft:
     m_PersistentCalls:
       m_Calls: []
@@ -15392,6 +15433,8 @@ Transform:
   m_Children:
   - {fileID: 3127728406599221488}
   - {fileID: 3127728408205537667}
+  - {fileID: 729832037}
+  - {fileID: 223644413}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4136355493345961344
@@ -18502,7 +18545,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 4134505310327263383}
     m_Modifications:
     - target: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
@@ -18713,7 +18756,6 @@ SceneRoots:
   - {fileID: 1519520462}
   - {fileID: 3953970342977539823}
   - {fileID: 4134505310327263383}
-  - {fileID: 9014170783776458979}
   - {fileID: 599916905}
   - {fileID: 2140481601}
   - {fileID: 542324654}

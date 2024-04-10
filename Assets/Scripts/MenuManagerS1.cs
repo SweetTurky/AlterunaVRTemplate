@@ -6,6 +6,8 @@ using Alteruna;
 
 public class MenuManagerS1 : MonoBehaviour
 {
+
+    public string sceneToLoad;
     public Multiplayer multiplayerManager;
 
     // Audio clips to play during the game intro
@@ -18,13 +20,17 @@ public class MenuManagerS1 : MonoBehaviour
     //public FadeManager fadeManager;
 
     // Start is called before the first frame update
+    
+    private void Start() {
+        GameIntro();
+    }
     public void GameIntro()
     {
         // Start playing the audio clips
         StartCoroutine(PlayIntroAudio());
 
         // Wait for the intro duration
-        //StartCoroutine(Outro());
+        StartCoroutine(Outro());
     }
 
     IEnumerator PlayIntroAudio()
@@ -45,8 +51,18 @@ public class MenuManagerS1 : MonoBehaviour
         // Fade out all objects with the "Player" tag
         //FadeOutPlayers();
 
-        // Load the next scene after a short delay (you can adjust the delay as needed)
-        //yield return new WaitForSeconds(1f); // Adjust the delay here if needed
+        //Search for the XR Interaction Manager, and make sure it is added to DontDestroyOnLoad
+         GameObject obj = GameObject.Find("XRInteractionManager");
+        if (obj != null)
+        {
+            Multiplayer.DontDestroyOnLoad(obj);
+            Debug.Log("XR Interaction Manager added to Don'tDestroyOnLoad");
+        }
+        else
+        {
+            Debug.LogError("XR Interaction Manager not found!");
+        }
+
         LoadNextScene();
     }
 
@@ -69,6 +85,6 @@ public class MenuManagerS1 : MonoBehaviour
     void LoadNextScene()
     {
         // Load the next scene (you can specify the scene name or index here)
-        multiplayerManager.LoadScene("XR Interaction");
+        multiplayerManager.LoadScene(sceneToLoad);
     }
 }
