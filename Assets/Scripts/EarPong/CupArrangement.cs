@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 public class CupArrangement : MonoBehaviour
@@ -17,6 +18,9 @@ public class CupArrangement : MonoBehaviour
         {
             CreateTriangleArrangement(startPointPlayer1, cupPrefabPlayer1, 6, true); // Passing true for Player 1
             CreateTriangleArrangement(startPointPlayer2, cupPrefabPlayer2, 6, false); // Passing false for Player 2
+
+            startPointPlayer2.transform.localEulerAngles = new Vector3(0, -180, 0);
+
         }
         else
         {
@@ -43,25 +47,16 @@ void CreateTriangleArrangement(Transform startPoint, GameObject cupPrefab, int t
         zOffset = -0.1f; // Offset for Player 2's cups in a 10-cup game
     }
 
-    Vector3 startPointLocalPosition = startPoint.localPosition; // Get the local position of the start point
-
     for (int row = 0; row < rows; row++)
     {
-        float offsetX = -row * cupSpacing * 0.5f;
+        float rowOffset = -row * cupSpacing * Mathf.Sqrt(3) * 0.5f;
+        float xOffset = -((cupsInRow - 1) * cupSpacing * 0.5f);
+
         for (int cupIndex = 0; cupIndex < cupsInRow; cupIndex++)
         {
-            Vector3 cupPosition = startPointLocalPosition + new Vector3(offsetX + cupIndex * cupSpacing, 0f, row * cupSpacing * Mathf.Sqrt(3) * 0.5f + zOffset);
+            Vector3 cupPosition = startPoint.position + new Vector3(rowOffset + zOffset, 0f, xOffset + cupIndex * cupSpacing);
 
-            Quaternion cupRotation = Quaternion.identity; // Default rotation
-
-            // Apply reverse orientation for Player 1's cups
-            if (startPoint == startPointPlayer1 && reverseOrientation)
-            {
-                int reverseRow = rows - row - 1; // Reverse the row index
-                cupPosition = startPointLocalPosition + new Vector3(offsetX + cupIndex * cupSpacing, 0f, reverseRow * cupSpacing * Mathf.Sqrt(3) * 0.5f + zOffset);
-            }
-
-            GameObject newCup = Instantiate(cupPrefab, cupPosition, cupRotation);
+            GameObject newCup = Instantiate(cupPrefab, cupPosition, Quaternion.identity);
             newCup.transform.parent = startPoint; // Set the parent to the starting point
             cups.Add(newCup);
 
