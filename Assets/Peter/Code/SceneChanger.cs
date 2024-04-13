@@ -47,7 +47,7 @@ public class SceneChanger : MonoBehaviour
 
     void ChangeScene()
     {
-        SceneManager.LoadScene();
+        SceneManager.LoadScene("PeterXRInteraction");
     }
     
 }
