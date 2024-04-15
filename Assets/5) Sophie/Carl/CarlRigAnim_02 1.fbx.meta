@@ -1,0 +1,896 @@
+fileFormatVersion: 2
+guid: 20a7910e447284842b35ae190013f8d6
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: 02
+      takeName: 02
+      internalID: 3434879494862452794
+      firstFrame: 152
+      lastFrame: 1323
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 151.8
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: CarlRig_hips_JNT
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_l_upleg_JNT
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_r_upreg_JNT
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_l_leg_JNT
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_r_reg_JNT
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_l_foot_JNT
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_r_foot_JNT
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_spine_JNT
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_spine1_JNT
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_neck_JNT
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_head_JNT
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_l_shoulder_JNT
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_r_shourder_JNT
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_l_arm_JNT
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_r_arm_JNT
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_l_forearm_JNT
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_r_forearm_JNT
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_l_hand_JNT
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_r_hand_JNT
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_l_toebase_JNT
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_r_toebase_JNT
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_l_handThumb1_JNT
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_l_handThumb2_JNT
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_l_handThumb3_JNT
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_l_handIndex_01_JNT
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_l_handIndex_02_JNT
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_l_handIndex_03_JNT
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_l_handMiddle1_JNT
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_l_handMiddle2_JNT
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_l_handMiddle3_JNT
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_l_handRing1_JNT
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_l_handRing2_JNT
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_l_handRing3_JNT
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_l_handPinky1_JNT
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_l_handPinky2_JNT
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_l_handPinky3_JNT
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_r_handThumb1_JNT
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_r_handThumb2_JNT
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_r_handThumb3_JNT
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_r_handIndex_01_JNT
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_r_handIndex_02_JNT
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_r_handIndex_03_JNT
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_r_handMiddre1_JNT
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_r_handMiddre2_JNT
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_r_handMiddre3_JNT
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_r_handRing1_JNT
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_r_handRing2_JNT
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_r_handRing3_JNT
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_r_handPinky1_JNT
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_r_handPinky2_JNT
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_r_handPinky3_JNT
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CarlRig_spine2_JNT
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: CarlRigAnim_02(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CarlRig_Skeleton
+      parentName: CarlRigAnim_02(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CarlRig_hips_JNT
+      parentName: CarlRig_Skeleton
+      position: {x: 0.00000023841858, y: 0.9130236, z: -0.08837412}
+      rotation: {x: -0.000000005820767, y: 0.000000023283064, z: -0.000000011641532,
+        w: 1}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1.0000002}
+    - name: CarlRig_spine_JNT
+      parentName: CarlRig_hips_JNT
+      position: {x: 0.000000020923501, y: 0.11893394, z: 0.0035397625}
+      rotation: {x: 0.0000000029103842, y: -0, z: 0.000000023283064, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 1.0000004}
+    - name: CarlRig_spine1_JNT
+      parentName: CarlRig_spine_JNT
+      position: {x: 0.0000000139573615, y: 0.18641105, z: -0.012844504}
+      rotation: {x: 0.0000000029103824, y: -0.000000034924597, z: -0.000000011641532,
+        w: 1}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000001}
+    - name: CarlRig_spine2_JNT
+      parentName: CarlRig_spine1_JNT
+      position: {x: -0.000037505797, y: 0.128712, z: -0.009837313}
+      rotation: {x: -0, y: -0, z: 1.0164393e-16, w: 1}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000001}
+    - name: CarlRig_neck_JNT
+      parentName: CarlRig_spine2_JNT
+      position: {x: -0.0000434758, y: 0.148929, z: 0.010257526}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: CarlRig_head_JNT
+      parentName: CarlRig_neck_JNT
+      position: {x: -0.00002325275, y: 0.07571075, z: 0.039948758}
+      rotation: {x: -0.000000014551917, y: 1.479114e-24, z: -0.000000005820766, w: 1}
+      scale: {x: 1.0000001, y: 1.0000006, z: 0.9999998}
+    - name: CarlRig_head_JNT_End
+      parentName: CarlRig_head_JNT
+      position: {x: 1.7347234e-20, y: 0.21502508, z: 8.881784e-18}
+      rotation: {x: -0, y: -0, z: 2.1523944e-32, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: CarlRig_l_shoulder_JNT
+      parentName: CarlRig_spine2_JNT
+      position: {x: -0.0367288, y: 0.1181, z: 0.079695}
+      rotation: {x: 9.080492e-11, y: 0.028015558, z: -0.005159305, w: 0.99959415}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: CarlRig_l_arm_JNT
+      parentName: CarlRig_l_shoulder_JNT
+      position: {x: -0.15919015, y: -0.011747588, z: -0.06378996}
+      rotation: {x: -0.00018631142, y: 0.00005632056, z: 0.000006267817, w: 1}
+      scale: {x: 0.9999996, y: 1.000001, z: 0.9999998}
+    - name: CarlRig_l_forearm_JNT
+      parentName: CarlRig_l_arm_JNT
+      position: {x: -0.294417, y: -0.00007522613, z: -0.0000070004057}
+      rotation: {x: 0.00014659134, y: -0.024657596, z: 0.0018935057, w: 0.99969417}
+      scale: {x: 1.0000001, y: 1.0000004, z: 0.99999994}
+    - name: CarlRig_l_hand_JNT
+      parentName: CarlRig_l_forearm_JNT
+      position: {x: -0.23621996, y: -0.00006688068, z: 0.017440556}
+      rotation: {x: 0.0000070896567, y: 0.00005519626, z: -0.00000029560573, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1.0000001}
+    - name: CarlRig_l_handThumb1_JNT
+      parentName: CarlRig_l_hand_JNT
+      position: {x: -0.042174365, y: -0.023050822, z: 0.052063122}
+      rotation: {x: 0.40116793, y: 0.3884169, z: -0.1380533, w: 0.81800854}
+      scale: {x: 1.0000002, y: 1, z: 1}
+    - name: CarlRig_l_handThumb2_JNT
+      parentName: CarlRig_l_handThumb1_JNT
+      position: {x: -0.044711422, y: -4.227868e-16, z: 1.769418e-16}
+      rotation: {x: -0, y: -0, z: -0.000000014901161, w: 1}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.9999998}
+    - name: CarlRig_l_handThumb3_JNT
+      parentName: CarlRig_l_handThumb2_JNT
+      position: {x: -0.034559444, y: 6.308842e-16, z: -6.9444446e-16}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: CarlRig_l_handThumb3_JNT_End
+      parentName: CarlRig_l_handThumb3_JNT
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: CarlRig_l_handIndex_01_JNT
+      parentName: CarlRig_l_hand_JNT
+      position: {x: -0.102010556, y: 0, z: 0.042808913}
+      rotation: {x: -0.000000023410848, y: 0.016928809, z: -0.000000034845854, w: 0.99985677}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: CarlRig_l_handIndex_02_JNT
+      parentName: CarlRig_l_handIndex_01_JNT
+      position: {x: -0.0374603, y: 0, z: 0}
+      rotation: {x: 0.0000000455065, y: 0.000000024214382, z: 0.041228477, w: 0.9991498}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+    - name: CarlRig_l_handIndex_03_JNT
+      parentName: CarlRig_l_handIndex_02_JNT
+      position: {x: -0.026065199, y: 0, z: 0}
+      rotation: {x: 3.5527128e-15, y: -0, z: 0.0000000037252879, w: 1}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1.0000002}
+    - name: CarlRig_l_handIndex_03_JNT_End
+      parentName: CarlRig_l_handIndex_03_JNT
+      position: {x: -0.021645574, y: 0, z: -1.6653344e-17}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1.0000002}
+    - name: CarlRig_l_handMiddle1_JNT
+      parentName: CarlRig_l_hand_JNT
+      position: {x: -0.10911632, y: 0, z: 0.018420454}
+      rotation: {x: 0.000000047534286, y: 0.027223842, z: -0.000000018186213, w: 0.99962944}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CarlRig_l_handMiddle2_JNT
+      parentName: CarlRig_l_handMiddle1_JNT
+      position: {x: -0.036826864, y: 0, z: 8.881784e-18}
+      rotation: {x: 0.00000000805238, y: -0.00000006705521, z: 0.040481836, w: 0.99918026}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: CarlRig_l_handMiddle3_JNT
+      parentName: CarlRig_l_handMiddle2_JNT
+      position: {x: -0.032217223, y: 0, z: 0}
+      rotation: {x: -0, y: -0, z: -1.9359646e-17, w: 1}
+      scale: {x: 0.99999994, y: 0.9999998, z: 1}
+    - name: CarlRig_l_handMiddle3_JNT_End
+      parentName: CarlRig_l_handMiddle3_JNT
+      position: {x: -0.023569928, y: 0, z: 1.6653344e-17}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CarlRig_l_handRing1_JNT
+      parentName: CarlRig_l_hand_JNT
+      position: {x: -0.10520749, y: 0, z: -0.006466917}
+      rotation: {x: 0.000000022933818, y: 0.029840747, z: -0.000000049150344, w: 0.99955475}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: CarlRig_l_handRing2_JNT
+      parentName: CarlRig_l_handRing1_JNT
+      position: {x: -0.032749858, y: 0, z: 0}
+      rotation: {x: 0.0000000011938837, y: 0.000000067055204, z: 0.041261923, w: 0.99914837}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1}
+    - name: CarlRig_l_handRing3_JNT
+      parentName: CarlRig_l_handRing2_JNT
+      position: {x: -0.029125327, y: 0, z: 0}
+      rotation: {x: -0, y: 8.881782e-16, z: 0.0000000037252894, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: CarlRig_l_handRing3_JNT_End
+      parentName: CarlRig_l_handRing3_JNT
+      position: {x: -0.025207387, y: 0, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: CarlRig_l_handPinky1_JNT
+      parentName: CarlRig_l_hand_JNT
+      position: {x: -0.097369224, y: -0.0052050916, z: -0.025161084}
+      rotation: {x: 0.000000047657977, y: 0.014049469, z: -0.0000000024059688, w: 0.99990135}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: CarlRig_l_handPinky2_JNT
+      parentName: CarlRig_l_handPinky1_JNT
+      position: {x: -0.024486508, y: 0, z: -1.7763568e-17}
+      rotation: {x: -0, y: -0, z: 5.5511145e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CarlRig_l_handPinky3_JNT
+      parentName: CarlRig_l_handPinky2_JNT
+      position: {x: -0.019168815, y: 0, z: -1.7763568e-17}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: CarlRig_l_handPinky3_JNT_End
+      parentName: CarlRig_l_handPinky3_JNT
+      position: {x: -0.020611422, y: 0, z: -1.7763568e-17}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: CarlRig_r_shourder_JNT
+      parentName: CarlRig_spine2_JNT
+      position: {x: 0.03672877, y: 0.11809649, z: 0.07969499}
+      rotation: {x: 0.9995943, y: 0.0051554926, z: 0.028012713, w: 0.0000000031201095}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: CarlRig_r_arm_JNT
+      parentName: CarlRig_r_shourder_JNT
+      position: {x: 0.1591897, y: 0.011739959, z: 0.0637899}
+      rotation: {x: -0.0001551328, y: 0.0001256055, z: 0.000005258176, w: 1}
+      scale: {x: 0.9999997, y: 1.0000013, z: 1.0000004}
+    - name: CarlRig_r_forearm_JNT
+      parentName: CarlRig_r_arm_JNT
+      position: {x: 0.294417, y: 0.00008008981, z: 0.000054780547}
+      rotation: {x: 0.00014659998, y: -0.024723709, z: 0.0018913646, w: 0.99969256}
+      scale: {x: 1.0000007, y: 1.0000002, z: 0.9999998}
+    - name: CarlRig_r_hand_JNT
+      parentName: CarlRig_r_forearm_JNT
+      position: {x: 0.23621967, y: 0.000069735266, z: -0.017440438}
+      rotation: {x: -0.00026407727, y: 0.00015299552, z: 0.000008423208, w: 1}
+      scale: {x: 1.0000007, y: 1.0000004, z: 1.0000002}
+    - name: CarlRig_r_handThumb1_JNT
+      parentName: CarlRig_r_hand_JNT
+      position: {x: 0.042174, y: 0.02305, z: -0.052063096}
+      rotation: {x: 0.40121058, y: 0.3884712, z: -0.13788857, w: 0.8179897}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.99999994}
+    - name: CarlRig_r_handThumb2_JNT
+      parentName: CarlRig_r_handThumb1_JNT
+      position: {x: 0.04471025, y: -0.0000010839855, z: 0.000001703718}
+      rotation: {x: -0.000000029802319, y: -0.000000014901159, z: -0, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: CarlRig_r_handThumb3_JNT
+      parentName: CarlRig_r_handThumb2_JNT
+      position: {x: 0.034560792, y: 0.0000010209965, z: -0.0000014254716}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: CarlRig_r_handThumb3_JNT_End
+      parentName: CarlRig_r_handThumb3_JNT
+      position: {x: -1.0658141e-16, y: -1.4210854e-16, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CarlRig_r_handIndex_01_JNT
+      parentName: CarlRig_r_hand_JNT
+      position: {x: 0.10201, y: 0, z: -0.042808898}
+      rotation: {x: -6.402842e-10, y: 0.016928893, z: 0.0000000018212629, w: 0.9998567}
+      scale: {x: 0.99999994, y: 1, z: 1.0000001}
+    - name: CarlRig_r_handIndex_02_JNT
+      parentName: CarlRig_r_handIndex_01_JNT
+      position: {x: 0.03746047, y: 2.842171e-16, z: 0.00000004624424}
+      rotation: {x: 0.000000022583924, y: -0.00000021420409, z: 0.04130305, w: 0.99914676}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000001}
+    - name: CarlRig_r_handIndex_03_JNT
+      parentName: CarlRig_r_handIndex_02_JNT
+      position: {x: 0.02606508, y: -0.000003716014, z: -0.000000056503634}
+      rotation: {x: -0, y: -0, z: 0.000000003725289, w: 1}
+      scale: {x: 0.9999998, y: 0.9999998, z: 0.99999994}
+    - name: CarlRig_r_handIndex_03_JNT_End
+      parentName: CarlRig_r_handIndex_03_JNT
+      position: {x: 0.021645555, y: -0.0000008780971, z: 0.000000006812371}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CarlRig_r_handMiddre1_JNT
+      parentName: CarlRig_r_hand_JNT
+      position: {x: 0.109115995, y: 0, z: -0.018420398}
+      rotation: {x: -1.1641532e-10, y: 0.027223771, z: 0.00000001825947, w: 0.99962944}
+      scale: {x: 0.99999994, y: 0.9999998, z: 1}
+    - name: CarlRig_r_handMiddre2_JNT
+      parentName: CarlRig_r_handMiddre1_JNT
+      position: {x: 0.03682659, y: 0, z: -0.000000025886838}
+      rotation: {x: 0.000000019091967, y: 0.000000022351735, z: 0.04060978, w: 0.9991751}
+      scale: {x: 1.0000002, y: 1.0000001, z: 0.99999994}
+    - name: CarlRig_r_handMiddre3_JNT
+      parentName: CarlRig_r_handMiddre2_JNT
+      position: {x: 0.03221643, y: -0.000007851429, z: -0.000000017526217}
+      rotation: {x: 1.7763562e-15, y: -1.7763562e-15, z: -5.052328e-16, w: 1}
+      scale: {x: 1.0000004, y: 1, z: 0.99999994}
+    - name: CarlRig_r_handMiddre3_JNT_End
+      parentName: CarlRig_r_handMiddre3_JNT
+      position: {x: 0.023570258, y: 0.0000059097647, z: 0.00000001102114}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CarlRig_r_handRing1_JNT
+      parentName: CarlRig_r_hand_JNT
+      position: {x: 0.105207, y: 0, z: 0.0064669}
+      rotation: {x: 0.00000002302113, y: 0.02984076, z: 0.000000012738383, w: 0.99955475}
+      scale: {x: 0.99999994, y: 0.9999998, z: 0.99999994}
+    - name: CarlRig_r_handRing2_JNT
+      parentName: CarlRig_r_handRing1_JNT
+      position: {x: 0.03275032, y: -2.842171e-16, z: 0.00000011465496}
+      rotation: {x: -0.000000024388164, y: -0.00000047869963, z: 0.04136617, w: 0.99914414}
+      scale: {x: 0.9999998, y: 0.9999997, z: 0.9999997}
+    - name: CarlRig_r_handRing3_JNT
+      parentName: CarlRig_r_handRing2_JNT
+      position: {x: 0.02912382, y: -0.0000058804485, z: -0.00000012984361}
+      rotation: {x: -1.7763564e-15, y: -0, z: 0.0000000037252892, w: 1}
+      scale: {x: 1.0000001, y: 0.9999998, z: 0.99999994}
+    - name: CarlRig_r_handRing3_JNT_End
+      parentName: CarlRig_r_handRing3_JNT
+      position: {x: 0.02520829, y: 0.0000033248284, z: 0.00000007898992}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1}
+    - name: CarlRig_r_handPinky1_JNT
+      parentName: CarlRig_r_hand_JNT
+      position: {x: 0.097369, y: 0.0051999995, z: 0.0251615}
+      rotation: {x: 0.000000034371624, y: 0.014049482, z: 0.0000000013378667, w: 0.99990135}
+      scale: {x: 0.9999996, y: 0.9999997, z: 0.9999998}
+    - name: CarlRig_r_handPinky2_JNT
+      parentName: CarlRig_r_handPinky1_JNT
+      position: {x: 0.024486668, y: 0, z: -0.000000020078469}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: CarlRig_r_handPinky3_JNT
+      parentName: CarlRig_r_handPinky2_JNT
+      position: {x: 0.01916858, y: 0, z: -0.00000043778417}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: CarlRig_r_handPinky3_JNT_End
+      parentName: CarlRig_r_handPinky3_JNT
+      position: {x: 0.020611133, y: 0, z: 0.00000009258752}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: CarlRig_l_upleg_JNT
+      parentName: CarlRig_hips_JNT
+      position: {x: -0.109581485, y: -0.0000019073486, z: 0.037501644}
+      rotation: {x: 0.004986261, y: 0.10181271, z: 0.0056080422, w: 0.9947753}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CarlRig_l_leg_JNT
+      parentName: CarlRig_l_upleg_JNT
+      position: {x: -0.028977865, y: -0.40982398, z: 0.0074315914}
+      rotation: {x: 0.000000492204, y: -0.000000029802322, z: 0.00000017439015, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: CarlRig_l_foot_JNT
+      parentName: CarlRig_l_leg_JNT
+      position: {x: -0.010292688, y: -0.39197314, z: -0.051598124}
+      rotation: {x: -0.004986764, y: -0.10181272, z: -0.0056081535, w: 0.9947753}
+      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+    - name: CarlRig_l_toebase_JNT
+      parentName: CarlRig_l_foot_JNT
+      position: {x: -0.0080779, y: -0.0984754, z: 0.15623212}
+      rotation: {x: -0, y: -0, z: 1.1641532e-10, w: 1}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1}
+    - name: CarlRig_l_toebase_JNT_End
+      parentName: CarlRig_l_toebase_JNT
+      position: {x: -1.7763568e-17, y: 0, z: 0.08396074}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 0.9999999, y: 1, z: 1}
+    - name: CarlRig_r_upreg_JNT
+      parentName: CarlRig_hips_JNT
+      position: {x: 0.109581, y: -0.0000015258788, z: 0.03750164}
+      rotation: {x: 0.99477553, y: -0.0056081195, z: 0.10181009, w: -0.0049887374}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000007}
+    - name: CarlRig_r_reg_JNT
+      parentName: CarlRig_r_upreg_JNT
+      position: {x: 0.02897811, y: 0.40982398, z: -0.007433162}
+      rotation: {x: -0.0000026142225, y: 0.00000016149534, z: -0.0000007827766, w: 1}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: CarlRig_r_foot_JNT
+      parentName: CarlRig_r_reg_JNT
+      position: {x: 0.010292638, y: 0.39197308, z: 0.051598012}
+      rotation: {x: -0.004986575, y: -0.10181375, z: -0.0056074485, w: 0.9947752}
+      scale: {x: 1.0000005, y: 1.0000002, z: 0.9999998}
+    - name: CarlRig_r_toebase_JNT
+      parentName: CarlRig_r_foot_JNT
+      position: {x: 0.008077398, y: 0.09847418, z: -0.15623306}
+      rotation: {x: -0, y: -0, z: -2.3283064e-10, w: 1}
+      scale: {x: 1.0000004, y: 1.0000006, z: 1.0000002}
+    - name: CarlRig_r_toebase_JNT_End
+      parentName: CarlRig_r_toebase_JNT
+      position: {x: -0, y: 0, z: -0.0839608}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CarlRigBody
+      parentName: CarlRigAnim_02(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1631 @@
+fileFormatVersion: 2
+guid: 1a22c55373f497041bc9768e74b8253c
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: 01
+      takeName: 01
+      internalID: -62716426508773975
+      firstFrame: 3497
+      lastFrame: 6533
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 3496.7998
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: BaiDRig_hips_JNT
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_l_upleg_JNT
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_r_upreg_JNT
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_l_leg_JNT
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_r_reg_JNT
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_l_foot_JNT
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_r_foot_JNT
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_spine_JNT
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_spine1_JNT
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_neck_JNT
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_head_JNT
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_l_shoulder_JNT
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_r_shourder_JNT
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_l_arm_JNT
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_r_arm_JNT
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_l_forearm_JNT
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_r_forearm_JNT
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_l_hand_JNT
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_r_hand_JNT
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_l_toebase_JNT
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_r_toebase_JNT
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_l_handThumb1_JNT
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_l_handThumb2_JNT
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_l_handThumb3_JNT
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_l_handIndex_01_JNT
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_l_handIndex_02_JNT
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_l_handIndex_03_JNT
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_l_handMiddle1_JNT
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_l_handMiddle2_JNT
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_l_handMiddle3_JNT
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_l_handRing1_JNT
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_l_handRing2_JNT
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_l_handRing3_JNT
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_l_handPinky1_JNT
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_l_handPinky2_JNT
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_l_handPinky3_JNT
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_r_handThumb1_JNT
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_r_handThumb2_JNT
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_r_handThumb3_JNT
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_r_handIndex_01_JNT
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_r_handIndex_02_JNT
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_r_handIndex_03_JNT
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_r_handMiddre1_JNT
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_r_handMiddre2_JNT
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_r_handMiddre3_JNT
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_r_handRing1_JNT
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_r_handRing2_JNT
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_r_handRing3_JNT
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_r_handPinky1_JNT
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_r_handPinky2_JNT
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_r_handPinky3_JNT
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BaiDRig_spine2_JNT
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: BaiDAnim_01(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_Skeleton
+      parentName: BaiDAnim_01(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_hips_JNT
+      parentName: BaiDRig_Skeleton
+      position: {x: 0.00000024214387, y: 0.92657995, z: 0.09421976}
+      rotation: {x: 0.0000000029103826, y: 1.058791e-18, z: 3.6379788e-10, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: BaiDRig_spine_JNT
+      parentName: BaiDRig_hips_JNT
+      position: {x: 0.000000020923501, y: 0.11893394, z: 0.0035397625}
+      rotation: {x: -0.0000000058207656, y: -0.000000011641532, z: 0.0000000010913936,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_spine1_JNT
+      parentName: BaiDRig_spine_JNT
+      position: {x: 0.000000013576463, y: 0.18641105, z: -0.0128445}
+      rotation: {x: 0.000000008731149, y: -0, z: -6.776263e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_spine2_JNT
+      parentName: BaiDRig_spine1_JNT
+      position: {x: -0.000037505684, y: 0.128712, z: -0.009837311}
+      rotation: {x: -0.000000011641532, y: 0.000000023283066, z: 2.6530427e-16, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: BaiDRig_l_shoulder_JNT
+      parentName: BaiDRig_spine2_JNT
+      position: {x: -0.0367288, y: 0.1181, z: 0.079695}
+      rotation: {x: 0.0000000058784666, y: 0.028015625, z: -0.00515938, w: 0.99959415}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_arm_JNT
+      parentName: BaiDRig_l_shoulder_JNT
+      position: {x: -0.15919015, y: -0.011747588, z: -0.06378996}
+      rotation: {x: -0.0020820615, y: 0.000056056768, z: 0.000068614194, w: 0.99999785}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000001}
+    - name: BaiDRig_l_forearm_JNT
+      parentName: BaiDRig_l_arm_JNT
+      position: {x: -0.24273, y: 0, z: 0}
+      rotation: {x: 0.000093835646, y: -0.01777812, z: 0.0014803165, w: 0.9998409}
+      scale: {x: 1, y: 0.9999998, z: 1}
+    - name: BaiDRig_l_hand_JNT
+      parentName: BaiDRig_l_forearm_JNT
+      position: {x: -0.28790998, y: -0.00006688068, z: 0.017440556}
+      rotation: {x: 0.0019028634, y: -0.00005613335, z: -0.00006278182, w: 0.9999982}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+    - name: BaiDRig_l_handIndex_01_JNT
+      parentName: BaiDRig_l_hand_JNT
+      position: {x: -0.102010556, y: 0, z: 0.042808913}
+      rotation: {x: 0.000000010244547, y: 0.016928867, z: 0.000000028205246, w: 0.99985677}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000001}
+    - name: BaiDRig_l_handIndex_02_JNT
+      parentName: BaiDRig_l_handIndex_01_JNT
+      position: {x: -0.0374603, y: 0, z: 0}
+      rotation: {x: -0.0000000012121831, y: -0.00000009313224, z: 0.04123009, w: 0.99914974}
+      scale: {x: 1.0000002, y: 1.0000006, z: 1.0000002}
+    - name: BaiDRig_l_handIndex_03_JNT
+      parentName: BaiDRig_l_handIndex_02_JNT
+      position: {x: -0.026065199, y: 0, z: 0}
+      rotation: {x: -0.0000000015960636, y: 0.00000002991307, z: -0.00000003725289,
+        w: 1}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: BaiDRig_l_handIndex_03_JNT_End
+      parentName: BaiDRig_l_handIndex_03_JNT
+      position: {x: -0.021645574, y: 0, z: -1.6653344e-17}
+      rotation: {x: -0, y: -0, z: 4.7743164e-17, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: BaiDRig_l_handMiddle1_JNT
+      parentName: BaiDRig_l_hand_JNT
+      position: {x: -0.10911632, y: 0, z: 0.018420454}
+      rotation: {x: -0.000000007566996, y: 0.027223727, z: 0.000000024665496, w: 0.99962944}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000001}
+    - name: BaiDRig_l_handMiddle2_JNT
+      parentName: BaiDRig_l_handMiddle1_JNT
+      position: {x: -0.036826864, y: 0, z: 8.881784e-18}
+      rotation: {x: -0.000000017820545, y: 0.00000013224778, z: 0.040485825, w: 0.99918014}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1.0000001}
+    - name: BaiDRig_l_handMiddle3_JNT
+      parentName: BaiDRig_l_handMiddle2_JNT
+      position: {x: -0.032217223, y: 0, z: 0}
+      rotation: {x: 0.000000050760757, y: -0.000000033054835, z: -0.000000022351733,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: BaiDRig_l_handMiddle3_JNT_End
+      parentName: BaiDRig_l_handMiddle3_JNT
+      position: {x: -0.023569928, y: 0, z: 1.6653344e-17}
+      rotation: {x: -0, y: -0, z: -9.846776e-17, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 0.99999994}
+    - name: BaiDRig_l_handRing1_JNT
+      parentName: BaiDRig_l_hand_JNT
+      position: {x: -0.10520749, y: 0, z: -0.006466917}
+      rotation: {x: 0.000000009313225, y: 0.029840702, z: 0.000000025938785, w: 0.9995547}
+      scale: {x: 1.0000006, y: 1.0000005, z: 1.0000002}
+    - name: BaiDRig_l_handRing2_JNT
+      parentName: BaiDRig_l_handRing1_JNT
+      position: {x: -0.032749858, y: 0, z: 0}
+      rotation: {x: -8.028323e-10, y: 0.000000048428763, z: 0.041263252, w: 0.99914837}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1}
+    - name: BaiDRig_l_handRing3_JNT
+      parentName: BaiDRig_l_handRing2_JNT
+      position: {x: -0.029125327, y: 0, z: 0}
+      rotation: {x: 0.000000012437032, y: -0.000000015505384, z: 0.00000006332992,
+        w: 1}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000001}
+    - name: BaiDRig_l_handRing3_JNT_End
+      parentName: BaiDRig_l_handRing3_JNT
+      position: {x: -0.025207387, y: 0, z: 0}
+      rotation: {x: -0, y: -0, z: 1.9284096e-16, w: 1}
+      scale: {x: 0.9999998, y: 0.99999994, z: 1.0000001}
+    - name: BaiDRig_l_handThumb1_JNT
+      parentName: BaiDRig_l_hand_JNT
+      position: {x: -0.042174365, y: -0.023050822, z: 0.052063122}
+      rotation: {x: 0.40116698, y: 0.3884156, z: -0.13805658, w: 0.8180091}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000004}
+    - name: BaiDRig_l_handThumb2_JNT
+      parentName: BaiDRig_l_handThumb1_JNT
+      position: {x: -0.044711422, y: -4.227868e-16, z: 1.769418e-16}
+      rotation: {x: -0, y: -0.000000014901161, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000007}
+    - name: BaiDRig_l_handThumb3_JNT
+      parentName: BaiDRig_l_handThumb2_JNT
+      position: {x: -0.034559444, y: 6.308842e-16, z: -6.9444446e-16}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000002}
+    - name: BaiDRig_l_handThumb3_JNT_End
+      parentName: BaiDRig_l_handThumb3_JNT
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000002}
+    - name: BaiDRig_l_handPinky1_JNT
+      parentName: BaiDRig_l_hand_JNT
+      position: {x: -0.097369224, y: -0.0052050916, z: -0.025161084}
+      rotation: {x: 0.00000003434252, y: 0.014049395, z: -0.000000010993972, w: 0.99990135}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000002}
+    - name: BaiDRig_l_handPinky2_JNT
+      parentName: BaiDRig_l_handPinky1_JNT
+      position: {x: -0.024486508, y: 0, z: -1.7763568e-17}
+      rotation: {x: 0.000000014578967, y: 0.00000005960463, z: 0.00000002303541, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: BaiDRig_l_handPinky3_JNT
+      parentName: BaiDRig_l_handPinky2_JNT
+      position: {x: -0.019168815, y: 0, z: -1.7763568e-17}
+      rotation: {x: -0.000000022349534, y: -0, z: -3.140287e-10, w: 1}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1}
+    - name: BaiDRig_l_handPinky3_JNT_End
+      parentName: BaiDRig_l_handPinky3_JNT
+      position: {x: -0.020611422, y: 0, z: -1.7763568e-17}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1.0000001}
+    - name: BaiDRig_r_shourder_JNT
+      parentName: BaiDRig_spine2_JNT
+      position: {x: 0.03672877, y: 0.11809649, z: 0.07969499}
+      rotation: {x: 0.9995943, y: 0.0051555093, z: 0.02801281, w: -0.000000011394481}
+      scale: {x: 1, y: 1.0000004, z: 1.0000004}
+    - name: BaiDRig_r_arm_JNT
+      parentName: BaiDRig_r_shourder_JNT
+      position: {x: 0.1591897, y: 0.011739959, z: 0.0637899}
+      rotation: {x: 0.00067326386, y: 0.00021435168, z: -0.000022089345, w: 0.99999976}
+      scale: {x: 1.0000006, y: 1.0000006, z: 1.000001}
+    - name: BaiDRig_r_forearm_JNT
+      parentName: BaiDRig_r_arm_JNT
+      position: {x: 0.24273226, y: 0.000080095204, z: 0.000037628368}
+      rotation: {x: 0.00009717577, y: -0.017911267, z: 0.0015409449, w: 0.9998384}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000001}
+    - name: BaiDRig_r_hand_JNT
+      parentName: BaiDRig_r_forearm_JNT
+      position: {x: 0.28790998, y: 0.000069735266, z: -0.017440438}
+      rotation: {x: -0.0008130995, y: 0.00015217766, z: 0.000026438214, w: 0.9999997}
+      scale: {x: 1, y: 1.0000007, z: 1.0000006}
+    - name: BaiDRig_r_handIndex_01_JNT
+      parentName: BaiDRig_r_hand_JNT
+      position: {x: 0.10201, y: 0, z: -0.042808898}
+      rotation: {x: -0.000000011117661, y: 0.016928887, z: -0.00000004440243, w: 0.9998567}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1.0000006}
+    - name: BaiDRig_r_handIndex_02_JNT
+      parentName: BaiDRig_r_handIndex_01_JNT
+      position: {x: 0.03746047, y: 2.842171e-16, z: 0.00000004624424}
+      rotation: {x: 0.000000024785377, y: -0.00000021792941, z: 0.04130535, w: 0.9991466}
+      scale: {x: 1.0000004, y: 1, z: 0.9999998}
+    - name: BaiDRig_r_handIndex_03_JNT
+      parentName: BaiDRig_r_handIndex_02_JNT
+      position: {x: 0.02606508, y: -0.000003716014, z: -0.000000056503634}
+      rotation: {x: 0.0000000020420834, y: -0.00000002061054, z: -0.00000006332992,
+        w: 1}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.99999994}
+    - name: BaiDRig_r_handIndex_03_JNT_End
+      parentName: BaiDRig_r_handIndex_03_JNT
+      position: {x: 0.021645555, y: -0.0000008780971, z: 0.000000006812371}
+      rotation: {x: -0, y: -0, z: 4.2088445e-17, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
+    - name: BaiDRig_r_handMiddre1_JNT
+      parentName: BaiDRig_r_hand_JNT
+      position: {x: 0.109115995, y: 0, z: -0.018420398}
+      rotation: {x: -0.000000008498318, y: 0.027223814, z: -0.000000048557915, w: 0.99962944}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000005}
+    - name: BaiDRig_r_handMiddre2_JNT
+      parentName: BaiDRig_r_handMiddre1_JNT
+      position: {x: 0.03682659, y: 0, z: -0.000000025886838}
+      rotation: {x: -0.000000010254704, y: 0.00000023469323, z: 0.040614203, w: 0.9991749}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000002}
+    - name: BaiDRig_r_handMiddre3_JNT
+      parentName: BaiDRig_r_handMiddre2_JNT
+      position: {x: 0.03221643, y: -0.000007851429, z: -0.000000017526217}
+      rotation: {x: -0.0000000019751552, y: 1.2427032e-10, z: -0.000000029802308,
+        w: 1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000001}
+    - name: BaiDRig_r_handMiddre3_JNT_End
+      parentName: BaiDRig_r_handMiddre3_JNT
+      position: {x: 0.023570258, y: 0.0000059097647, z: 0.00000001102114}
+      rotation: {x: -0, y: -0, z: 2.4545313e-19, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000002}
+    - name: BaiDRig_r_handRing1_JNT
+      parentName: BaiDRig_r_hand_JNT
+      position: {x: 0.105207, y: 0, z: 0.0064669}
+      rotation: {x: -0.000000012572853, y: 0.029840723, z: -0.000000031841406, w: 0.9995547}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000004}
+    - name: BaiDRig_r_handRing2_JNT
+      parentName: BaiDRig_r_handRing1_JNT
+      position: {x: 0.03275032, y: -2.842171e-16, z: 0.00000011465496}
+      rotation: {x: -0.000000007350523, y: -0.0000005066394, z: 0.041370507, w: 0.99914396}
+      scale: {x: 1.0000004, y: 1.0000007, z: 1.0000005}
+    - name: BaiDRig_r_handRing3_JNT
+      parentName: BaiDRig_r_handRing2_JNT
+      position: {x: 0.02912382, y: -0.0000058804485, z: -0.00000012984361}
+      rotation: {x: 0.000000020715412, y: 0.000000043774616, z: 0.0000000037252899,
+        w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: BaiDRig_r_handRing3_JNT_End
+      parentName: BaiDRig_r_handRing3_JNT
+      position: {x: 0.02520829, y: 0.0000033248284, z: 0.00000007898992}
+      rotation: {x: -0, y: -0, z: -1.8630806e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_handThumb1_JNT
+      parentName: BaiDRig_r_hand_JNT
+      position: {x: 0.042174, y: 0.02305, z: -0.052063096}
+      rotation: {x: 0.4011744, y: 0.38841385, z: -0.13807006, w: 0.81800395}
+      scale: {x: 1.0000004, y: 1.0000008, z: 1.0000004}
+    - name: BaiDRig_r_handThumb2_JNT
+      parentName: BaiDRig_r_handThumb1_JNT
+      position: {x: 0.04471025, y: -0.0000010839855, z: 0.000001703718}
+      rotation: {x: 0.000000119209275, y: -0.00000004470348, z: -0.0000000372529,
+        w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000001}
+    - name: BaiDRig_r_handThumb3_JNT
+      parentName: BaiDRig_r_handThumb2_JNT
+      position: {x: 0.034560792, y: 0.0000010209965, z: -0.0000014254716}
+      rotation: {x: -0, y: -0, z: 1.7763558e-15, w: 1}
+      scale: {x: 1.0000005, y: 1.0000001, z: 0.9999998}
+    - name: BaiDRig_r_handThumb3_JNT_End
+      parentName: BaiDRig_r_handThumb3_JNT
+      position: {x: -1.0658141e-16, y: -1.4210854e-16, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000001}
+    - name: BaiDRig_r_handPinky1_JNT
+      parentName: BaiDRig_r_hand_JNT
+      position: {x: 0.097369, y: 0.0051999995, z: 0.0251615}
+      rotation: {x: 0.000000011001247, y: 0.014049424, z: -0.00000005959918, w: 0.9999013}
+      scale: {x: 1.0000002, y: 1.000001, z: 1.0000011}
+    - name: BaiDRig_r_handPinky2_JNT
+      parentName: BaiDRig_r_handPinky1_JNT
+      position: {x: 0.024486668, y: 0, z: -0.000000020078469}
+      rotation: {x: -0.000000004473075, y: 0.000000058673308, z: -0.0000000130953755,
+        w: 1}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1.0000002}
+    - name: BaiDRig_r_handPinky3_JNT
+      parentName: BaiDRig_r_handPinky2_JNT
+      position: {x: 0.01916858, y: 0, z: -0.00000043778417}
+      rotation: {x: 0.000000014860435, y: -9.3132235e-10, z: 0.0000000030030454, w: 1}
+      scale: {x: 1.0000002, y: 0.9999997, z: 0.99999994}
+    - name: BaiDRig_r_handPinky3_JNT_End
+      parentName: BaiDRig_r_handPinky3_JNT
+      position: {x: 0.020611133, y: 0, z: 0.00000009258752}
+      rotation: {x: -0, y: -0, z: 1.3839855e-17, w: 1}
+      scale: {x: 1, y: 1.0000004, z: 1.0000005}
+    - name: BaiDRig_neck_JNT
+      parentName: BaiDRig_spine2_JNT
+      position: {x: -0.00004347807, y: 0.148929, z: 0.010257526}
+      rotation: {x: -0.000000005820766, y: -0.000000011641534, z: 0.0000000014551912,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_head_JNT
+      parentName: BaiDRig_neck_JNT
+      position: {x: -0.00002325055, y: 0.07571075, z: 0.039948758}
+      rotation: {x: 0.000000023283064, y: -0.000000023283063, z: 0.000000008731147,
+        w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: BaiDRig_head_JNT_End
+      parentName: BaiDRig_head_JNT
+      position: {x: 1.7347234e-20, y: 0.21502508, z: 8.881784e-18}
+      rotation: {x: -0, y: -0, z: -3.4607739e-16, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: BaiDRig_l_upleg_JNT
+      parentName: BaiDRig_hips_JNT
+      position: {x: -0.109581485, y: -0.0000019073486, z: 0.037501644}
+      rotation: {x: 0.00745875, y: 0.15228881, z: 0.008388542, w: 0.9882723}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: BaiDRig_l_leg_JNT
+      parentName: BaiDRig_l_upleg_JNT
+      position: {x: -0.028977873, y: -0.38517383, z: 0.007431616}
+      rotation: {x: 0.000000010710209, y: -0.000000014901159, z: 0.000000010943039,
+        w: 1}
+      scale: {x: 1.0000005, y: 1, z: 1.0000004}
+    - name: BaiDRig_l_foot_JNT
+      parentName: BaiDRig_l_leg_JNT
+      position: {x: -0.010292688, y: -0.41662, z: -0.051598124}
+      rotation: {x: -0.0074587655, y: -0.15228878, z: -0.008388552, w: 0.9882723}
+      scale: {x: 0.99999964, y: 1, z: 0.99999976}
+    - name: BaiDRig_l_toebase_JNT
+      parentName: BaiDRig_l_foot_JNT
+      position: {x: -0.0080779, y: -0.0984754, z: 0.15623212}
+      rotation: {x: -0, y: -0, z: -1.1641531e-10, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 1.0000002}
+    - name: BaiDRig_l_toebase_JNT_End
+      parentName: BaiDRig_l_toebase_JNT
+      position: {x: -1.7763568e-17, y: 0, z: 0.08396074}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_upreg_JNT
+      parentName: BaiDRig_hips_JNT
+      position: {x: 0.109581, y: -0.0000015258788, z: 0.03750164}
+      rotation: {x: 0.98827237, y: -0.008389412, z: 0.15228803, w: -0.007465279}
+      scale: {x: 1, y: 1.0000001, z: 1.0000004}
+    - name: BaiDRig_r_reg_JNT
+      parentName: BaiDRig_r_upreg_JNT
+      position: {x: 0.02897811, y: 0.38516998, z: -0.007433162}
+      rotation: {x: -0.000010284594, y: 0.00000065634225, z: -0.0000035800035, w: 1}
+      scale: {x: 0.99999994, y: 1.0000004, z: 1.0000005}
+    - name: BaiDRig_r_foot_JNT
+      parentName: BaiDRig_r_reg_JNT
+      position: {x: 0.010292638, y: 0.41662, z: 0.051598012}
+      rotation: {x: -0.0074550887, y: -0.15229213, z: -0.008387283, w: 0.98827183}
+      scale: {x: 1.0000001, y: 0.99999994, z: 0.9999998}
+    - name: BaiDRig_r_toebase_JNT
+      parentName: BaiDRig_r_foot_JNT
+      position: {x: 0.008077398, y: 0.09847418, z: -0.15623306}
+      rotation: {x: -0, y: -0, z: -2.3283064e-10, w: 1}
+      scale: {x: 1, y: 1.0000004, z: 1.0000001}
+    - name: BaiDRig_r_toebase_JNT_End
+      parentName: BaiDRig_r_toebase_JNT
+      position: {x: -0, y: 0, z: -0.0839608}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: BaiDRig_ctrls
+      parentName: BaiDAnim_01(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_ctrls
+      parentName: BaiDRig_ctrls
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_hand_ctrl
+      parentName: BaiDRig_l_ctrls
+      position: {x: -0.27771842, y: 0.9932642, z: 0.23186554}
+      rotation: {x: 0.17153905, y: 0.5161285, z: 0.5761101, w: 0.61014986}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_FingerCtrls
+      parentName: BaiDRig_l_hand_ctrl
+      position: {x: 0.72659343, y: -1.4650337, z: 0.07772952}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_index_ctrl_01
+      parentName: BaiDRig_l_FingerCtrls
+      position: {x: -0.82860404, y: 1.4650337, z: -0.034920614}
+      rotation: {x: 0, y: 0, z: 0.15097605, w: 0.98853743}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_index_ctrl_02
+      parentName: BaiDRig_l_index_ctrl_01
+      position: {x: -0.03743881, y: 0, z: 0.0012681412}
+      rotation: {x: 0, y: 0, z: 0.15097605, w: 0.98853743}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_index_ctrl_03
+      parentName: BaiDRig_l_index_ctrl_02
+      position: {x: -0.028402405, y: 0.0026856994, z: 0.0028495216}
+      rotation: {x: 0, y: 0, z: 0.15097605, w: 0.98853743}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_middle_ctrl_01
+      parentName: BaiDRig_l_FingerCtrls
+      position: {x: -0.83570975, y: 1.4650337, z: -0.059309073}
+      rotation: {x: 0, y: 0, z: 0.15097605, w: 0.98853743}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_middle_ctrl_02
+      parentName: BaiDRig_l_middle_ctrl_01
+      position: {x: -0.036772307, y: 0, z: 0.0020043897}
+      rotation: {x: 0, y: 0, z: 0.15097605, w: 0.98853743}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_middle_ctrl_03
+      parentName: BaiDRig_l_middle_ctrl_02
+      position: {x: -0.034106977, y: 0.0018443298, z: 0.0034031773}
+      rotation: {x: 0, y: 0, z: 0.15097605, w: 0.98853743}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_ring_ctrl_01
+      parentName: BaiDRig_l_FingerCtrls
+      position: {x: -0.831801, y: 1.4650337, z: -0.08419644}
+      rotation: {x: 0, y: 0, z: 0.15097605, w: 0.98853743}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_ring_ctrl_02
+      parentName: BaiDRig_l_ring_ctrl_01
+      position: {x: -0.033473052, y: 0.0052841185, z: 0.002191944}
+      rotation: {x: 0, y: 0, z: 0.15097605, w: 0.98853743}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_ring_ctrl_03
+      parentName: BaiDRig_l_ring_ctrl_02
+      position: {x: -0.029265594, y: -0.003618164, z: 0.0017230511}
+      rotation: {x: 0, y: 0, z: 0.15097605, w: 0.98853743}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_pinky_ctrl_01
+      parentName: BaiDRig_l_FingerCtrls
+      position: {x: -0.8239627, y: 1.4598286, z: -0.10289061}
+      rotation: {x: 0, y: 0, z: 0.15097605, w: 0.98853743}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_pinky_ctrl_02
+      parentName: BaiDRig_l_pinky_ctrl_01
+      position: {x: -0.024476852, y: 0, z: 0.0006879806}
+      rotation: {x: 0, y: 0, z: 0.15097605, w: 0.98853743}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_pinky_ctrl_03
+      parentName: BaiDRig_l_pinky_ctrl_02
+      position: {x: -0.019161224, y: 0, z: 0.0005385685}
+      rotation: {x: 0, y: 0, z: 0.15097605, w: 0.98853743}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_thumb_ctrl_01_offset
+      parentName: BaiDRig_l_FingerCtrls
+      position: {x: -0.76876783, y: 1.4419829, z: -0.025666403}
+      rotation: {x: 0.47301582, y: 0.27506366, z: -0.010405701, w: 0.83695143}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_thumb_ctrl_01
+      parentName: BaiDRig_l_thumb_ctrl_01_offset
+      position: {x: -0, y: 0, z: 2.842171e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_thumb_ctrl_02_offset
+      parentName: BaiDRig_l_thumb_ctrl_01
+      position: {x: -0.043092072, y: -0.011449313, z: 0.0033304992}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_thumb_ctrl_02
+      parentName: BaiDRig_l_thumb_ctrl_02_offset
+      position: {x: -0, y: -5.684342e-16, z: 2.842171e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_foot_ctrl
+      parentName: BaiDRig_l_ctrls
+      position: {x: -0.1932944, y: 0.15192196, z: 0.11517527}
+      rotation: {x: 0.06454971, y: 0.1401916, z: -0.02123069, w: 0.9877899}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_toe_ctrl
+      parentName: BaiDRig_l_foot_ctrl
+      position: {x: -0.00807786, y: -0.09847547, z: 0.15623204}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_ik_knee_ctrl_offset
+      parentName: BaiDRig_l_ctrls
+      position: {x: -0.1325445, y: 0.53921616, z: 0.049711242}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_ik_knee_ctrl
+      parentName: BaiDRig_l_ik_knee_ctrl_offset
+      position: {x: 0.0077036857, y: 0.008978576, z: 0.27856454}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_ik_elbow_ctrl_offset
+      parentName: BaiDRig_l_ctrls
+      position: {x: -0.43928406, y: 1.4651006, z: -0.23291104}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_ik_elbow_ctrl
+      parentName: BaiDRig_l_ik_elbow_ctrl_offset
+      position: {x: 0.09427726, y: -0.22425628, z: 0.20871124}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_BaseController
+      parentName: BaiDRig_ctrls
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_Hip_ctrl
+      parentName: BaiDRig_BaseController
+      position: {x: -0.011145176, y: 0.92657995, z: 0.09421976}
+      rotation: {x: -0.019042457, y: 0.073138095, z: 0.01830571, w: 0.99697196}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_Spine_ctrl_01
+      parentName: BaiDRig_Hip_ctrl
+      position: {x: 0.000000020923501, y: 0.11893394, z: 0.0035397625}
+      rotation: {x: -0.027591204, y: 0.03987933, z: 0.005810589, w: 0.9988066}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_Spine_ctrl_02
+      parentName: BaiDRig_Spine_ctrl_01
+      position: {x: 0.0000000130955, y: 0.18641105, z: -0.0128444955}
+      rotation: {x: -0.01140993, y: 0.03355727, z: 0.0014798262, w: 0.9993706}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_Spine_ctrl_03
+      parentName: BaiDRig_Spine_ctrl_02
+      position: {x: -0.000037505797, y: 0.128712, z: -0.009837313}
+      rotation: {x: -0.017746305, y: -0.000110358866, z: 0.0012147162, w: 0.9998418}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_Neck_ctrl
+      parentName: BaiDRig_Spine_ctrl_03
+      position: {x: -0.000043475793, y: 0.14892898, z: 0.010257521}
+      rotation: {x: -0.000820289, y: 0.13179351, z: -0.050678547, w: 0.9899806}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_Head_ctrl
+      parentName: BaiDRig_Neck_ctrl
+      position: {x: -0.000023252498, y: 0.07571075, z: 0.039948776}
+      rotation: {x: 0.3212341, y: 0.011647309, z: 0.034983028, w: 0.9462818}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_l_clavicle_ctrl
+      parentName: BaiDRig_Spine_ctrl_03
+      position: {x: -0.0367288, y: 0.11809997, z: 0.079695}
+      rotation: {x: 0.000000021694445, y: -0.00000002590171, z: 5.6192325e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_clavicle_ctrl
+      parentName: BaiDRig_Spine_ctrl_03
+      position: {x: 0.036803745, y: 0.11809997, z: 0.079695}
+      rotation: {x: 0.000000026430913, y: -0.00000002590171, z: 6.846058e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_ctrls
+      parentName: BaiDRig_ctrls
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_hand_ctrl
+      parentName: BaiDRig_r_ctrls
+      position: {x: 0.11728138, y: 1.2014761, z: 0.25305182}
+      rotation: {x: 0.49430716, y: 0.4875983, z: 0.6870579, w: -0.21414885}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_FingerCtrls
+      parentName: BaiDRig_r_hand_ctrl
+      position: {x: -0.72659343, y: -1.4650337, z: 0.07772952}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_index_ctrl_01
+      parentName: BaiDRig_r_FingerCtrls
+      position: {x: 0.82860404, y: 1.4650337, z: -0.034920614}
+      rotation: {x: 0, y: -0, z: -0.39729768, w: 0.9176898}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_index_ctrl_02
+      parentName: BaiDRig_r_index_ctrl_01
+      position: {x: 0.03743881, y: 0, z: 0.0012681412}
+      rotation: {x: 0, y: -0, z: -0.2669428, w: 0.9637124}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_index_ctrl_03
+      parentName: BaiDRig_r_index_ctrl_02
+      position: {x: 0.028402405, y: 0.0026856994, z: 0.0028495216}
+      rotation: {x: 0, y: -0, z: -0.2669428, w: 0.9637124}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_middle_ctrl_01
+      parentName: BaiDRig_r_FingerCtrls
+      position: {x: 0.83570975, y: 1.4650337, z: -0.059309073}
+      rotation: {x: 0, y: -0, z: -0.39729768, w: 0.9176898}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_middle_ctrl_02
+      parentName: BaiDRig_r_middle_ctrl_01
+      position: {x: 0.036772307, y: 0, z: 0.0020043897}
+      rotation: {x: 0, y: -0, z: -0.39729768, w: 0.9176898}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_middle_ctrl_03
+      parentName: BaiDRig_r_middle_ctrl_02
+      position: {x: 0.034106977, y: 0.0018443298, z: 0.0034031773}
+      rotation: {x: 0, y: -0, z: -0.39729768, w: 0.9176898}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_ring_ctrl_01
+      parentName: BaiDRig_r_FingerCtrls
+      position: {x: 0.831801, y: 1.4650337, z: -0.08419644}
+      rotation: {x: 0, y: -0, z: -0.44471005, w: 0.8956746}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_ring_ctrl_02
+      parentName: BaiDRig_r_ring_ctrl_01
+      position: {x: 0.033473052, y: 0.0052841185, z: 0.002191944}
+      rotation: {x: 0, y: -0, z: -0.44471005, w: 0.8956746}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_ring_ctrl_03
+      parentName: BaiDRig_r_ring_ctrl_02
+      position: {x: 0.029265594, y: -0.003618164, z: 0.0017230511}
+      rotation: {x: 0, y: -0, z: -0.44471005, w: 0.8956746}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_pinky_ctrl_01
+      parentName: BaiDRig_r_FingerCtrls
+      position: {x: 0.8239627, y: 1.4598286, z: -0.10289061}
+      rotation: {x: 0, y: -0, z: -0.44471005, w: 0.8956746}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_pinky_ctrl_02
+      parentName: BaiDRig_r_pinky_ctrl_01
+      position: {x: 0.024476852, y: 0, z: 0.0006879806}
+      rotation: {x: 0, y: -0, z: -0.44471005, w: 0.8956746}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_pinky_ctrl_03
+      parentName: BaiDRig_r_pinky_ctrl_02
+      position: {x: 0.019161224, y: 0, z: 0.0005385685}
+      rotation: {x: 0, y: -0, z: -0.44471005, w: 0.8956746}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_thumb_ctrl_01_offset
+      parentName: BaiDRig_r_FingerCtrls
+      position: {x: 0.76876783, y: 1.4419829, z: -0.025666403}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_thumb_ctrl_01
+      parentName: BaiDRig_r_thumb_ctrl_01_offset
+      position: {x: -1.4210854e-16, y: -2.842171e-16, z: 0}
+      rotation: {x: 0.1045869, y: -0.003713155, z: -0.006619558, w: 0.9944868}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_thumb_ctrl_02_offset
+      parentName: BaiDRig_r_thumb_ctrl_01
+      position: {x: 0.038240127, y: -0.01944229, z: 0.012601428}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_thumb_ctrl_02
+      parentName: BaiDRig_r_thumb_ctrl_02_offset
+      position: {x: -0, y: -8.5265126e-16, z: -5.684342e-16}
+      rotation: {x: 0.1045869, y: -0.003713155, z: -0.006619558, w: 0.9944868}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_foot_ctrl
+      parentName: BaiDRig_r_ctrls
+      position: {x: 0.0942276, y: 0.18701482, z: 0.03042922}
+      rotation: {x: 0.18872961, y: 0.4822901, z: -0.08576979, w: 0.8511293}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_toe_ctrl
+      parentName: BaiDRig_r_foot_ctrl
+      position: {x: 0.00807786, y: -0.09847547, z: 0.15623204}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_ik_knee_ctrl_offset
+      parentName: BaiDRig_r_ctrls
+      position: {x: 0.13254417, y: 0.5392203, z: 0.0497108}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_ik_knee_ctrl
+      parentName: BaiDRig_r_ik_knee_ctrl_offset
+      position: {x: 0.096545056, y: 0.02792221, z: 0.20095077}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_ik_elbow_ctrl_offset
+      parentName: BaiDRig_r_ctrls
+      position: {x: 0.43821445, y: 1.4651006, z: -0.23291104}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDRig_r_ik_elbow_ctrl
+      parentName: BaiDRig_r_ik_elbow_ctrl_offset
+      position: {x: -0.20133775, y: -0.21743812, z: 0.103331275}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: l_arm_ik
+      parentName: BaiDRig_ctrls
+      position: {x: -0.27770838, y: 0.99330723, z: 0.23195083}
+      rotation: {x: 0.17153904, y: 0.5161285, z: 0.5761101, w: 0.61014986}
+      scale: {x: 1, y: 1, z: 1}
+    - name: l_leg_ik
+      parentName: BaiDRig_ctrls
+      position: {x: -0.19329447, y: 0.15192495, z: 0.11517709}
+      rotation: {x: 0.06454971, y: 0.1401916, z: -0.02123069, w: 0.9877899}
+      scale: {x: 1, y: 1, z: 1}
+    - name: r_leg_ik
+      parentName: BaiDRig_ctrls
+      position: {x: 0.09423131, y: 0.18702075, z: 0.030431299}
+      rotation: {x: 0.18872942, y: 0.48228806, z: -0.08577024, w: 0.85113037}
+      scale: {x: 1, y: 1, z: 1}
+    - name: r_arm_ik
+      parentName: BaiDRig_ctrls
+      position: {x: 0.117306344, y: 1.2014654, z: 0.25299138}
+      rotation: {x: 0.49430716, y: 0.4875983, z: 0.6870579, w: -0.21414885}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCube1
+      parentName: BaiDAnim_01(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MASH1_Instancer
+      parentName: BaiDAnim_01(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MASH1_Instancer_objects
+      parentName: BaiDAnim_01(Clone)
+      position: {x: -0, y: 0, z: 0.23573685}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCubeShape1_MASH1_Instancer_0
+      parentName: MASH1_Instancer_objects
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCubeShape1_MASH1_Instancer_2
+      parentName: MASH1_Instancer_objects
+      position: {x: -0.057931032, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCubeShape1_MASH1_Instancer_4
+      parentName: MASH1_Instancer_objects
+      position: {x: -0.115862064, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: group1
+      parentName: MASH1_Instancer_objects
+      position: {x: -0, y: 0, z: 0.06467337}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCubeShape1_MASH1_Instancer_1
+      parentName: group1
+      position: {x: -0.028965516, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1.1865094, z: 1}
+    - name: group2
+      parentName: MASH1_Instancer_objects
+      position: {x: -0, y: 0, z: 0.057035264}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCubeShape1_MASH1_Instancer_3
+      parentName: group2
+      position: {x: -0.08689655, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1.9719237, z: 1}
+    - name: BaiDMeshes
+      parentName: BaiDAnim_01(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiD_Head
+      parentName: BaiDMeshes
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiD_Hands
+      parentName: BaiDMeshes
+      position: {x: -0, y: -0.004463926, z: -0.032366168}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.9878415, y: 0.9878415, z: 0.9878415}
+    - name: BaiD_Pants
+      parentName: BaiDMeshes
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiD_Jacket
+      parentName: BaiDMeshes
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiD_Shoes
+      parentName: BaiDMeshes
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: teeth_baseMesh
+      parentName: BaiDMeshes
+      position: {x: -0, y: 0.002562044, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:hips_JNT
+      parentName: BaiDAnim_01(Clone)
+      position: {x: -0.0035153078, y: 0.9219416, z: 0.12783827}
+      rotation: {x: -0.01904247, y: 0.07313812, z: 0.018305717, w: 0.99697196}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:spine_JNT
+      parentName: BaiDMotionCapture1:hips_JNT
+      position: {x: 0.000000020923501, y: 0.118934, z: 0.0035397601}
+      rotation: {x: 0.0067446027, y: 0.040163383, z: -0.0002864219, w: 0.9991703}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:spine1_JNT
+      parentName: BaiDMotionCapture1:spine_JNT
+      position: {x: 0.0000000130955, y: 0.186411, z: -0.0128445}
+      rotation: {x: 0.006286135, y: 0.033674717, z: -0.0003311372, w: 0.999413}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:spine2_JNT
+      parentName: BaiDMotionCapture1:spine1_JNT
+      position: {x: -0.000037505797, y: 0.128712, z: -0.019482698}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:neck_JNT
+      parentName: BaiDMotionCapture1:spine2_JNT
+      position: {x: -0.0000434758, y: 0.148929, z: -0.0230486}
+      rotation: {x: 0.08375766, y: 0.16986491, z: -0.17068201, w: 0.9669531}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:head_JNT
+      parentName: BaiDMotionCapture1:neck_JNT
+      position: {x: -0.0000232525, y: 0.0913919, z: 0.00064668094}
+      rotation: {x: 0.15670623, y: -0.011057961, z: 0.13971731, w: 0.9776503}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:head_JNT_End
+      parentName: BaiDMotionCapture1:head_JNT
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_shoulder_JNT
+      parentName: BaiDMotionCapture1:spine2_JNT
+      position: {x: -0.0367288, y: 0.1181, z: 0.0071776495}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_arm_JNT
+      parentName: BaiDMotionCapture1:l_shoulder_JNT
+      position: {x: -0.132669, y: -0.011747499, z: -0.0756562}
+      rotation: {x: 0.2803287, y: 0.18934415, z: 0.52216667, w: 0.7828835}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_forearm_JNT
+      parentName: BaiDMotionCapture1:l_arm_JNT
+      position: {x: -0.294417, y: -0.0000753403, z: 0.000067912}
+      rotation: {x: 0, y: 0.2978102, z: -0, w: 0.9546251}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_hand_JNT
+      parentName: BaiDMotionCapture1:l_forearm_JNT
+      position: {x: -0.261765, y: -0.0000669956, z: 0.0000605434}
+      rotation: {x: 0.001273942, y: 0.0058503496, z: 0.0032531668, w: 0.9999768}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_handThumb1_JNT
+      parentName: BaiDMotionCapture1:l_hand_JNT
+      position: {x: -0.0461988, y: -0.021084499, z: 0.0263465}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_handThumb2_JNT
+      parentName: BaiDMotionCapture1:l_handThumb1_JNT
+      position: {x: -0.0267276, y: -0.0118769, z: 0.023551399}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_handThumb3_JNT
+      parentName: BaiDMotionCapture1:l_handThumb2_JNT
+      position: {x: -0.029768901, y: -0.020594498, z: 0.0156058995}
+      rotation: {x: -0.00007964087, y: -0.000012503387, z: 0.15509732, w: 0.9878992}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_handThumb3_JNT_End
+      parentName: BaiDMotionCapture1:l_handThumb3_JNT
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_handIndex_01_JNT
+      parentName: BaiDMotionCapture1:l_hand_JNT
+      position: {x: -0.11701, y: -0.0151976, z: 0.0216506}
+      rotation: {x: 0.07321539, y: 0.01866785, z: 0.2463609, w: 0.9662284}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_handIndex_02_JNT
+      parentName: BaiDMotionCapture1:l_handIndex_01_JNT
+      position: {x: -0.0374603, y: -0.018055, z: -0.0013366599}
+      rotation: {x: 0.089426205, y: 0.029928217, z: 0.31595358, w: 0.9440766}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_handIndex_03_JNT
+      parentName: BaiDMotionCapture1:l_handIndex_02_JNT
+      position: {x: -0.026065199, y: -0.019962199, z: -0.00259067}
+      rotation: {x: 0.06405244, y: 0.013881779, z: 0.21135263, w: 0.9752101}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_handIndex_03_JNT_End
+      parentName: BaiDMotionCapture1:l_handIndex_03_JNT
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_handMiddle1_JNT
+      parentName: BaiDMotionCapture1:l_hand_JNT
+      position: {x: -0.118815, y: -0.0129751, z: -0.0045275}
+      rotation: {x: 0.0543881, y: 0.015877737, z: 0.27978635, w: 0.958389}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_handMiddle2_JNT
+      parentName: BaiDMotionCapture1:l_handMiddle1_JNT
+      position: {x: -0.0411872, y: -0.0177222, z: -0.00415167}
+      rotation: {x: 0.065208144, y: 0.025343046, z: 0.36136398, w: 0.92979664}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_handMiddle3_JNT
+      parentName: BaiDMotionCapture1:l_handMiddle2_JNT
+      position: {x: -0.0287592, y: -0.0205374, z: -0.00220393}
+      rotation: {x: 0.04790504, y: 0.011880943, z: 0.24042423, w: 0.96941227}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_handMiddle3_JNT_End
+      parentName: BaiDMotionCapture1:l_handMiddle3_JNT
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_handRing1_JNT
+      parentName: BaiDMotionCapture1:l_hand_JNT
+      position: {x: -0.111483, y: -0.0188249, z: -0.026309099}
+      rotation: {x: -0.029701885, y: -0.0097850785, z: 0.3127473, w: 0.94932145}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_handRing2_JNT
+      parentName: BaiDMotionCapture1:l_handRing1_JNT
+      position: {x: -0.0387625, y: -0.0172722, z: -0.0068778098}
+      rotation: {x: -0.0348014, y: -0.015303527, z: 0.40224734, w: 0.9147414}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_handRing3_JNT
+      parentName: BaiDMotionCapture1:l_handRing2_JNT
+      position: {x: -0.026662499, y: -0.0203094, z: -0.0038511897}
+      rotation: {x: -0.028344404, y: -0.007925749, z: 0.26917663, w: 0.962641}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_handRing3_JNT_End
+      parentName: BaiDMotionCapture1:l_handRing3_JNT
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_handPinky1_JNT
+      parentName: BaiDMotionCapture1:l_hand_JNT
+      position: {x: -0.0983148, y: -0.025106201, z: -0.043306097}
+      rotation: {x: -0.06411114, y: -0.023845606, z: 0.34779257, w: 0.935073}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_handPinky2_JNT
+      parentName: BaiDMotionCapture1:l_handPinky1_JNT
+      position: {x: -0.0307645, y: -0.0121474005, z: -0.0103341}
+      rotation: {x: -0.07342024, y: -0.036861636, z: 0.44717166, w: 0.89066726}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_handPinky3_JNT
+      parentName: BaiDMotionCapture1:l_handPinky2_JNT
+      position: {x: -0.0236694, y: -0.0151944, z: -0.0069496897}
+      rotation: {x: -0.057387557, y: -0.018039826, z: 0.29934004, w: 0.9522483}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_handPinky3_JNT_End
+      parentName: BaiDMotionCapture1:l_handPinky3_JNT
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_shoulder_JNT
+      parentName: BaiDMotionCapture1:spine2_JNT
+      position: {x: 0.0366718, y: 0.11812, z: 0.0071606897}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_arm_JNT
+      parentName: BaiDMotionCapture1:r_shoulder_JNT
+      position: {x: 0.13263899, y: -0.0116794, z: -0.075717}
+      rotation: {x: 0.22833638, y: -0.27333292, z: -0.5403667, w: 0.76233554}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_forearm_JNT
+      parentName: BaiDMotionCapture1:r_arm_JNT
+      position: {x: 0.29441798, y: 0.000075459495, z: -0.0000678897}
+      rotation: {x: 0.000000036481524, y: -0.6659904, z: -0.0000000141585925, w: 0.7459603}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_hand_JNT
+      parentName: BaiDMotionCapture1:r_forearm_JNT
+      position: {x: 0.261767, y: 0.0000669956, z: -0.0000602975}
+      rotation: {x: -0.0009943764, y: 0.0015473899, z: -0.008232001, w: 0.9999644}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_handThumb1_JNT
+      parentName: BaiDMotionCapture1:r_hand_JNT
+      position: {x: 0.0462228, y: -0.0210621, z: 0.026325298}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_handThumb2_JNT
+      parentName: BaiDMotionCapture1:r_handThumb1_JNT
+      position: {x: 0.026742999, y: -0.011863, z: 0.0235393}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_handThumb3_JNT
+      parentName: BaiDMotionCapture1:r_handThumb2_JNT
+      position: {x: 0.0297866, y: -0.0205792, z: 0.015592099}
+      rotation: {x: 0.00014704079, y: -0.000019661755, z: -0.1325367, w: 0.9911781}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_handThumb3_JNT_End
+      parentName: BaiDMotionCapture1:r_handThumb3_JNT
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_handIndex1_JNT
+      parentName: BaiDMotionCapture1:r_hand_JNT
+      position: {x: 0.117204994, y: -0.0157671, z: 0.0217914}
+      rotation: {x: 0.06140413, y: -0.014524383, z: -0.22972706, w: 0.97120756}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_handIndex2_JNT
+      parentName: BaiDMotionCapture1:r_handIndex1_JNT
+      position: {x: 0.037462298, y: -0.0180547, z: -0.0013373699}
+      rotation: {x: 0.07600129, y: -0.023087306, z: -0.28974175, w: 0.9538032}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_handIndex3_JNT
+      parentName: BaiDMotionCapture1:r_handIndex2_JNT
+      position: {x: 0.026065899, y: -0.019961199, z: -0.00259057}
+      rotation: {x: 0.05347394, y: -0.010761722, z: -0.19700219, w: 0.9788845}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_handIndex3_JNT_End
+      parentName: BaiDMotionCapture1:r_handIndex3_JNT
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_handMiddle1_JNT
+      parentName: BaiDMotionCapture1:r_hand_JNT
+      position: {x: 0.118819, y: -0.012914999, z: -0.0045818}
+      rotation: {x: 0.045934573, y: -0.012208944, z: -0.25658113, w: 0.96535337}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_handMiddle2_JNT
+      parentName: BaiDMotionCapture1:r_handMiddle1_JNT
+      position: {x: 0.0411954, y: -0.017702699, z: -0.00417371}
+      rotation: {x: 0.056079634, y: -0.019521512, z: -0.32817414, w: 0.942749}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_handMiddle3_JNT
+      parentName: BaiDMotionCapture1:r_handMiddle2_JNT
+      position: {x: 0.0287694, y: -0.020522201, z: -0.00222374}
+      rotation: {x: 0.04551452, y: -0.010477837, z: -0.22409602, w: 0.9734473}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_handMiddle3_JNT_End
+      parentName: BaiDMotionCapture1:r_handMiddle3_JNT
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_handRing1_JNT
+      parentName: BaiDMotionCapture1:r_hand_JNT
+      position: {x: 0.11166799, y: -0.0193931, z: -0.026167199}
+      rotation: {x: -0.028445706, y: 0.008527197, z: -0.28702, w: 0.9574642}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_handRing2_JNT
+      parentName: BaiDMotionCapture1:r_handRing1_JNT
+      position: {x: 0.03876, y: -0.0172702, z: -0.00687784}
+      rotation: {x: -0.033918377, y: 0.013325926, z: -0.36542973, w: 0.93012536}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_handRing3_JNT
+      parentName: BaiDMotionCapture1:r_handRing2_JNT
+      position: {x: 0.0266626, y: -0.0203098, z: -0.00385113}
+      rotation: {x: -0.0257904, y: 0.0065728365, z: -0.24687435, w: 0.968682}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_handRing3_JNT_End
+      parentName: BaiDMotionCapture1:r_handRing3_JNT
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_handPinky1_JNT
+      parentName: BaiDMotionCapture1:r_hand_JNT
+      position: {x: 0.098493494, y: -0.025671, z: -0.0431608}
+      rotation: {x: -0.05491757, y: 0.018538116, z: -0.31929412, w: 0.9458814}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_handPinky2_JNT
+      parentName: BaiDMotionCapture1:r_handPinky1_JNT
+      position: {x: 0.030764898, y: -0.0121484995, z: -0.010334199}
+      rotation: {x: -0.06502043, y: 0.029019674, z: -0.40653092, w: 0.91085833}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_handPinky3_JNT
+      parentName: BaiDMotionCapture1:r_handPinky2_JNT
+      position: {x: 0.023668598, y: -0.0151907, z: -0.00695059}
+      rotation: {x: -0.048646174, y: 0.013911056, z: -0.274591, w: 0.9602291}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_handPinky3_JNT_End
+      parentName: BaiDMotionCapture1:r_handPinky3_JNT
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_upleg_JNT
+      parentName: BaiDMotionCapture1:hips_JNT
+      position: {x: -0.0873919, y: -0.00000184774, z: -0.0000000493601}
+      rotation: {x: -0.077698804, y: 0.069776624, z: 0.00027172876, w: 0.99453205}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_leg_JNT
+      parentName: BaiDMotionCapture1:l_upleg_JNT
+      position: {x: -0.050577402, y: -0.40982398, z: -0.0123411}
+      rotation: {x: 0.18465692, y: -4.4907125e-12, z: -2.3901004e-11, w: 0.98280305}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_foot_JNT
+      parentName: BaiDMotionCapture1:l_leg_JNT
+      position: {x: -0.027737899, y: -0.38429, z: -0.060862496}
+      rotation: {x: -0.018670527, y: -0.0042969887, z: -0.020231867, w: 0.99961174}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_toebase_JNT
+      parentName: BaiDMotionCapture1:l_foot_JNT
+      position: {x: -0.00807786, y: -0.130671, z: 0.159427}
+      rotation: {x: 0.00038577514, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:l_toebase_JNT_End
+      parentName: BaiDMotionCapture1:l_toebase_JNT
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_upleg_JNT
+      parentName: BaiDMotionCapture1:hips_JNT
+      position: {x: 0.087391995, y: 0, z: 4.6566098e-10}
+      rotation: {x: -0.13160405, y: 0.41730505, z: 0.052280504, w: 0.8976657}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_leg_JNT
+      parentName: BaiDMotionCapture1:r_upleg_JNT
+      position: {x: 0.050577696, y: -0.409826, z: -0.012341199}
+      rotation: {x: 0.3002584, y: 2.327119e-11, z: 7.392769e-11, w: 0.9538579}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_foot_JNT
+      parentName: BaiDMotionCapture1:r_leg_JNT
+      position: {x: 0.027737997, y: -0.384291, z: -0.060862698}
+      rotation: {x: 0.07094164, y: 0.015074377, z: 0.027107242, w: 0.99699813}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_toebase_JNT
+      parentName: BaiDMotionCapture1:r_foot_JNT
+      position: {x: 0.00807786, y: -0.130671, z: 0.159426}
+      rotation: {x: 0.0038528575, y: -0.0010959274, z: 0.0000042224856, w: 0.999992}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BaiDMotionCapture1:r_toebase_JNT_End
+      parentName: BaiDMotionCapture1:r_toebase_JNT
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
