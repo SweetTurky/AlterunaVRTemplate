@@ -1,5 +1,7 @@
 using System.Linq;
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class EarPongGameManager : MonoBehaviour
 {
@@ -9,7 +11,7 @@ public class EarPongGameManager : MonoBehaviour
     public int player2CupsDestroyed = 0;
 
     public AudioClip victorySound;
-    public ParticleSystem winParticle;
+    public GameObject winParticle;
 
     //public Transform[] player1CupOriginalPositions; // Assign in Inspector
     //public Transform[] player2CupOriginalPositions; // Assign in Inspector
@@ -61,20 +63,20 @@ public class EarPongGameManager : MonoBehaviour
         }
     }
 
-    public void ResetPlayerCupsOnClick()
+    /*public void ResetPlayerCupsOnClick()
     {
         ResetPlayerCups(player1Cups); // Assuming player1Cups is an array of Transform
         ResetPlayerCups(player2Cups); // Assuming player2Cups is an array of Transform
-    }
+    }*/
 
-    public void ResetPlayerCups(Transform[] cups)
+    /*public void ResetPlayerCups(Transform[] cups)
     {
         foreach (Transform cup in cups)
         {
             cup.gameObject.SetActive(true);
             ResetGame();
         }
-    }
+    }*/
 
     private void PlayVictoryEffects()
     {
@@ -83,26 +85,26 @@ public class EarPongGameManager : MonoBehaviour
         // Instantiate the particle effect
         if (winParticle != null)
         {
-            winParticle.Play();
+            winParticle.SetActive(true);
         }
 
-        if(player1CupsDestroyed == 6)
+        if(player1CupsDestroyed >= 6)
         {
             p2Wins.SetActive(true);
         }
 
-        if(player2CupsDestroyed == 6)
+        if(player2CupsDestroyed >= 6)
         { 
             p1Wins.SetActive(true);       
         }
 
-        resetObject.SetActive(true);
+        //resetObject.SetActive(true);
     }
 
-    private void ResetGame()
+    /*private void ResetGame()
     {
         player1CupsDestroyed = 0;
         player2CupsDestroyed = 0;
         // Add any additional reset logic here
-    }
+    }*/
 }
