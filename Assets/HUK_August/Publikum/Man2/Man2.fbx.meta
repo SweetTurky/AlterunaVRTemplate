@@ -3,7 +3,37 @@ guid: de075a4dcca05b34095c269d0f1ae6cb
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hair_05
+    second: {fileID: 2100000, guid: d358fe92f88abba42a189d6129c2bb84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: high-poly
+    second: {fileID: 2100000, guid: 4b85a6035d4370b48ad578ec2043d919, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ladieshoodiedown1
+    second: {fileID: 2100000, guid: b3a484fcb8acf1045a9b11bec0452618, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_trousers_02
+    second: {fileID: 2100000, guid: 63de717fcfd574c47b81ec58d8415f32, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: man2
+    second: {fileID: 2100000, guid: d40ce7ca32c1033448438f436c9d0f5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shoes02
+    second: {fileID: 2100000, guid: 492db6c96c3dc444183550aad7e893bf, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
