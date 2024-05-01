@@ -6,6 +6,11 @@ TagManager:
   tags:
   - AnchorPoint
   - Magnus
+  - Ball
+  - Player2Cup
+  - FxTemporaire
+  - Player1Cup
+  - Basketball
   layers:
   - Default
   - TransparentFX
