@@ -1,58 +1,64 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Alteruna;
 
 public class MenuManagerS1 : MonoBehaviour
 {
-
     public string sceneToLoad;
     public Multiplayer multiplayerManager;
 
-    // Audio clips to play during the game intro
-    public AudioClip[] introAudioClips;
-
-    // Duration of the intro in seconds
-    public float outroDuration = 30f;
-
-    // Reference to the fade manager
-    //public FadeManager fadeManager;
+    public Text countdownText; // Reference to the Text component on the canvas
+    public Text textToDisable;
+    private float countdownTimer = 10f; // Timer for the countdown
+    private bool allPlayersConnected = false;
 
     // Start is called before the first frame update
-    
-    private void Start() {
-        GameIntro();
-    }
-    public void GameIntro()
-    {
-        // Start playing the audio clips
-        StartCoroutine(PlayIntroAudio());
 
-        // Wait for the intro duration
-        StartCoroutine(Outro());
-    }
-
-    IEnumerator PlayIntroAudio()
+    private void Update()
     {
-        // Play each audio clip in the intro
-        foreach (AudioClip clip in introAudioClips)
+        // Check if both Player1 and Player2 are connected
+        if (!allPlayersConnected && IsPlayerConnected("Player1") && IsPlayerConnected("Player2"))
         {
-            AudioSource.PlayClipAtPoint(clip, transform.position);
-            yield return new WaitForSeconds(clip.length);
+            allPlayersConnected = true;
+            StartCoroutine(AllPlayersConnectedCoroutine());
         }
+
+        // Update the countdown text
+        countdownText.text = "Game starting in: " + Mathf.Round(countdownTimer).ToString();
     }
 
-    IEnumerator Outro()
+    private bool IsPlayerConnected(string tag)
     {
-        // Wait for the intro duration
-        yield return new WaitForSeconds(outroDuration);
+        // Find all game objects with the given tag
+        GameObject[] players = GameObject.FindGameObjectsWithTag(tag);
 
-        // Fade out all objects with the "Player" tag
-        //FadeOutPlayers();
+        // Return true if at least one object is found with the given tag
+        return players.Length > 0;
+    }
 
-        //Search for the XR Interaction Manager, and make sure it is added to DontDestroyOnLoad
-         GameObject obj = GameObject.Find("XRInteractionManager");
+    private IEnumerator AllPlayersConnectedCoroutine()
+    {
+        // Coroutine logic here
+        Debug.Log("Both players connected!");
+        textToDisable.enabled = false;
+
+        // Countdown loop
+        while (countdownTimer > 0)
+        {
+            yield return null; // Wait for the next frame
+            countdownTimer -= Time.deltaTime; // Update the timer based on frame time
+        }
+
+        // When the countdown is finished, load the next scene
+        LoadNextScene();
+    }
+
+    void LoadNextScene()
+    {
+        GameObject obj = GameObject.Find("XRInteractionManager");
         if (obj != null)
         {
             Multiplayer.DontDestroyOnLoad(obj);
@@ -62,28 +68,6 @@ public class MenuManagerS1 : MonoBehaviour
         {
             Debug.LogError("XR Interaction Manager not found!");
         }
-
-        LoadNextScene();
-    }
-
-    /*void FadeOutPlayers()
-    {
-        // Find all objects with the "Player" tag
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-
-        // Call the fade to black function on each player object
-        foreach (GameObject player in players)
-        {
-            FadeToBlack fadeToBlack = player.GetComponent<FadeToBlack>();
-            if (fadeToBlack != null)
-            {
-                fadeToBlack.StartFade(); // Assuming there's a function to start fading to black
-            }
-        }
-    }*/
-
-    void LoadNextScene()
-    {
         // Load the next scene (you can specify the scene name or index here)
         multiplayerManager.LoadScene(sceneToLoad);
     }
