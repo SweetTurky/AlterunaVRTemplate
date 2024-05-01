@@ -3,7 +3,42 @@ guid: dd41e91ff4b2b1b4ea4d8e0cfb80221b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elvs_keylth_hair_m1
+    second: {fileID: 2100000, guid: de8b7c6038f3f114ab65cdea6b4d98e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyebrow001
+    second: {fileID: 2100000, guid: 07ec29b0ce67bae43b53076f1e179991, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: high-poly
+    second: {fileID: 2100000, guid: 58702d26cf8d63d4581c7f448bfdec83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: male-classic-jeans
+    second: {fileID: 2100000, guid: adae7a42c461b0d4587285961737fb44, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rolled_neck_blouse
+    second: {fileID: 2100000, guid: 778ec45fbee501545a3bdd2fe9a8874d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shoes02
+    second: {fileID: 2100000, guid: b5d2c812dd8d5294fa45cf919bd775e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: woman2
+    second: {fileID: 2100000, guid: 760d068f1edbe144898de079554737b5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,37 @@ guid: af723be143843f14dbb09dc7e5d5ce6f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyebrow009
+    second: {fileID: 2100000, guid: d5e1675bd556ecc4abf962ea9aba69ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: high-poly
+    second: {fileID: 2100000, guid: bc44d492037876b4fa6c6c350b5190d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: male_casualsuit03
+    second: {fileID: 2100000, guid: b7850193fd8bb8445aecaed884350a6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: man1
+    second: {fileID: 2100000, guid: 185f2cdb0709c744188b2376541e1e52, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shoes03
+    second: {fileID: 2100000, guid: 39484f927857b3a43be9f41a1ed38d28, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: short02
+    second: {fileID: 2100000, guid: 6e17b43c8e4f65f4ebeac6ded8c2e02b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
