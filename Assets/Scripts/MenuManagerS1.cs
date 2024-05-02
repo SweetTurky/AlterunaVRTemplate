@@ -8,26 +8,33 @@ using Alteruna;
 public class MenuManagerS1 : MonoBehaviour
 {
     public string sceneToLoad;
-    public Multiplayer multiplayerManager;
-
+    public Multiplayer Instance;
     public Text countdownText; // Reference to the Text component on the canvas
     public Text textToDisable;
     private float countdownTimer = 10f; // Timer for the countdown
     private bool allPlayersConnected = false;
 
     // Start is called before the first frame update
-
+    private void Start() 
+    {
+        countdownText.enabled = false;
+    }
     private void Update()
     {
         // Check if both Player1 and Player2 are connected
-        if (!allPlayersConnected && IsPlayerConnected("Player1") && IsPlayerConnected("Player2"))
+        if (!allPlayersConnected && IsPlayerConnected("Player1")/* && IsPlayerConnected("Player2")*/)
         {
             allPlayersConnected = true;
+            countdownText.enabled = true;
             StartCoroutine(AllPlayersConnectedCoroutine());
+            // Update the countdown text
+            
         }
-
-        // Update the countdown text
-        countdownText.text = "Game starting in: " + Mathf.Round(countdownTimer).ToString();
+        if (countdownText.enabled == true) 
+        {
+            countdownText.text = "Game starting in: " + Mathf.Round(countdownTimer).ToString();
+        }
+        
     }
 
     private bool IsPlayerConnected(string tag)
@@ -69,6 +76,6 @@ public class MenuManagerS1 : MonoBehaviour
             Debug.LogError("XR Interaction Manager not found!");
         }
         // Load the next scene (you can specify the scene name or index here)
-        multiplayerManager.LoadScene(sceneToLoad);
+        Multiplayer.Instance.LoadScene(sceneToLoad);
     }
 }

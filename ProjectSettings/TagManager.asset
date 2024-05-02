@@ -10,9 +10,11 @@ TagManager:
   - Player2Cup
   - FxTemporaire
   - Player1Cup
-  - Basketball
   - Player1
   - Player2
+  - Player1Basketball
+  - Player2Basketball
+  - MultiplayerManagerTag
   layers:
   - Default
   - TransparentFX
