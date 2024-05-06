@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Peter/PeterXRInteraction.unity
-    guid: f4005e3a22a94814ebb7678720cdebf7
-  - enabled: 1
     path: Assets/Scenes/LobbyMenu.unity
     guid: 4fa8b2a293b5f3b4aa4aaaa9fecc73d8
   - enabled: 1
