@@ -22,7 +22,7 @@ public class MenuManagerS1 : MonoBehaviour
     private void Update()
     {
         // Check if both Player1 and Player2 are connected
-        if (!allPlayersConnected && IsPlayerConnected("Player1")/* && IsPlayerConnected("Player2")*/)
+        if (!allPlayersConnected && IsPlayerConnected("Player1") && IsPlayerConnected("Player2"))
         {
             allPlayersConnected = true;
             countdownText.enabled = true;
