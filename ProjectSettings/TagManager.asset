@@ -4,18 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - AnchorPoint
-  - Magnus
-  - Ball
-  - Player2Cup
-  - FxTemporaire
-  - Player1Cup
-  - Player1
-  - Player2
+  - Basketball
   - Player1Basketball
   - Player2Basketball
-  - MultiplayerManagerTag
-  - Basketball
+  - Player1
+  - Player2
   layers:
   - Default
   - TransparentFX
@@ -23,7 +16,7 @@ TagManager:
   - 
   - Water
   - UI
-  - PlayerSelf
+  - 
   - 
   - 
   - 

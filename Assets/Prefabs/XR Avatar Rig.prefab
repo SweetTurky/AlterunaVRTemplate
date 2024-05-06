@@ -1289,7 +1289,6 @@ GameObject:
   - component: {fileID: 3703451264651002451}
   - component: {fileID: 5468240032253811164}
   - component: {fileID: 4943043731020404431}
-  - component: {fileID: 6333054002909640001}
   m_Layer: 6
   m_Name: XR Avatar Rig
   m_TagString: Untagged
@@ -1507,21 +1506,6 @@ MonoBehaviour:
   OnUnpossessed:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &6333054002909640001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7256836740291858884}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6be56fb3e33517a4c95e27025b5526f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  head: {fileID: 3356884870912977765}
-  camera: {fileID: 9083259426149419495}
-  playerSelfLayer: 6
 --- !u!1 &8067100400585784905
 GameObject:
   m_ObjectHideFlags: 0

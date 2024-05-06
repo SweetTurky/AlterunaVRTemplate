@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 1971675}
   - component: {fileID: 1971674}
   - component: {fileID: 1971673}
+  - component: {fileID: 1971676}
   m_Layer: 0
   m_Name: nodes_0_meshes_0-1
   m_TagString: Untagged
@@ -269,6 +270,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1971671}
   m_Mesh: {fileID: 7381249404482147299, guid: cab9df25d3401244a9987c0b13e196c8, type: 3}
+--- !u!114 &1971676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1312809854, guid: 0ae8d181602a00248a82f64a684a1c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Multiplayer: {fileID: 0}
+  _uidString: d633831f-0b23-4cf4-a574-b689d8a3521c
+  BucketBehaviors:
+  - Name: Min
+    NetLOD: 0
+    Frequency: -1
+  - Name: Low
+    NetLOD: 1
+    Frequency: 0
+  - Name: Mid
+    NetLOD: 2
+    Frequency: 0
+  - Name: High
+    NetLOD: 3
+    Frequency: 0
+  - Name: Max
+    NetLOD: 4
+    Frequency: 120
+  UseGlobalPosition: 0
+  refreshRate: 10
+  SyncedAxes: 511
 --- !u!1 &2327765
 GameObject:
   m_ObjectHideFlags: 0
@@ -2410,6 +2444,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 333430390}
+    - targetCorrespondingSourceObject: {fileID: 3715641676247019973, guid: 629b385b7abaa70458a15d5782e74001,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 333430391}
   m_SourcePrefab: {fileID: 100100000, guid: 629b385b7abaa70458a15d5782e74001, type: 3}
 --- !u!4 &333430388 stripped
 Transform:
@@ -2439,6 +2477,39 @@ MonoBehaviour:
   basketballManager: {fileID: 628722958}
   goalCooldown: 2
   isScored: 0
+--- !u!114 &333430391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333430389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1312809854, guid: 0ae8d181602a00248a82f64a684a1c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Multiplayer: {fileID: 0}
+  _uidString: 5f6d8a3b-e980-49a0-8f88-21a9aab49b92
+  BucketBehaviors:
+  - Name: Min
+    NetLOD: 0
+    Frequency: -1
+  - Name: Low
+    NetLOD: 1
+    Frequency: 0
+  - Name: Mid
+    NetLOD: 2
+    Frequency: 0
+  - Name: High
+    NetLOD: 3
+    Frequency: 0
+  - Name: Max
+    NetLOD: 4
+    Frequency: 120
+  UseGlobalPosition: 0
+  refreshRate: 120
+  SyncedAxes: 511
 --- !u!1 &374314444
 GameObject:
   m_ObjectHideFlags: 0
@@ -3564,7 +3635,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &580877174
 Transform:
   m_ObjectHideFlags: 0
@@ -3587,7 +3658,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580877173}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5be63e39cdeedf64499bab02acb0fb4f, type: 3}
   m_Name: 
@@ -4359,7 +4430,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.4, y: 0.1, z: 0.4}
-  m_Center: {x: 12.26, y: 0, z: -0.72}
+  m_Center: {x: 7.4, y: 0, z: -0.72}
 --- !u!1001 &646428443
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5270,11 +5341,11 @@ Transform:
   m_GameObject: {fileID: 752712846}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.99, y: 0, z: 17.37}
+  m_LocalPosition: {x: 9, y: 0, z: -5.09}
   m_LocalScale: {x: 20, y: 0.25, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2077779457}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &757323465
 GameObject:
@@ -6036,6 +6107,7 @@ GameObject:
   - component: {fileID: 916878800}
   - component: {fileID: 916878799}
   - component: {fileID: 916878798}
+  - component: {fileID: 916878801}
   m_Layer: 0
   m_Name: nodes_0_meshes_0-1
   m_TagString: Untagged
@@ -6170,6 +6242,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 916878796}
   m_Mesh: {fileID: 7381249404482147299, guid: cab9df25d3401244a9987c0b13e196c8, type: 3}
+--- !u!114 &916878801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916878796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1312809854, guid: 0ae8d181602a00248a82f64a684a1c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Multiplayer: {fileID: 0}
+  _uidString: f5bea370-4c02-4702-a546-c1688409b343
+  BucketBehaviors:
+  - Name: Min
+    NetLOD: 0
+    Frequency: -1
+  - Name: Low
+    NetLOD: 1
+    Frequency: 0
+  - Name: Mid
+    NetLOD: 2
+    Frequency: 0
+  - Name: High
+    NetLOD: 3
+    Frequency: 0
+  - Name: Max
+    NetLOD: 4
+    Frequency: 120
+  UseGlobalPosition: 0
+  refreshRate: 10
+  SyncedAxes: 511
 --- !u!1 &935116625
 GameObject:
   m_ObjectHideFlags: 0
@@ -8668,6 +8773,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1473673028}
+    - targetCorrespondingSourceObject: {fileID: 3715641676247019973, guid: 629b385b7abaa70458a15d5782e74001,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1473673029}
   m_SourcePrefab: {fileID: 100100000, guid: 629b385b7abaa70458a15d5782e74001, type: 3}
 --- !u!4 &1473673026 stripped
 Transform:
@@ -8697,6 +8806,39 @@ MonoBehaviour:
   basketballManager: {fileID: 628722958}
   goalCooldown: 2
   isScored: 0
+--- !u!114 &1473673029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473673027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1312809854, guid: 0ae8d181602a00248a82f64a684a1c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Multiplayer: {fileID: 0}
+  _uidString: 5711eec5-6ce8-4130-a491-c6a7c27d6719
+  BucketBehaviors:
+  - Name: Min
+    NetLOD: 0
+    Frequency: -1
+  - Name: Low
+    NetLOD: 1
+    Frequency: 0
+  - Name: Mid
+    NetLOD: 2
+    Frequency: 0
+  - Name: High
+    NetLOD: 3
+    Frequency: 0
+  - Name: Max
+    NetLOD: 4
+    Frequency: 120
+  UseGlobalPosition: 0
+  refreshRate: 120
+  SyncedAxes: 511
 --- !u!1 &1484916062
 GameObject:
   m_ObjectHideFlags: 0
@@ -8911,6 +9053,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1492464309}
+    - targetCorrespondingSourceObject: {fileID: 3715641676247019973, guid: 629b385b7abaa70458a15d5782e74001,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1492464310}
   m_SourcePrefab: {fileID: 100100000, guid: 629b385b7abaa70458a15d5782e74001, type: 3}
 --- !u!4 &1492464307 stripped
 Transform:
@@ -8940,6 +9086,39 @@ MonoBehaviour:
   basketballManager: {fileID: 628722958}
   goalCooldown: 2
   isScored: 0
+--- !u!114 &1492464310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492464308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1312809854, guid: 0ae8d181602a00248a82f64a684a1c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Multiplayer: {fileID: 0}
+  _uidString: f8367b66-69e9-495a-bc4c-6d89000823d1
+  BucketBehaviors:
+  - Name: Min
+    NetLOD: 0
+    Frequency: -1
+  - Name: Low
+    NetLOD: 1
+    Frequency: 0
+  - Name: Mid
+    NetLOD: 2
+    Frequency: 0
+  - Name: High
+    NetLOD: 3
+    Frequency: 0
+  - Name: Max
+    NetLOD: 4
+    Frequency: 120
+  UseGlobalPosition: 0
+  refreshRate: 120
+  SyncedAxes: 511
 --- !u!1 &1497825039
 GameObject:
   m_ObjectHideFlags: 0
@@ -9780,6 +9959,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1611087376}
+    - targetCorrespondingSourceObject: {fileID: 3715641676247019973, guid: 629b385b7abaa70458a15d5782e74001,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1611087377}
   m_SourcePrefab: {fileID: 100100000, guid: 629b385b7abaa70458a15d5782e74001, type: 3}
 --- !u!4 &1611087374 stripped
 Transform:
@@ -9809,6 +9992,39 @@ MonoBehaviour:
   basketballManager: {fileID: 628722958}
   goalCooldown: 2
   isScored: 0
+--- !u!114 &1611087377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611087375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1312809854, guid: 0ae8d181602a00248a82f64a684a1c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Multiplayer: {fileID: 0}
+  _uidString: b44b13db-9dcd-4b57-bf3a-8be552172e10
+  BucketBehaviors:
+  - Name: Min
+    NetLOD: 0
+    Frequency: -1
+  - Name: Low
+    NetLOD: 1
+    Frequency: 0
+  - Name: Mid
+    NetLOD: 2
+    Frequency: 0
+  - Name: High
+    NetLOD: 3
+    Frequency: 0
+  - Name: Max
+    NetLOD: 4
+    Frequency: 120
+  UseGlobalPosition: 0
+  refreshRate: 120
+  SyncedAxes: 511
 --- !u!1 &1632652482
 GameObject:
   m_ObjectHideFlags: 0
@@ -9942,11 +10158,11 @@ Transform:
   m_GameObject: {fileID: 1658575336}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9, y: 0, z: 17.39}
+  m_LocalPosition: {x: 9, y: 0, z: -12.52}
   m_LocalScale: {x: 20, y: 0.25, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1565887663878291441}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1673947979
 PrefabInstance:
@@ -10044,6 +10260,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1673947982}
+    - targetCorrespondingSourceObject: {fileID: 3715641676247019973, guid: 629b385b7abaa70458a15d5782e74001,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1673947983}
   m_SourcePrefab: {fileID: 100100000, guid: 629b385b7abaa70458a15d5782e74001, type: 3}
 --- !u!4 &1673947980 stripped
 Transform:
@@ -10073,6 +10293,39 @@ MonoBehaviour:
   basketballManager: {fileID: 628722958}
   goalCooldown: 2
   isScored: 0
+--- !u!114 &1673947983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673947981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1312809854, guid: 0ae8d181602a00248a82f64a684a1c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Multiplayer: {fileID: 0}
+  _uidString: 67c0f9d5-de2d-41b4-b413-3d265189afbf
+  BucketBehaviors:
+  - Name: Min
+    NetLOD: 0
+    Frequency: -1
+  - Name: Low
+    NetLOD: 1
+    Frequency: 0
+  - Name: Mid
+    NetLOD: 2
+    Frequency: 0
+  - Name: High
+    NetLOD: 3
+    Frequency: 0
+  - Name: Max
+    NetLOD: 4
+    Frequency: 120
+  UseGlobalPosition: 0
+  refreshRate: 120
+  SyncedAxes: 511
 --- !u!1 &1680340409
 GameObject:
   m_ObjectHideFlags: 0
@@ -10433,6 +10686,7 @@ GameObject:
   - component: {fileID: 1723255009}
   - component: {fileID: 1723255008}
   - component: {fileID: 1723255007}
+  - component: {fileID: 1723255010}
   m_Layer: 0
   m_Name: nodes_0_meshes_0-1
   m_TagString: Untagged
@@ -10567,6 +10821,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723255005}
   m_Mesh: {fileID: 7381249404482147299, guid: cab9df25d3401244a9987c0b13e196c8, type: 3}
+--- !u!114 &1723255010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723255005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1312809854, guid: 0ae8d181602a00248a82f64a684a1c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Multiplayer: {fileID: 0}
+  _uidString: 795249bc-b5c7-4915-b188-176c2fe02842
+  BucketBehaviors:
+  - Name: Min
+    NetLOD: 0
+    Frequency: -1
+  - Name: Low
+    NetLOD: 1
+    Frequency: 0
+  - Name: Mid
+    NetLOD: 2
+    Frequency: 0
+  - Name: High
+    NetLOD: 3
+    Frequency: 0
+  - Name: Max
+    NetLOD: 4
+    Frequency: 120
+  UseGlobalPosition: 0
+  refreshRate: 10
+  SyncedAxes: 511
 --- !u!1 &1757507909
 GameObject:
   m_ObjectHideFlags: 0
@@ -12649,6 +12936,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1992582296}
+    - targetCorrespondingSourceObject: {fileID: 3715641676247019973, guid: 629b385b7abaa70458a15d5782e74001,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1992582297}
   m_SourcePrefab: {fileID: 100100000, guid: 629b385b7abaa70458a15d5782e74001, type: 3}
 --- !u!4 &1992582294 stripped
 Transform:
@@ -12678,6 +12969,39 @@ MonoBehaviour:
   basketballManager: {fileID: 628722958}
   goalCooldown: 2
   isScored: 0
+--- !u!114 &1992582297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992582295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1312809854, guid: 0ae8d181602a00248a82f64a684a1c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Multiplayer: {fileID: 0}
+  _uidString: 528f4905-61a2-4bf8-a2e8-c0a3fd5ea6e3
+  BucketBehaviors:
+  - Name: Min
+    NetLOD: 0
+    Frequency: -1
+  - Name: Low
+    NetLOD: 1
+    Frequency: 0
+  - Name: Mid
+    NetLOD: 2
+    Frequency: 0
+  - Name: High
+    NetLOD: 3
+    Frequency: 0
+  - Name: Max
+    NetLOD: 4
+    Frequency: 120
+  UseGlobalPosition: 0
+  refreshRate: 120
+  SyncedAxes: 511
 --- !u!1 &1998520982
 GameObject:
   m_ObjectHideFlags: 0
@@ -12915,7 +13239,7 @@ Transform:
   m_GameObject: {fileID: 2077779456}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -17.66}
+  m_LocalPosition: {x: 0, y: 0, z: -22.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12924,7 +13248,6 @@ Transform:
   - {fileID: 1764670120}
   - {fileID: 586274849}
   - {fileID: 583447323}
-  - {fileID: 752712847}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2081543789
@@ -13479,6 +13802,7 @@ GameObject:
   - component: {fileID: 8905412345407725638}
   - component: {fileID: 4408026371878273751}
   - component: {fileID: 8905412345407725639}
+  - component: {fileID: 8905412345407725640}
   m_Layer: 0
   m_Name: nodes_0_meshes_0-1
   m_TagString: Untagged
@@ -13520,7 +13844,6 @@ Transform:
   - {fileID: 1365900113}
   - {fileID: 1796915302}
   - {fileID: 2991896911459612469}
-  - {fileID: 1658575337}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1644405815358242504
@@ -14099,6 +14422,7 @@ GameObject:
   - component: {fileID: 5793898072048114777}
   - component: {fileID: 1644405815358242504}
   - component: {fileID: 5793898072048114778}
+  - component: {fileID: 5793898072048114779}
   m_Layer: 0
   m_Name: nodes_0_meshes_0-1
   m_TagString: Untagged
@@ -14248,6 +14572,39 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &5793898072048114779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4493150608921431683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1312809854, guid: 0ae8d181602a00248a82f64a684a1c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Multiplayer: {fileID: 0}
+  _uidString: 7c952067-614a-46d6-a16f-551f74e18b09
+  BucketBehaviors:
+  - Name: Min
+    NetLOD: 0
+    Frequency: -1
+  - Name: Low
+    NetLOD: 1
+    Frequency: 0
+  - Name: Mid
+    NetLOD: 2
+    Frequency: 0
+  - Name: High
+    NetLOD: 3
+    Frequency: 0
+  - Name: Max
+    NetLOD: 4
+    Frequency: 120
+  UseGlobalPosition: 0
+  refreshRate: 10
+  SyncedAxes: 511
 --- !u!1 &5840425888669573256
 GameObject:
   m_ObjectHideFlags: 0
@@ -14548,6 +14905,7 @@ GameObject:
   - component: {fileID: 2105314588060338585}
   - component: {fileID: 6597071483232905992}
   - component: {fileID: 8288166219352169284}
+  - component: {fileID: 8288166219352169285}
   m_Layer: 0
   m_Name: nodes_0_meshes_0-1
   m_TagString: Untagged
@@ -14617,6 +14975,39 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &8288166219352169285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8288166219352169283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1312809854, guid: 0ae8d181602a00248a82f64a684a1c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Multiplayer: {fileID: 0}
+  _uidString: 7b01fef3-6352-47e7-a76e-7e59cb699a36
+  BucketBehaviors:
+  - Name: Min
+    NetLOD: 0
+    Frequency: -1
+  - Name: Low
+    NetLOD: 1
+    Frequency: 0
+  - Name: Mid
+    NetLOD: 2
+    Frequency: 0
+  - Name: High
+    NetLOD: 3
+    Frequency: 0
+  - Name: Max
+    NetLOD: 4
+    Frequency: 120
+  UseGlobalPosition: 0
+  refreshRate: 10
+  SyncedAxes: 511
 --- !u!33 &8376904113438574306
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14718,6 +15109,39 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &8905412345407725640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559527971059921564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1312809854, guid: 0ae8d181602a00248a82f64a684a1c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Multiplayer: {fileID: 0}
+  _uidString: 892d6054-99c9-46aa-a844-b8d236222e32
+  BucketBehaviors:
+  - Name: Min
+    NetLOD: 0
+    Frequency: -1
+  - Name: Low
+    NetLOD: 1
+    Frequency: 0
+  - Name: Mid
+    NetLOD: 2
+    Frequency: 0
+  - Name: High
+    NetLOD: 3
+    Frequency: 0
+  - Name: Max
+    NetLOD: 4
+    Frequency: 120
+  UseGlobalPosition: 0
+  refreshRate: 10
+  SyncedAxes: 511
 --- !u!65 &8918898903492024018
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14890,3 +15314,5 @@ SceneRoots:
   - {fileID: 4134505310327263383}
   - {fileID: 599916905}
   - {fileID: 580877174}
+  - {fileID: 752712847}
+  - {fileID: 1658575337}

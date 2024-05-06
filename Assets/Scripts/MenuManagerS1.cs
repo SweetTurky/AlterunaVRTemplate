@@ -8,11 +8,12 @@ using Alteruna;
 public class MenuManagerS1 : MonoBehaviour
 {
     public string sceneToLoad;
-    public Multiplayer Instance;
+    public Multiplayer instance;
     public Text countdownText; // Reference to the Text component on the canvas
     public Text textToDisable;
     private float countdownTimer = 10f; // Timer for the countdown
-    private bool allPlayersConnected = false;
+    //private bool allPlayersConnected = false;
+    private int playercount = 0;
 
     // Start is called before the first frame update
     private void Start() 
@@ -22,14 +23,14 @@ public class MenuManagerS1 : MonoBehaviour
     private void Update()
     {
         // Check if both Player1 and Player2 are connected
-        if (!allPlayersConnected && IsPlayerConnected("Player1") && IsPlayerConnected("Player2"))
+        /*if (!allPlayersConnected && IsPlayerConnected("Player1") && IsPlayerConnected("Player2"))
         {
             allPlayersConnected = true;
             countdownText.enabled = true;
             StartCoroutine(AllPlayersConnectedCoroutine());
             // Update the countdown text
             
-        }
+        }*/
         if (countdownText.enabled == true) 
         {
             countdownText.text = "Game starting in: " + Mathf.Round(countdownTimer).ToString();
@@ -37,13 +38,16 @@ public class MenuManagerS1 : MonoBehaviour
         
     }
 
-    private bool IsPlayerConnected(string tag)
+    public void IsPlayerConnected()
     {
-        // Find all game objects with the given tag
-        GameObject[] players = GameObject.FindGameObjectsWithTag(tag);
-
-        // Return true if at least one object is found with the given tag
-        return players.Length > 0;
+        Debug.Log("1 player connected");
+        playercount++;
+        if (playercount == 2)
+        {
+            Debug.Log("2 players connected, starting game...");
+            StartCoroutine("AllPlayersConnectedCoroutine");
+            countdownText.enabled = true;
+        }
     }
 
     private IEnumerator AllPlayersConnectedCoroutine()
