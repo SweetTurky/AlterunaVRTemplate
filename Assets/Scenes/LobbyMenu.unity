@@ -594,7 +594,7 @@ PrefabInstance:
     - target: {fileID: 5493592328094363582, guid: 6b7c9e064f10a0e4aa68c2d994cc8a4c,
         type: 3}
       propertyPath: refreshRate
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 7689379589735883819, guid: 6b7c9e064f10a0e4aa68c2d994cc8a4c,
         type: 3}
@@ -1328,7 +1328,7 @@ MonoBehaviour:
   sceneToLoad: Tutorial
   countdownText: {fileID: 1433511053}
   textToDisable: {fileID: 8908833148128773134}
-  debugMode: 0
+  debugMode: 1
 --- !u!4 &542324654
 Transform:
   m_ObjectHideFlags: 0
