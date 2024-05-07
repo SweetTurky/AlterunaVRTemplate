@@ -8,12 +8,14 @@ using Alteruna;
 public class MenuManagerS1 : MonoBehaviour
 {
     public string sceneToLoad;
-    public Multiplayer instance;
+    //public Multiplayer instance;
     public Text countdownText; // Reference to the Text component on the canvas
     public Text textToDisable;
     private float countdownTimer = 10f; // Timer for the countdown
     //private bool allPlayersConnected = false;
     private int playercount = 0;
+
+    public bool debugMode = false;
 
     // Start is called before the first frame update
     private void Start() 
@@ -42,9 +44,15 @@ public class MenuManagerS1 : MonoBehaviour
     {
         Debug.Log("1 player connected");
         playercount++;
-        if (playercount == 2)
+        if (!debugMode && playercount == 2)
         {
             Debug.Log("2 players connected, starting game...");
+            StartCoroutine("AllPlayersConnectedCoroutine");
+            countdownText.enabled = true;
+        }
+        else if (debugMode && playercount == 1)
+        {
+            Debug.Log("1 players connected, starting game in debug mode...");
             StartCoroutine("AllPlayersConnectedCoroutine");
             countdownText.enabled = true;
         }
