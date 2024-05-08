@@ -70,5 +70,5 @@ MonoBehaviour:
     - stateName: focused
       animationStateStartValue: {r: 0.41176474, g: 0.5176471, b: 0.69411767, a: 1}
       animationStateEndValue: {r: 0.41176474, g: 0.5176471, b: 0.69411767, a: 1}
-    m_ColorBlendMode: 0
+    m_ColorBlendMode: 1
     m_BlendAmount: 1

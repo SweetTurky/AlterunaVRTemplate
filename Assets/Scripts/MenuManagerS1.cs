@@ -1,58 +1,83 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Alteruna;
 
 public class MenuManagerS1 : MonoBehaviour
 {
-
     public string sceneToLoad;
-    public Multiplayer multiplayerManager;
+    //public Multiplayer instance;
+    public Text countdownText; // Reference to the Text component on the canvas
+    public Text textToDisable;
+    private float countdownTimer = 10f; // Timer for the countdown
+    //private bool allPlayersConnected = false;
+    private int playercount = 0;
 
-    // Audio clips to play during the game intro
-    public AudioClip[] introAudioClips;
-
-    // Duration of the intro in seconds
-    public float outroDuration = 30f;
-
-    // Reference to the fade manager
-    //public FadeManager fadeManager;
+    public bool debugMode = false;
 
     // Start is called before the first frame update
-    
-    private void Start() {
-        GameIntro();
-    }
-    public void GameIntro()
+    private void Start() 
     {
-        // Start playing the audio clips
-        StartCoroutine(PlayIntroAudio());
-
-        // Wait for the intro duration
-        StartCoroutine(Outro());
+        countdownText.enabled = false;
     }
-
-    IEnumerator PlayIntroAudio()
+    private void Update()
     {
-        // Play each audio clip in the intro
-        foreach (AudioClip clip in introAudioClips)
+        // Check if both Player1 and Player2 are connected
+        /*if (!allPlayersConnected && IsPlayerConnected("Player1") && IsPlayerConnected("Player2"))
         {
-            AudioSource.PlayClipAtPoint(clip, transform.position);
-            yield return new WaitForSeconds(clip.length);
+            allPlayersConnected = true;
+            countdownText.enabled = true;
+            StartCoroutine(AllPlayersConnectedCoroutine());
+            // Update the countdown text
+            
+        }*/
+        if (countdownText.enabled == true) 
+        {
+            countdownText.text = "Game starting in: " + Mathf.Round(countdownTimer).ToString();
+        }
+        
+    }
+
+    public void IsPlayerConnected()
+    {
+        Debug.Log("1 player connected");
+        playercount++;
+        if (!debugMode && playercount == 2)
+        {
+            Debug.Log("2 players connected, starting game...");
+            StartCoroutine("AllPlayersConnectedCoroutine");
+            countdownText.enabled = true;
+        }
+        else if (debugMode && playercount == 1)
+        {
+            Debug.Log("1 players connected, starting game in debug mode...");
+            StartCoroutine("AllPlayersConnectedCoroutine");
+            countdownText.enabled = true;
         }
     }
 
-    IEnumerator Outro()
+    private IEnumerator AllPlayersConnectedCoroutine()
     {
-        // Wait for the intro duration
-        yield return new WaitForSeconds(outroDuration);
+        // Coroutine logic here
+        Debug.Log("Both players connected!");
+        textToDisable.enabled = false;
 
-        // Fade out all objects with the "Player" tag
-        //FadeOutPlayers();
+        // Countdown loop
+        while (countdownTimer > 0)
+        {
+            yield return null; // Wait for the next frame
+            countdownTimer -= Time.deltaTime; // Update the timer based on frame time
+        }
 
-        //Search for the XR Interaction Manager, and make sure it is added to DontDestroyOnLoad
-         GameObject obj = GameObject.Find("XRInteractionManager");
+        // When the countdown is finished, load the next scene
+        LoadNextScene();
+    }
+
+    void LoadNextScene()
+    {
+        GameObject obj = GameObject.Find("XRInteractionManager");
         if (obj != null)
         {
             Multiplayer.DontDestroyOnLoad(obj);
@@ -62,29 +87,7 @@ public class MenuManagerS1 : MonoBehaviour
         {
             Debug.LogError("XR Interaction Manager not found!");
         }
-
-        LoadNextScene();
-    }
-
-    /*void FadeOutPlayers()
-    {
-        // Find all objects with the "Player" tag
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-
-        // Call the fade to black function on each player object
-        foreach (GameObject player in players)
-        {
-            FadeToBlack fadeToBlack = player.GetComponent<FadeToBlack>();
-            if (fadeToBlack != null)
-            {
-                fadeToBlack.StartFade(); // Assuming there's a function to start fading to black
-            }
-        }
-    }*/
-
-    void LoadNextScene()
-    {
         // Load the next scene (you can specify the scene name or index here)
-        multiplayerManager.LoadScene(sceneToLoad);
+        Multiplayer.Instance.LoadScene(sceneToLoad);
     }
 }

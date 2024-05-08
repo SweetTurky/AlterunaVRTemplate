@@ -14,6 +14,7 @@ public class CupBehaviour : MonoBehaviour
     public Transform respawnPoint; // Assign in Inspector
     public ParticleSystem hitEffect; // Assign in Inspector
     public AudioClip[] soundEffects;// Assign in Inspector
+    public Transform hitTransform;
 
     void DeactivateGameObject()
     {
@@ -33,7 +34,7 @@ public class CupBehaviour : MonoBehaviour
                 // Play the particle effect
                 if (hitEffect != null)
                 {
-                    hitEffect.Play();
+                    Instantiate(hitEffect, hitTransform.transform.position, Quaternion.identity);
                 }
 
                 ballBehaviour.TeleportSphereTo(respawnPoint);
