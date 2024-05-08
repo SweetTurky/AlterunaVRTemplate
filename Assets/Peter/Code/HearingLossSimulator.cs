@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class HearingLossSimulation : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class HearingLossSimulation : MonoBehaviour
     private AudioChorusFilter chorusFilter;
 
     private float timeSinceLastQChange = 0f;
-    private float timeBetweenQChanges = 2f; // Change Q every 5 seconds
+    private float timeBetweenQChanges = 2f; // Change Q every 2 seconds
 
     private void Start()
     {
@@ -39,7 +40,9 @@ public class HearingLossSimulation : MonoBehaviour
             if (timeSinceLastQChange >= timeBetweenQChanges)
             {
                 // Change the resonance Q to a random value between 0 and 3
-                lowPassFilter.lowpassResonanceQ = Random.Range(0f, 3f);
+                //lowPassFilter.lowpassResonanceQ = Random.Range(0f, 3f);
+                // Start a new Q change
+                StartCoroutine(ChangeResonanceQSmoothly(Random.Range(0f, 3f)));
 
                 // Reset time since last Q change
                 timeSinceLastQChange = 0f;
@@ -54,5 +57,28 @@ public class HearingLossSimulation : MonoBehaviour
         // Gradually increase the stereo panning skew towards one ear
         chorusFilter.dryMix -= stereoPanningSkew * Time.deltaTime;
         chorusFilter.dryMix = Mathf.Max(chorusFilter.dryMix, minDryMix);
+    }
+        
+        private IEnumerator ChangeResonanceQSmoothly(float targetQ)
+    {
+        float startQ = lowPassFilter.lowpassResonanceQ;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < 2f) // Duration of 2 seconds
+        {
+            // Calculate the interpolation factor (0 to 1) based on elapsed time
+            float t = elapsedTime / 2f;
+
+            // Smoothly interpolate between start and target Q values
+            lowPassFilter.lowpassResonanceQ = Mathf.Lerp(startQ, targetQ, t);
+
+            // Increment elapsed time
+            elapsedTime += Time.deltaTime;
+
+            yield return null;
+        }
+
+        // Ensure that the target Q value is set precisely when the interpolation finishes
+        lowPassFilter.lowpassResonanceQ = targetQ;
     }
 }
