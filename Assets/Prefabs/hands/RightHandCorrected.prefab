@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6466433876582666167
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e5bd90b2a6775b14ba669a5fcf71c8c0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5bd90b2a6775b14ba669a5fcf71c8c0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5bd90b2a6775b14ba669a5fcf71c8c0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5bd90b2a6775b14ba669a5fcf71c8c0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5bd90b2a6775b14ba669a5fcf71c8c0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5bd90b2a6775b14ba669a5fcf71c8c0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5bd90b2a6775b14ba669a5fcf71c8c0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5bd90b2a6775b14ba669a5fcf71c8c0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5bd90b2a6775b14ba669a5fcf71c8c0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5bd90b2a6775b14ba669a5fcf71c8c0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5bd90b2a6775b14ba669a5fcf71c8c0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e5bd90b2a6775b14ba669a5fcf71c8c0,
+        type: 3}
+      propertyPath: m_Name
+      value: RightHandCorrected
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: e5bd90b2a6775b14ba669a5fcf71c8c0,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 96e246092f8af3649b5733fd5b4414de, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e5bd90b2a6775b14ba669a5fcf71c8c0,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1975911999176891344}
+  m_SourcePrefab: {fileID: 100100000, guid: e5bd90b2a6775b14ba669a5fcf71c8c0, type: 3}
+--- !u!95 &637249384467378726 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: e5bd90b2a6775b14ba669a5fcf71c8c0,
+    type: 3}
+  m_PrefabInstance: {fileID: 6466433876582666167}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6159809970730578662 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e5bd90b2a6775b14ba669a5fcf71c8c0,
+    type: 3}
+  m_PrefabInstance: {fileID: 6466433876582666167}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1975911999176891344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6159809970730578662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7097b334e2952bc45820b0f4d1751e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  peaceAnimation:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Peace Animation
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 3fd3be6d-0e35-42a4-b155-fc4ed467ee96
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  grabAnimation:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Grab Animation
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 7a3b3bad-b639-4534-a431-b9d4cdef04f1
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  handAnimation: {fileID: 637249384467378726}
