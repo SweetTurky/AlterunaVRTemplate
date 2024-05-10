@@ -2,17 +2,39 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Alteruna;
 
 public class BasketballManager : MonoBehaviour
 {
+    private static BasketballManager _instance;
+
+    public static BasketballManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<BasketballManager>();
+                if (_instance == null)
+                {
+                    GameObject singletonObject = new GameObject(typeof(BasketballManager).Name);
+                    _instance = singletonObject.AddComponent<BasketballManager>();
+                    DontDestroyOnLoad(singletonObject);
+                }
+            }
+            return _instance;
+        }
+    }
+
     [Header("Player1")]
     public int scorePlayer1 = 0; // Score to keep track of player 1's goals
+    public TMP_Text scoreTextP1;
     public GameObject winCanvasPlayer1; // Canvas object for player 1
     public GameObject infoCanvasPlayer1;
     public GameObject[] lightbulbsPlayer1; // Array of lightbulbs GameObjects for player 1
     public AudioSource goalAudioPlayer1; // Audio source for player 1
-    private bool player1Finished = false; // Flag to indicate if player 1 has finished
+    public bool player1Finished = false; // Flag to indicate if player 1 has finished
     public AudioSource winAudioPlayer1;
     public GameObject countdownP1;
     public Text countdownTextP1; // Reference to the Text component on the canvas
@@ -20,11 +42,12 @@ public class BasketballManager : MonoBehaviour
 
     [Header("Player2")]
     public int scorePlayer2 = 0; // Score to keep track of player 2's goals
+    public TMP_Text scoreTextP2;
     public GameObject winCanvasPlayer2; // Canvas object for player 2
     public GameObject infoCanvasPlayer2;
     public GameObject[] lightbulbsPlayer2; // Array of lightbulbs GameObjects for player 2
     public AudioSource goalAudioPlayer2; // Audio source for player 2
-    private bool player2Finished = false; // Flag to indicate if player 2 has finished
+    public bool player2Finished = false; // Flag to indicate if player 2 has finished
     public AudioSource winAudioPlayer2;
     public GameObject countdownP2;
     public Text countdownTextP2;
@@ -55,6 +78,8 @@ public class BasketballManager : MonoBehaviour
             countdownTextP1.text = "Godt gået! Oplevelsen starter om: " + Mathf.Round(countdownTimer).ToString();
             countdownTextP2.text = "Godt gået! Oplevelsen starter om: " + Mathf.Round(countdownTimer).ToString();
         }
+        scoreTextP1.text = scorePlayer1.ToString();
+        scoreTextP2.text = scorePlayer2.ToString();
     }
 
     // Function to be called whenever a goal is scored
@@ -82,14 +107,14 @@ public class BasketballManager : MonoBehaviour
             }
 
             // If player 1 reached the score to win
-            if (scorePlayer1 >= scoreToWin && !player1Finished)
+            /*if (scorePlayer1 >= scoreToWin && !player1Finished)
             {
                 infoCanvasPlayer1.SetActive(false);
                 winCanvasPlayer1.SetActive(true);
                 winAudioPlayer1.PlayOneShot(winSound);
                 player1Finished = true;
                 CheckBothPlayersFinished();
-            }
+            }*/
         }
         else if (playerTag == "Player2")
         {
@@ -113,33 +138,32 @@ public class BasketballManager : MonoBehaviour
             }
 
             // If player 2 reached the score to win
-            if (scorePlayer2 >= scoreToWin && !player2Finished)
+            /*if (scorePlayer2 >= scoreToWin && !player2Finished)
             {
                 infoCanvasPlayer2.SetActive(false);
                 winCanvasPlayer2.SetActive(true);
                 winAudioPlayer2.PlayOneShot(winSound);
                 player2Finished = true;
                 CheckBothPlayersFinished();
-            }
+            }*/
         }
     }
 
     // Method to check if both players have finished
-    private void CheckBothPlayersFinished()
+    public void CheckBothPlayersFinished()
     {
         if (player1Finished && player2Finished)
         {
             // Both players have finished, execute methods
-            winCanvasPlayer2.SetActive(false);
-            winCanvasPlayer1.SetActive(false);
-            countdownP1.SetActive(true);
-            countdownP2.SetActive(true);
             StartCoroutine("BothPlayersFinishedCoroutine");
         }
     }
 
-    private IEnumerator BothPlayersFinishedCoroutine()
+    public IEnumerator BothPlayersFinishedCoroutine()
     {
+        ////winCanvasPlayer1.SetActive(false);
+        countdownP1.SetActive(true);
+        countdownP2.SetActive(true);
         //multiplayerManager = GameObject.FindWithTag("MultiplayerManagerTag");
         //multiplayerManager.GetComponent<MultiplayerManager>();
         // Coroutine logic here
