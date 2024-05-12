@@ -37,10 +37,10 @@ public class NPCController : MonoBehaviour
         TeleportToRandomAnchorPoint();
         }
     }
-    void Start()
+    /*void Start()
     {
         TeleportToRandomAnchorPoint();
-    }
+    }*/
     void Update()
     {
          if (Input.GetKeyDown("space"))
@@ -49,6 +49,14 @@ public class NPCController : MonoBehaviour
         // Antag at dette kaldes på et tidspunkt, hvor du ønsker at teleportere NPC'en
         TeleportToRandomAnchorPoint();
         }
+    }
+    void TeleportToWall()
+    {
+        TeleportTo(anchorPoints[1]);
+    }
+    void TeleportToBeerpong()
+    {
+        TeleportTo(anchorPoints[2]);
     }
 }
 
