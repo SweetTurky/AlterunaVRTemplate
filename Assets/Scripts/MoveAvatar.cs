@@ -12,10 +12,16 @@ public class MoveAvatar : MonoBehaviour
 
     private int avatarNumber;
     private bool hasMoved = false; // Flag to track whether the avatar has moved
-    
-    private void Awake() 
+
+    private void Awake()
     {
         _avatar = GetComponent<Avatar>();
+    }
+
+    void Start()
+    {
+        avatarNumber = _avatar.Possessor.Index;
+        Debug.Log("" + avatarNumber);
     }
 
     private void OnEnable()
@@ -41,7 +47,7 @@ public class MoveAvatar : MonoBehaviour
     {
         p1Spawn = GameObject.Find("P1Spawn").transform;
         p2Spawn = GameObject.Find("P2Spawn").transform;
-        
+
         if (avatarNumber == 0)
         {
             transform.position = p1Spawn.position;
