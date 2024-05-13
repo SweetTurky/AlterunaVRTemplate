@@ -8,17 +8,14 @@ public class Timer : MonoBehaviour
     public TMP_Text timerText;
     public float timerDuration = 60f;
     private float currentTime;
-    private bool timesUp = false;
-    private bool interactedWith = false;
+    //private bool timesUp = false;
+    //private bool interactedWith = false;
 
     // Update is called once per frame
     void Update()
     {
-        if (!timesUp)
-        {
-            UpdateTimer();
-            UpdateUIText();
-        }
+        UpdateTimer();
+        UpdateUIText();
     }
 
     void UpdateTimer()
@@ -29,7 +26,6 @@ public class Timer : MonoBehaviour
             currentTime = 0;
             //Do stuff when timer reaches 0
             BasketballManager.Instance.CheckBothPlayersFinished();  
-            timesUp = true;
         }
     }
 
@@ -42,25 +38,21 @@ public class Timer : MonoBehaviour
 
     public void StartTimer()
     { 
-        if(!interactedWith)
-        if (BasketballManager.Instance.player1Finished && BasketballManager.Instance.player2Finished) 
+        if (BasketballManager.Instance.player1Finished == true && BasketballManager.Instance.player2Finished == true) 
         {
             currentTime = timerDuration;
-            interactedWith = true;
-        }
-        else
-        {
-            return;
         }
     }
 
     public void Player1Finished()
     {
         BasketballManager.Instance.player1Finished = true;
+        Debug.Log("Player 1 Finished");
     }
     public void Player2Finished()
     {
         BasketballManager.Instance.player2Finished = true;
+        Debug.Log("Player 2 Finished");
     }
 }
    

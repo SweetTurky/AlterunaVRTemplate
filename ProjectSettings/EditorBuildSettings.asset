@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 9cad0da3314d0f54cb0a465c99d22ff2
+  - enabled: 1
+    path: Assets/Scenes/Koncert.unity
+    guid: 646f6bf89bbecf049b33eeb1e9a793d7
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260,
       type: 2}

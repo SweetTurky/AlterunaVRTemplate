@@ -13,7 +13,7 @@ public class MenuManagerS1 : MonoBehaviour
     public Text textToDisable;
     private float countdownTimer = 10f; // Timer for the countdown
     //private bool allPlayersConnected = false;
-    private int playercount = 0;
+    private int playerCount = 0;
 
     public bool debugMode = false;
 
@@ -43,14 +43,14 @@ public class MenuManagerS1 : MonoBehaviour
     public void IsPlayerConnected()
     {
         Debug.Log("1 player connected");
-        playercount++;
-        if (!debugMode && playercount == 2)
+        playerCount++;
+        if (!debugMode && playerCount == 2)
         {
             Debug.Log("2 players connected, starting game...");
             StartCoroutine("AllPlayersConnectedCoroutine");
             countdownText.enabled = true;
         }
-        else if (debugMode && playercount == 1)
+        else if (debugMode && playerCount == 1)
         {
             Debug.Log("1 players connected, starting game in debug mode...");
             StartCoroutine("AllPlayersConnectedCoroutine");
@@ -89,5 +89,11 @@ public class MenuManagerS1 : MonoBehaviour
         }
         // Load the next scene (you can specify the scene name or index here)
         Multiplayer.Instance.LoadScene(sceneToLoad);
+    }
+
+    public void SetTag()
+    {
+        int userNumber = Multiplayer.Instance.GetUser().Index;
+        Debug.Log("" + userNumber);
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SetTag : MonoBehaviour
 {
-    private static int playerCount = 0; // Static variable to count the number of players
+    private int playerCount = 0; // Static variable to count the number of players
 
     // Start is called before the first frame update
     void Start()
