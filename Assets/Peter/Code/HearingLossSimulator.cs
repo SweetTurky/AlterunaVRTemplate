@@ -74,6 +74,10 @@ public class HearingLossSimulation : MonoBehaviour
                 if (!tinnitusHasPlayed)
                 {
                     tinnitusAudio.Play();
+                    /*while (tinnitusAudio.isPlaying)
+                    {
+
+                    }*/
                     tinnitusHasPlayed = true;
                 }
             }

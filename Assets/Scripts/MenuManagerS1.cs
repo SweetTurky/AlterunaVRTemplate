@@ -95,5 +95,6 @@ public class MenuManagerS1 : MonoBehaviour
     {
         int userNumber = Multiplayer.Instance.GetUser().Index;
         Debug.Log("" + userNumber);
+        
     }
 }
