@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class BallBehaviour : MonoBehaviour
@@ -12,16 +13,43 @@ public class BallBehaviour : MonoBehaviour
 
         if (cup != null)
         {
-            if (cup.owner == CupOwner.Player1)
+            if (cup.owner == CupOwner.Player1 && gameObject.CompareTag("Ball1"))
             {
                 TeleportSphereTo(respawnPointPlayer1);
             }
-            else if (cup.owner == CupOwner.Player2)
+            else if (cup.owner == CupOwner.Player2 && gameObject.CompareTag("Ball1"))
+            {
+                TeleportSphereTo(respawnPointPlayer1);
+            }
+            else if (cup.owner == CupOwner.Player1 && gameObject.CompareTag("Ball2"))
+            {
+                TeleportSphereTo(respawnPointPlayer2);
+            }
+            else if (cup.owner == CupOwner.Player2 && gameObject.CompareTag("Ball2"))
             {
                 TeleportSphereTo(respawnPointPlayer2);
             }
         }
     }
+
+
+    // Function to respawn the ball after a certain delay
+    public IEnumerator RespawnAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        if (gameObject.CompareTag("Ball1"))
+        {
+            TeleportSphereTo(respawnPointPlayer1);
+        }
+        
+        else if (gameObject.CompareTag("Ball2"))
+        {
+            TeleportSphereTo(respawnPointPlayer2);
+        }
+
+    }
+
 
     public void TeleportSphereTo(Transform targetPosition)
     {
