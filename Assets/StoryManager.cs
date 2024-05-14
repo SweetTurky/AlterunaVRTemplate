@@ -59,8 +59,8 @@ public class StoryManager : MonoBehaviour
         StartCoroutine(magnusVoice1.MagnusSpeakWithDelay(8.5f, magnusVoice1.magnusKoncertVoicelines, 1));
         StartCoroutine(magnusVoice1.MagnusSpeakWithDelay(60f, magnusVoice1.magnusKoncertVoicelines, 2));
         StartCoroutine(magnusVoice1.MagnusSpeakWithDelay(212f, magnusVoice1.magnusKoncertVoicelines, 3));
-        StartCoroutine(magnusVoice1.MagnusSpeakWithDelay(237f, magnusVoice1.magnusKoncertVoicelines, 4));
-        Invoke(nameof(Deactivate), 230f);
+        StartCoroutine(magnusVoice1.MagnusSpeakWithDelay(239f, magnusVoice1.magnusKoncertVoicelines, 4));
+        Invoke(nameof(Deactivate), 215f);
         StartCoroutine(PlayAudioSource(230f, crowdMumble));
         StartCoroutine(PlayAudioSource(230f, crowdMumble1));
         Invoke(nameof(Activate), 248f);
