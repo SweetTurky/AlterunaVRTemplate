@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class MagnusAI : MonoBehaviour
 {
-    private UnityEngine.AI.NavMeshAgent _agent;
+    private NavMeshAgent _agent;
     [SerializeField]
     private Transform[] _waypoints;
     private int _currentWaypointIndex = 0;
@@ -17,12 +17,14 @@ public class MagnusAI : MonoBehaviour
     [SerializeField]
     private Animator _animator;
 
+    public GameObject lookAtObject;
+
     private bool _isWalking = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        _agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        _agent = GetComponent<NavMeshAgent>();
         if (_agent == null)
         {
             Debug.LogError("Nav Mesh Agent is Null.");
@@ -38,19 +40,14 @@ public class MagnusAI : MonoBehaviour
         {
             _walkingTimer += Time.deltaTime;
 
-            if (!_agent.pathPending && _agent.remainingDistance < 0.5f)
+            if (!_agent.pathPending && _agent.remainingDistance < 0.1f)
             {
                 SetNextWaypoint();
             }
 
             if (_walkingTimer >= _walkingDuration)
             {
-                _isWalking = false;
-                if (_animator != null)
-                {
-                    _animator.SetBool("IsWalking", false);
-                    _animator.SetTrigger("Talking");
-                }
+                StartCoroutine(HandleTalkingRoutine());
             }
         }
     }
@@ -65,5 +62,37 @@ public class MagnusAI : MonoBehaviour
 
         _currentWaypointIndex = (_currentWaypointIndex + 1) % _waypoints.Length;
         _agent.SetDestination(_waypoints[_currentWaypointIndex].position);
+    }
+
+    private IEnumerator HandleTalkingRoutine()
+    {
+        _isWalking = false;
+        _walkingTimer = 0f;
+        _agent.isStopped = true; // Stop the agent from moving
+
+        if (_animator != null)
+        {
+            _animator.SetBool("IsWalking", false);
+            _animator.SetTrigger("Talking");
+            transform.LookAt(lookAtObject.transform);
+        }
+
+        // Assuming talking animation length is 5 seconds. Adjust based on your animation length.
+        yield return new WaitForSeconds(5f); 
+
+        if (_animator != null)
+        {
+            _animator.ResetTrigger("Talking");
+            _animator.SetBool("IsWalking", true);
+        }
+
+        _agent.ResetPath(); // Clear any residual paths
+        yield return new WaitForEndOfFrame(); // Ensure path reset takes effect
+        
+        _agent.isStopped = false; // Resume the agent's movement
+        //SetNextWaypoint(); // Reassign the next waypoint
+        
+        _isWalking = true;
+        
     }
 }
