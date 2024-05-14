@@ -39,6 +39,9 @@ public class StoryManager : MonoBehaviour
     private MagnusVoice magnusVoice2;
     private MagnusVoice magnusVoice3;
 
+    [Header("Script References")]
+    public MagnusAISoff magnusAiSoff;
+
     private void Awake()
     {
         // Get MagnusVoice components from GameObjects and store references
@@ -114,20 +117,18 @@ public class StoryManager : MonoBehaviour
 
     public void ReadyToPlayVO()
     {   
-        //p1Ready = true; // Slet mig
-        //p2Ready = true; // Slet mig
+        p1Ready = true; // Slet mig
+        p2Ready = true; // Slet mig
         if (p1Ready && p2Ready)
         {
             magnusVoice3.MagnusSpeak(magnusVoice3.magnusEarpongVoicelines, 0);
-            p1Ready = false;
-            p2Ready = false;
-            magnusVoice3.MagnusSpeakWithDelay(28f, magnusVoice3.magnusEarpongVoicelines, 1);
+            //magnusVoice3.MagnusSpeakWithDelay(14f, magnusVoice3.magnusEarpongVoicelines, 1);
             
                // Convert array to a list
                 List<AudioClip> voicelinesList = new List<AudioClip>(magnusVoice3.magnusEarpongVoicelines);
                 
                 // Remove the first two elements
-                voicelinesList.RemoveRange(0, 2);
+                voicelinesList.RemoveRange(0, 1);
 
                 // Convert list back to array
                 magnusVoice3.magnusEarpongVoicelines = voicelinesList.ToArray();
@@ -154,26 +155,22 @@ public class StoryManager : MonoBehaviour
 
     private IEnumerator PlayBeerPongVoiceLines()
         {
-            Debug.Log("HejsaHejsa");
-            yield return new WaitForSeconds(25f);
+            
+            Debug.Log("Beerpongvoicelines aktiveret");
+            yield return new WaitForSeconds(11f);
             int totalVoicelines = magnusVoice3.magnusEarpongVoicelines.Length;
             foreach (AudioClip clip in magnusVoice3.magnusEarpongVoicelines)
             {
-                Debug.Log("hejsahejsahejsa");
                 AudioSource.PlayClipAtPoint(clip, magnus3.transform.position);
-                yield return new WaitForSeconds(clip.length + 20f); // 20f is delay between voicelines
+                yield return new WaitForSeconds(clip.length + 15f); // 20f is delay between voicelines
+                magnusAiSoff._isWalking = true;
             }
-
-            EndGame();
-            /*if (magnusVoice3.magnusEarpongVoicelines.currentVoiceLineIndex >= totalVoicelines)
-            {
-                EndGame();
-            }*/
-            
         }
 
-    private void EndGame()
+    public void EndGame()
         {
             Debug.Log("Spillet slutter nu");
+            outroSpeak.Play();
+            Application.Quit();
         }
 }

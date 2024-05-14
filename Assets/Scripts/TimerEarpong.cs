@@ -27,7 +27,7 @@ public class TimerEarpong : MonoBehaviour
             // Check if both players are ready and the timer is up
             if (player1Ready && player2Ready && elapsedTime >= timerDuration)
             {
-                //StoryManager.Instance.EndGame(); // Call the EndGame method from EndGameScript
+                StoryManager.Instance.EndGame(); // Call the EndGame method from EndGameScript
             }
         }
     }
@@ -49,6 +49,14 @@ public class TimerEarpong : MonoBehaviour
         int seconds = Mathf.FloorToInt(timeRemaining % 60);
         string timerString = string.Format("{0:00}:{1:00}", minutes, seconds);
         timerText.text = timerString;
+    }
+    public void P1Ready()
+    {
+        player1Ready = true;
+    }
+    public void P2Ready()
+    {
+        player2Ready = true;
     }
 }
 

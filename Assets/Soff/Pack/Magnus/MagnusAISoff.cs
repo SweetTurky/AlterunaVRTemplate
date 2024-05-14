@@ -10,15 +10,15 @@ public class MagnusAISoff : MonoBehaviour
     private Transform[] _waypoints;
     public int _currentWaypointIndex = 0;
 
-    [SerializeField]
+    /*[SerializeField]
     private float _walkingDuration = 30f; // Time in seconds for walking
-    private float _walkingTimer = 0f;
+    private float _walkingTimer = 0f; */
 
     //[SerializeField]
     private Animator _animator;
     public GameObject lookAtObject;
 
-    private bool _isWalking = true;
+    public bool _isWalking = false;
     //public float voiceLineDuration = voiceLines[currentVoiceLineIndex].length;
     // Start is called before the first frame update
     public AudioSource magnusAudioSource;
@@ -29,8 +29,7 @@ public class MagnusAISoff : MonoBehaviour
         {
             Debug.LogError("Nav Mesh Agent is Null.");
         }
-
-        SetNextWaypoint();
+        //SetNextWaypoint();
     }
 
     // Update is called once per frame
@@ -38,17 +37,17 @@ public class MagnusAISoff : MonoBehaviour
     {
         if (_isWalking)
         {
-            _walkingTimer += Time.deltaTime;
+            //_walkingTimer += Time.deltaTime;
 
             if (!_agent.pathPending  &&  _agent.remainingDistance < 0.5f)
             {
                 SetNextWaypoint();
             }
 
-            if (_walkingTimer >= _walkingDuration)
+            /*if (_walkingTimer >= _walkingDuration)
             {
                 StartCoroutine(HandleTalkingRoutine());
-            }
+            }*/
         }
     }
 
@@ -69,7 +68,7 @@ public class MagnusAISoff : MonoBehaviour
         _agent.SetDestination(_waypoints[_currentWaypointIndex].position);
     }
 
-    private IEnumerator HandleTalkingRoutine()
+    /*private IEnumerator HandleTalkingRoutine()
     {
         _isWalking = false;
         _walkingTimer = 0f;
@@ -98,7 +97,7 @@ public class MagnusAISoff : MonoBehaviour
         
         _isWalking = true;
         yield return new WaitForEndOfFrame(); // Ensure path reset takes effect
-    }
+    }*/
     
 }
 

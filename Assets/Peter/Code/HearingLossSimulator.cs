@@ -12,7 +12,6 @@ public class HearingLossSimulation : MonoBehaviour
     public AudioSource tinnitusAudio;
     public bool hearinglossActivated = false;
     private bool tinnitusHasPlayed = false;
-
     private AudioListener audioListener;
     public AudioLowPassFilter lowPassFilter;
     public AudioChorusFilter chorusFilter;
