@@ -9,10 +9,11 @@ TagManager:
   - Player2Basketball
   - Player1
   - Player2
-  - Ball
   - Player1Cup
   - FxTemporaire
   - Player2Cup
+  - Ball1
+  - Ball2
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Water
   - UI
   - Obstacle
-  - 
+  - NavMesh
   - 
   - 
   - 

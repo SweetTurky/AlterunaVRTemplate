@@ -21,6 +21,8 @@ public class StoryManager : MonoBehaviour
 
     [Header("Lists & Arrays")]
     public List<GameObject> artistsToActivate;
+    public List<GameObject> objectsToActivate;
+    public List<GameObject> objectsToDeactivate;
 
     [Header("P1 and P2")]
     private bool p1Ready;
@@ -51,6 +53,7 @@ public class StoryManager : MonoBehaviour
         StartCoroutine(magnusVoice1.MagnusSpeakWithDelay(60f, magnusVoice1.magnusKoncertVoicelines, 2));
         StartCoroutine(magnusVoice1.MagnusSpeakWithDelay(212f, magnusVoice1.magnusKoncertVoicelines, 3));
         StartCoroutine(magnusVoice1.MagnusSpeakWithDelay(237f, magnusVoice1.magnusKoncertVoicelines, 4));
+        Invoke(nameof(ActivateAndDeactivate), 248f);
         StartCoroutine(PlayAudioSource(26f, announcerBefore));
         StartCoroutine(PlayAudioSource(28f, crowdAudio1));
         StartCoroutine(PlayAudioSource(30f, crowdAudio2));
@@ -99,7 +102,22 @@ public class StoryManager : MonoBehaviour
         if (p1Ready && p2Ready)
         {
             magnusVoice2.MagnusSpeak(magnusVoice2.magnusKlatreVoicelines, 0);
+            p1Ready = false;
+            p2Ready = false;
         }       
     }
+    public void ActivateAndDeactivate()
+    {
+        foreach (var GameObject in objectsToActivate)
+        {
+            GameObject.SetActive(true);
+        }
+
+        foreach (var GameObject in objectsToDeactivate)
+        {
+            GameObject.SetActive(false);
+        }
+    }
+
 
 }
