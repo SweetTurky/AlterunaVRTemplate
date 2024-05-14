@@ -55,14 +55,15 @@ public class StoryManager : MonoBehaviour
         StartCoroutine(magnusVoice1.MagnusSpeakWithDelay(60f, magnusVoice1.magnusKoncertVoicelines, 2));
         StartCoroutine(magnusVoice1.MagnusSpeakWithDelay(212f, magnusVoice1.magnusKoncertVoicelines, 3));
         StartCoroutine(magnusVoice1.MagnusSpeakWithDelay(237f, magnusVoice1.magnusKoncertVoicelines, 4));
-        Invoke(nameof(ActivateAndDeactivate), 248f);
+        Invoke(nameof(Deactivate), 230f);
+        Invoke(nameof(Activate), 248f);
         StartCoroutine(PlayAudioSource(26f, announcerBefore));
         StartCoroutine(PlayAudioSource(28f, crowdAudio1));
         StartCoroutine(PlayAudioSource(30f, crowdAudio2));
         StartCoroutine(PlayAudioSource(32f, crowdAudio3));
         StartCoroutine(PlayAudioSource(203f, announcerAfter));
 
-        ReadyToPlayVO(); // SKAL FJERNES IGEN!
+        //ReadyToPlayVO(); // SKAL FJERNES IGEN!
     }
 
     public IEnumerator ActivateArtists()
@@ -113,8 +114,8 @@ public class StoryManager : MonoBehaviour
 
     public void ReadyToPlayVO()
     {   
-        p1Ready = true; // Slet mig
-        p2Ready = true; // Slet mig
+        //p1Ready = true; // Slet mig
+        //p2Ready = true; // Slet mig
         if (p1Ready && p2Ready)
         {
             magnusVoice3.MagnusSpeak(magnusVoice3.magnusEarpongVoicelines, 0);
@@ -135,18 +136,21 @@ public class StoryManager : MonoBehaviour
 
         }       
     }
-    public void ActivateAndDeactivate()
+    public void Activate()
     {
         foreach (var GameObject in objectsToActivate)
         {
             GameObject.SetActive(true);
         }
-
+    }
+    public void Deactivate()
+    {
         foreach (var GameObject in objectsToDeactivate)
         {
             GameObject.SetActive(false);
         }
     }
+        
 
     private IEnumerator PlayBeerPongVoiceLines()
         {
