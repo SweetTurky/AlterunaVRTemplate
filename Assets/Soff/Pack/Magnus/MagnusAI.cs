@@ -5,94 +5,60 @@ using UnityEngine.AI;
 
 public class MagnusAI : MonoBehaviour
 {
-    private NavMeshAgent _agent;
-    [SerializeField]
-    private Transform[] _waypoints;
-    private int _currentWaypointIndex = 0;
+    public Transform walkPoint1; // First walk point
+    public Transform walkPoint2; // Second walk point
+    public AudioClip[] voiceLines; // Array of voice lines to play
+    private int currentVoiceLineIndex = 0; // Index of the current voice line
 
-    [SerializeField]
-    private float _walkingDuration = 30f; // Time in seconds for walking
-    private float _walkingTimer = 0f;
+    private bool isPlayingVoiceLine = false; // Flag to indicate if NPC is currently playing a voice line
 
-    [SerializeField]
-    private Animator _animator;
+    private NavMeshAgent navMeshAgent;
+    private Animator animator;
 
-    public GameObject lookAtObject;
-
-    private bool _isWalking = true;
-
-    // Start is called before the first frame update
     void Start()
     {
-        _agent = GetComponent<NavMeshAgent>();
-        if (_agent == null)
-        {
-            Debug.LogError("Nav Mesh Agent is Null.");
-        }
+        navMeshAgent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
 
-        SetNextWaypoint();
+        // Start walking when the game starts
+        StartCoroutine(WalkBetweenPoints());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator WalkBetweenPoints()
     {
-        if (_isWalking)
+        while (true)
         {
-            _walkingTimer += Time.deltaTime;
+            // Walk to the first walk point
+            yield return WalkTo(walkPoint1.position);
 
-            if (!_agent.pathPending && _agent.remainingDistance < 0.1f)
-            {
-                SetNextWaypoint();
-            }
+            // Stand still and play voice line
+            yield return PlayVoiceLine();
 
-            if (_walkingTimer >= _walkingDuration)
-            {
-                StartCoroutine(HandleTalkingRoutine());
-            }
+            // Walk to the second walk point
+            yield return WalkTo(walkPoint2.position);
+
+            // Stand still and play voice line
+            yield return PlayVoiceLine();
         }
     }
 
-    private void SetNextWaypoint()
+    IEnumerator WalkTo(Vector3 targetPosition)
     {
-        if (_waypoints.Length == 0)
+        navMeshAgent.SetDestination(targetPosition);
+        animator.SetBool("isWalking", true);
+        while (navMeshAgent.remainingDistance > navMeshAgent.stoppingDistance)
         {
-            Debug.LogWarning("No waypoints assigned.");
-            return;
+            yield return null;
         }
-
-        _currentWaypointIndex = (_currentWaypointIndex + 1) % _waypoints.Length;
-        _agent.SetDestination(_waypoints[_currentWaypointIndex].position);
+        animator.SetBool("isWalking", false);
     }
 
-    private IEnumerator HandleTalkingRoutine()
+    IEnumerator PlayVoiceLine()
     {
-        _isWalking = false;
-        _walkingTimer = 0f;
-        _agent.isStopped = true; // Stop the agent from moving
-
-        if (_animator != null)
-        {
-            _animator.SetBool("IsWalking", false);
-            _animator.SetTrigger("Talking");
-            transform.LookAt(lookAtObject.transform);
-        }
-
-        // Assuming talking animation length is 5 seconds. Adjust based on your animation length.
-        yield return new WaitForSeconds(5f); 
-
-        if (_animator != null)
-        {
-            _animator.ResetTrigger("Talking");
-            _animator.SetBool("IsWalking", true);
-        }
-
-        _agent.ResetPath(); // Clear any residual paths
-        yield return new WaitForEndOfFrame(); // Ensure path reset takes effect
-        
-        _agent.isStopped = false; // Resume the agent's movement
-        //SetNextWaypoint(); // Reassign the next waypoint
-        
-        _isWalking = true;
-        
+        isPlayingVoiceLine = true;
+        // Play voice line here
+        yield return new WaitForSeconds(2); // Placeholder for voice line duration
+        isPlayingVoiceLine = false;
+        currentVoiceLineIndex = (currentVoiceLineIndex + 1) % voiceLines.Length; // Move to the next voice line in the array
     }
 }
