@@ -1590,7 +1590,7 @@ MonoBehaviour:
   sceneToLoad: Tutorial
   countdownText: {fileID: 1433511053}
   textToDisable: {fileID: 8908833148128773134}
-  debugMode: 0
+  debugMode: 1
 --- !u!4 &542324654
 Transform:
   m_ObjectHideFlags: 0
