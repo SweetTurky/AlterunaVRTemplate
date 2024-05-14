@@ -10,14 +10,15 @@ public class HearingLossSimulation : MonoBehaviour
     public float minCutoffFrequency = 500f; // Minimum cutoff frequency for low pass filter
     public float minDryMix = 0.1f; // Minimum dry mix for chorus filter
     public AudioSource tinnitusAudio;
-
     public bool hearinglossActivated = false;
     private bool tinnitusHasPlayed = false;
-
     private AudioListener audioListener;
-    private AudioLowPassFilter lowPassFilter;
-    private AudioChorusFilter chorusFilter;
-
+    public AudioLowPassFilter lowPassFilter;
+    public AudioChorusFilter chorusFilter;
+    public float hearingLossIncreaseRate = 150f;
+    public float stereoPanningPositiveSkew = 0f;
+    public float minimumRange = 0f;
+    public float maximumRange = 3f;
 
     private float timeSinceLastQChange = 0f;
     private float timeBetweenQChanges = 2f; // Change Q every 2 seconds
@@ -65,7 +66,7 @@ public class HearingLossSimulation : MonoBehaviour
                     // Change the resonance Q to a random value between 0 and 3
                     //lowPassFilter.lowpassResonanceQ = Random.Range(0f, 3f);
                     // Start a new Q change
-                    StartCoroutine(ChangeResonanceQSmoothly(Random.Range(0f, 3f)));
+                    StartCoroutine(ChangeResonanceQSmoothly(Random.Range(minimumRange, maximumRange)));
 
                     // Reset time since last Q change
                     timeSinceLastQChange = 0f;
@@ -116,4 +117,5 @@ public class HearingLossSimulation : MonoBehaviour
         // Ensure that the target Q value is set precisely when the interpolation finishes
         lowPassFilter.lowpassResonanceQ = targetQ;
     }
+    
 }

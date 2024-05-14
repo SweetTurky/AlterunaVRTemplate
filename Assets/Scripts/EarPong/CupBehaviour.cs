@@ -42,6 +42,10 @@ public class CupBehaviour : MonoBehaviour
                 // Remove the cup after the particle effect finishes
                 Invoke(nameof(DeactivateGameObject), 1.2f);
                 EarPongGameManager.Instance.CheckWinCondition(owner);
+                HearingLossSimulation.Instance.lowPassFilter.cutoffFrequency += HearingLossSimulation.Instance.hearingLossIncreaseRate;
+                HearingLossSimulation.Instance.minimumRange += 0.1f;
+                HearingLossSimulation.Instance.maximumRange -= 0.2f;
+                HearingLossSimulation.Instance.chorusFilter.dryMix += 0.5f;
             }
         }
     }
