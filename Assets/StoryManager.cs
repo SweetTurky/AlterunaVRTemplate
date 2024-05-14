@@ -19,6 +19,8 @@ public class StoryManager : MonoBehaviour
     public AudioSource crowdAudio1;
     public AudioSource crowdAudio2;
     public AudioSource crowdAudio3;
+    public AudioSource crowdMumble;
+    public AudioSource crowdMumble1;
     public AudioSource magnusAudioSource;
 
     [Header("Lists & Arrays")]
@@ -59,6 +61,8 @@ public class StoryManager : MonoBehaviour
         StartCoroutine(magnusVoice1.MagnusSpeakWithDelay(212f, magnusVoice1.magnusKoncertVoicelines, 3));
         StartCoroutine(magnusVoice1.MagnusSpeakWithDelay(237f, magnusVoice1.magnusKoncertVoicelines, 4));
         Invoke(nameof(Deactivate), 230f);
+        StartCoroutine(PlayAudioSource(230f, crowdMumble));
+        StartCoroutine(PlayAudioSource(230f, crowdMumble1));
         Invoke(nameof(Activate), 248f);
         StartCoroutine(PlayAudioSource(26f, announcerBefore));
         StartCoroutine(PlayAudioSource(28f, crowdAudio1));
@@ -112,30 +116,30 @@ public class StoryManager : MonoBehaviour
             magnusVoice2.MagnusSpeak(magnusVoice2.magnusKlatreVoicelines, 0);
             p1Ready = false;
             p2Ready = false;
-        }       
+        }
     }
 
     public void ReadyToPlayVO()
-    {   
+    {
         p1Ready = true; // Slet mig
         p2Ready = true; // Slet mig
         if (p1Ready && p2Ready)
         {
             magnusVoice3.MagnusSpeak(magnusVoice3.magnusEarpongVoicelines, 0);
             //magnusVoice3.MagnusSpeakWithDelay(14f, magnusVoice3.magnusEarpongVoicelines, 1);
-            
-               // Convert array to a list
-                List<AudioClip> voicelinesList = new List<AudioClip>(magnusVoice3.magnusEarpongVoicelines);
-                
-                // Remove the first two elements
-                voicelinesList.RemoveRange(0, 1);
 
-                // Convert list back to array
-                magnusVoice3.magnusEarpongVoicelines = voicelinesList.ToArray();
+            // Convert array to a list
+            List<AudioClip> voicelinesList = new List<AudioClip>(magnusVoice3.magnusEarpongVoicelines);
 
-                StartCoroutine("PlayBeerPongVoiceLines");
+            // Remove the first two elements
+            voicelinesList.RemoveRange(0, 1);
 
-        }       
+            // Convert list back to array
+            magnusVoice3.magnusEarpongVoicelines = voicelinesList.ToArray();
+
+            StartCoroutine("PlayBeerPongVoiceLines");
+
+        }
     }
     public void Activate()
     {
@@ -151,26 +155,32 @@ public class StoryManager : MonoBehaviour
             GameObject.SetActive(false);
         }
     }
-        
+
 
     private IEnumerator PlayBeerPongVoiceLines()
+    {
+
+        Debug.Log("Beerpongvoicelines aktiveret");
+        yield return new WaitForSeconds(11f);
+        int totalVoicelines = magnusVoice3.magnusEarpongVoicelines.Length;
+        foreach (AudioClip clip in magnusVoice3.magnusEarpongVoicelines)
         {
-            
-            Debug.Log("Beerpongvoicelines aktiveret");
-            yield return new WaitForSeconds(11f);
-            int totalVoicelines = magnusVoice3.magnusEarpongVoicelines.Length;
-            foreach (AudioClip clip in magnusVoice3.magnusEarpongVoicelines)
-            {
-                AudioSource.PlayClipAtPoint(clip, magnus3.transform.position);
-                yield return new WaitForSeconds(clip.length + 15f); // 20f is delay between voicelines
-                magnusAiSoff._isWalking = true;
-            }
+            AudioSource.PlayClipAtPoint(clip, magnus3.transform.position);
+            yield return new WaitForSeconds(clip.length + 15f); // 20f is delay between voicelines
+            magnusAiSoff._isWalking = true;
         }
+    }
 
     public void EndGame()
-        {
-            Debug.Log("Spillet slutter nu");
-            outroSpeak.Play();
-            Application.Quit();
-        }
+    {
+        Debug.Log("Spillet slutter nu");
+        outroSpeak.Play();
+        StartCoroutine("QuitGame");        
+    }
+
+    public IEnumerator QuitGame()
+    {
+        yield return new WaitForSeconds(10f);
+        Application.Quit();
+    }
 }

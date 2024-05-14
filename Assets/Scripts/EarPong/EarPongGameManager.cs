@@ -2,6 +2,7 @@ using System.Linq;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class EarPongGameManager : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class EarPongGameManager : MonoBehaviour
 
     public int player1CupsDestroyed = 0;
     public int player2CupsDestroyed = 0;
+
+    public TMP_Text player1ScoreText;
+    public TMP_Text player2ScoreText;
 
     public AudioClip victorySound;
     public GameObject winParticle;
@@ -22,7 +26,7 @@ public class EarPongGameManager : MonoBehaviour
     public GameObject p1Wins;
     public GameObject p2Wins;
 
-    public GameObject resetObject;
+    //public GameObject resetObject;
     private void Awake()
     {
         if (Instance == null)
@@ -40,15 +44,17 @@ public class EarPongGameManager : MonoBehaviour
 
     }
 
-    public void CheckWinCondition(CupOwner owner)
+     public void CheckWinCondition(CupOwner owner)
     {
         if (owner == CupOwner.Player1)
         {
             player1CupsDestroyed++;
+            UpdateScore(player1ScoreText, player1CupsDestroyed);
         }
         else if (owner == CupOwner.Player2)
         {
             player2CupsDestroyed++;
+            UpdateScore(player2ScoreText, player2CupsDestroyed);
         }
 
         if (player1CupsDestroyed == 6)
@@ -61,6 +67,12 @@ public class EarPongGameManager : MonoBehaviour
             PlayVictoryEffects();
             Debug.Log("Player 1 wins!");
         }
+    }
+
+    // Method to update the score on a TextMeshPro UI element
+    void UpdateScore(TMP_Text scoreText, int score)
+    {
+        scoreText.text = score.ToString();
     }
 
     /*public void ResetPlayerCupsOnClick()
