@@ -484,7 +484,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7027530010787593942}
   - component: {fileID: 4184643007033193775}
-  - component: {fileID: 2103873256752966250}
   - component: {fileID: 2719939008940266443}
   m_Layer: 0
   m_Name: Magnus3
@@ -537,25 +536,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2103873256752966250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1514141147575955286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c6af1d8d55850d48b89efa34710bf36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _walkingDuration: 30
-  _animator: {fileID: 4184643007033193775}
 --- !u!195 &2719939008940266443
 NavMeshAgent:
   m_ObjectHideFlags: 0

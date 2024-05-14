@@ -7,7 +7,10 @@ public class MagnusAI : MonoBehaviour
 {
     public Transform walkPoint1; // First walk point
     public Transform walkPoint2; // Second walk point
+    public Transform walkPoint3;
+    public Transform walkPoint4;
     public AudioClip[] voiceLines; // Array of voice lines to play
+    public AudioSource magnusAudioSource;
     private int currentVoiceLineIndex = 0; // Index of the current voice line
 
     private bool isPlayingVoiceLine = false; // Flag to indicate if NPC is currently playing a voice line

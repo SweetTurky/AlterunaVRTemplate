@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Linq;
 
 public class StoryManager : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class StoryManager : MonoBehaviour
     public AudioSource crowdAudio1;
     public AudioSource crowdAudio2;
     public AudioSource crowdAudio3;
+    public AudioSource magnusAudioSource;
 
     [Header("Lists & Arrays")]
     public List<GameObject> artistsToActivate;
@@ -59,6 +61,8 @@ public class StoryManager : MonoBehaviour
         StartCoroutine(PlayAudioSource(30f, crowdAudio2));
         StartCoroutine(PlayAudioSource(32f, crowdAudio3));
         StartCoroutine(PlayAudioSource(203f, announcerAfter));
+
+        ReadyToPlayVO(); // SKAL FJERNES IGEN!
     }
 
     public IEnumerator ActivateArtists()
@@ -87,12 +91,12 @@ public class StoryManager : MonoBehaviour
         audioSource.Play();
     }
 
-    public void P1ReadyToClimb()
+    public void P1Ready()
     {
         p1Ready = true;
     }
 
-    public void P2ReadyToClimb()
+    public void P2Ready()
     {
         p2Ready = true;
     }
@@ -104,6 +108,31 @@ public class StoryManager : MonoBehaviour
             magnusVoice2.MagnusSpeak(magnusVoice2.magnusKlatreVoicelines, 0);
             p1Ready = false;
             p2Ready = false;
+        }       
+    }
+
+    public void ReadyToPlayVO()
+    {   
+        p1Ready = true; // Slet mig
+        p2Ready = true; // Slet mig
+        if (p1Ready && p2Ready)
+        {
+            magnusVoice3.MagnusSpeak(magnusVoice3.magnusEarpongVoicelines, 0);
+            p1Ready = false;
+            p2Ready = false;
+            magnusVoice3.MagnusSpeakWithDelay(28f, magnusVoice3.magnusEarpongVoicelines, 1);
+            
+               // Convert array to a list
+                List<AudioClip> voicelinesList = new List<AudioClip>(magnusVoice3.magnusEarpongVoicelines);
+                
+                // Remove the first two elements
+                voicelinesList.RemoveRange(0, 2);
+
+                // Convert list back to array
+                magnusVoice3.magnusEarpongVoicelines = voicelinesList.ToArray();
+
+                StartCoroutine("PlayBeerPongVoiceLines");
+
         }       
     }
     public void ActivateAndDeactivate()
@@ -119,5 +148,28 @@ public class StoryManager : MonoBehaviour
         }
     }
 
+    private IEnumerator PlayBeerPongVoiceLines()
+        {
+            Debug.Log("HejsaHejsa");
+            yield return new WaitForSeconds(25f);
+            int totalVoicelines = magnusVoice3.magnusEarpongVoicelines.Length;
+            foreach (AudioClip clip in magnusVoice3.magnusEarpongVoicelines)
+            {
+                Debug.Log("hejsahejsahejsa");
+                AudioSource.PlayClipAtPoint(clip, magnus3.transform.position);
+                yield return new WaitForSeconds(clip.length + 20f); // 20f is delay between voicelines
+            }
 
+            EndGame();
+            /*if (magnusVoice3.magnusEarpongVoicelines.currentVoiceLineIndex >= totalVoicelines)
+            {
+                EndGame();
+            }*/
+            
+        }
+
+    private void EndGame()
+        {
+            Debug.Log("Spillet slutter nu");
+        }
 }
