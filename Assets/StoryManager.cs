@@ -159,23 +159,68 @@ public class StoryManager : MonoBehaviour
 
     private IEnumerator PlayBeerPongVoiceLines()
     {
-
-        Debug.Log("Beerpongvoicelines aktiveret");
+        Debug.Log("Beerpongvoicelines activated");
         yield return new WaitForSeconds(11f);
         int totalVoicelines = magnusVoice3.magnusEarpongVoicelines.Length;
+
+        // Ensure the agent is not walking initially
+        magnusAiSoff._isWalking = false;
+
+        // Initialize animation state
+        if (magnusAiSoff._animator != null)
+        {
+            magnusAiSoff._animator.SetBool("IsWalking", false);
+            magnusAiSoff._animator.SetBool("IsTalking", true);
+        }
+
         foreach (AudioClip clip in magnusVoice3.magnusEarpongVoicelines)
         {
-            AudioSource.PlayClipAtPoint(clip, magnus3.transform.position);
-            yield return new WaitForSeconds(clip.length + 15f); // 20f is delay between voicelines
+            // Set the clip to be played by the AudioSource
+            magnusAudioSource.clip = clip;
+            // Play the clip through the AudioSource
+            magnusAudioSource.Play();
+
+            // Wait for the audio clip to start playing
+            yield return WaitForAudioClip(magnusAudioSource);
+
+            // Play talking animation and remain stationary while the voice line is playing
+            if (magnusAiSoff._animator != null)
+            {
+                magnusAiSoff._animator.SetBool("IsWalking", false);
+                magnusAiSoff._animator.SetBool("IsTalking", true);
+            }
+
+            // Wait for the duration of the clip
+            yield return new WaitForSeconds(clip.length);
+
+            // Resume walking animation after the voice line is finished playing
+            if (magnusAiSoff._animator != null)
+            {
+                magnusAiSoff._animator.SetBool("IsWalking", true);
+                magnusAiSoff._animator.SetBool("IsTalking", false);
+            }
+
+            // Resume walking
             magnusAiSoff._isWalking = true;
         }
     }
+
+    private IEnumerator WaitForAudioClip(AudioSource audioSource)
+    {
+        // Wait until the audio clip starts playing
+        while (!audioSource.isPlaying)
+        {
+            yield return null;
+        }
+    }
+
+
 
     public void EndGame()
     {
         Debug.Log("Spillet slutter nu");
         outroSpeak.Play();
-        StartCoroutine("QuitGame");        
+        StartCoroutine("QuitGame");
     }
 
     public IEnumerator QuitGame()

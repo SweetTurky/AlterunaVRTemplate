@@ -15,7 +15,7 @@ public class MagnusAISoff : MonoBehaviour
     private float _walkingTimer = 0f; */
 
     //[SerializeField]
-    private Animator _animator;
+    public Animator _animator;
     public GameObject lookAtObject;
 
     public bool _isWalking = false;
@@ -37,17 +37,33 @@ public class MagnusAISoff : MonoBehaviour
     {
         if (_isWalking)
         {
-            //_walkingTimer += Time.deltaTime;
-
-            if (!_agent.pathPending  &&  _agent.remainingDistance < 0.5f)
+            if (!_agent.pathPending && _agent.remainingDistance > _agent.stoppingDistance)
             {
-                SetNextWaypoint();
+                // Play the walking animation
+                if (_animator != null)
+                {
+                    _animator.SetBool("IsWalking", true);
+                    _animator.SetBool("IsTalking", false); // Make sure talking is false when walking
+                }
             }
-
-            /*if (_walkingTimer >= _walkingDuration)
+            else
             {
-                StartCoroutine(HandleTalkingRoutine());
-            }*/
+                // Stop the walking animation
+                if (_animator != null)
+                {
+                    _animator.SetBool("IsWalking", false);
+                    _animator.SetBool("IsTalking", true); // Start talking animation
+                }
+            }
+        }
+        else
+        {
+            // Play the talking animation when not walking
+            if (_animator != null)
+            {
+                _animator.SetBool("IsWalking", false);
+                _animator.SetBool("IsTalking", true);
+            }
         }
     }
 
@@ -59,7 +75,7 @@ public class MagnusAISoff : MonoBehaviour
             return;
         }
 
-        if(_currentWaypointIndex + 1 == 5)
+        if (_currentWaypointIndex + 1 == 5)
         {
             _currentWaypointIndex = 0;
         }
@@ -68,37 +84,6 @@ public class MagnusAISoff : MonoBehaviour
         _agent.SetDestination(_waypoints[_currentWaypointIndex].position);
     }
 
-    /*private IEnumerator HandleTalkingRoutine()
-    {
-        _isWalking = false;
-        _walkingTimer = 0f;
-        _agent.isStopped = true; // Stop the agent from moving
-
-        if (_animator != null)
-        {
-            _animator.SetBool("IsWalking", false);
-            _animator.SetTrigger("Talking");
-            transform.LookAt(lookAtObject.transform);
-        }
-
-        // Assuming talking animation length is 5 seconds. Adjust based on your animation length.
-        yield return new WaitForSeconds(2f); 
-
-        if (_animator != null)
-        {
-            _animator.ResetTrigger("Talking");
-            _animator.SetBool("IsWalking", true);
-            transform.LookAt(_waypoints[_currentWaypointIndex].transform);
-        }
-
-        _agent.ResetPath(); // Clear any residual paths
-        
-        _agent.isStopped = false; // Resume the agent's movement
-        
-        _isWalking = true;
-        yield return new WaitForEndOfFrame(); // Ensure path reset takes effect
-    }*/
-    
 }
 
 
