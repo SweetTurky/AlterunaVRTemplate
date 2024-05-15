@@ -8,18 +8,6 @@ public class MagnusVoice : MonoBehaviour
     public AudioClip[] magnusKlatreVoicelines;
     public AudioClip[] magnusEarpongVoicelines;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void MagnusSpeak(AudioClip[] voicelines, int index)
     {
         if (voicelines != null && index >= 0 && index < voicelines.Length)

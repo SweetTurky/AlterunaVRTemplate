@@ -4612,7 +4612,7 @@ PrefabInstance:
     - target: {fileID: 2818971628382573792, guid: fad94b617f0540568dbf4c9c4011248c,
         type: 3}
       propertyPath: m_Teleporting.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2818971628382573792, guid: fad94b617f0540568dbf4c9c4011248c,
         type: 3}
@@ -16823,7 +16823,7 @@ PrefabInstance:
     - target: {fileID: 9049102834065068900, guid: 2db9d72896b63eb4a820e6b38f666829,
         type: 3}
       propertyPath: m_SkipOnDrop
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9049102834065068900, guid: 2db9d72896b63eb4a820e6b38f666829,
         type: 3}
@@ -16838,7 +16838,7 @@ PrefabInstance:
     - target: {fileID: 9049102834065068900, guid: 2db9d72896b63eb4a820e6b38f666829,
         type: 3}
       propertyPath: m_TimeUpdateMode
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9049102834065068900, guid: 2db9d72896b63eb4a820e6b38f666829,
         type: 3}
@@ -22301,7 +22301,7 @@ PrefabInstance:
     - target: {fileID: 2456965378598054803, guid: 629b385b7abaa70458a15d5782e74001,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2456965378598054803, guid: 629b385b7abaa70458a15d5782e74001,
         type: 3}
@@ -22376,7 +22376,7 @@ PrefabInstance:
     - target: {fileID: 7255421067614698154, guid: 629b385b7abaa70458a15d5782e74001,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.446
+      value: 1.449
       objectReference: {fileID: 0}
     - target: {fileID: 7255421067614698154, guid: 629b385b7abaa70458a15d5782e74001,
         type: 3}
@@ -24230,7 +24230,7 @@ PrefabInstance:
     - target: {fileID: 2456965378598054803, guid: 629b385b7abaa70458a15d5782e74001,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2456965378598054803, guid: 629b385b7abaa70458a15d5782e74001,
         type: 3}
@@ -30529,13 +30529,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ade843922316db842bf87c0eabe377be, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.8
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 50
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -32113,7 +32113,7 @@ PrefabInstance:
     - target: {fileID: 9049102834065068900, guid: 2db9d72896b63eb4a820e6b38f666829,
         type: 3}
       propertyPath: m_SkipOnDrop
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9049102834065068900, guid: 2db9d72896b63eb4a820e6b38f666829,
         type: 3}
@@ -32128,7 +32128,7 @@ PrefabInstance:
     - target: {fileID: 9049102834065068900, guid: 2db9d72896b63eb4a820e6b38f666829,
         type: 3}
       propertyPath: m_TimeUpdateMode
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9049102834065068900, guid: 2db9d72896b63eb4a820e6b38f666829,
         type: 3}
