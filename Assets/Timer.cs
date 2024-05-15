@@ -5,23 +5,26 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
+    public static Timer Instance;
     public TMP_Text timerText;
     public float timerDuration = 60f;
-    private float currentTime = 300f;
-    //private bool timesUp = false;
-    private bool interactedWith = false;
+    private float currentTime;
+    private bool timerStarted = false;
 
     // Update is called once per frame
     void Update()
     {
-        UpdateTimer();
-        UpdateUIText();
+        if (timerStarted)
+        {
+            UpdateTimer();
+            UpdateUIText();
+        }
     }
 
     void UpdateTimer()
     {
         currentTime -= Time.deltaTime;
-        if (currentTime <= 0)
+        if (currentTime <= 0 && timerStarted == true)
         {
             currentTime = 0;
             //Do stuff when timer reaches 0
@@ -37,12 +40,12 @@ public class Timer : MonoBehaviour
     }
 
     public void StartTimer()
-    {  
-        if (!interactedWith)
+    {
+        if (!timerStarted)
         {
+            timerStarted = true;
             currentTime = timerDuration;
-            interactedWith = true;
-        }
+        }  
     }
 
     public void Player1Finished()
@@ -56,4 +59,4 @@ public class Timer : MonoBehaviour
         Debug.Log("Player 2 Finished");
     }
 }
-   
+

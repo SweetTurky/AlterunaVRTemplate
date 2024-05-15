@@ -40,8 +40,8 @@ public class BasketballManager : MonoBehaviour
     public AudioClip goalSound; // Sound to play when goal is scored
     public AudioClip winSound;
     private float countdownTimer = 10f; // Timer for the countdown
-
-
+    public string sceneToLoad;
+    public MessageAllPlayers rpcObject;
 
     // Start is called before the first frame update
     void Start()
@@ -148,6 +148,6 @@ public class BasketballManager : MonoBehaviour
         // Coroutine logic here
         Debug.Log("Both players finished!");
         //textToDisable.enabled = false;
-        Multiplayer.Instance.LoadScene("Koncert");
+        rpcObject.SendLoadSceneRPC(2);
     }
 }
