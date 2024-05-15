@@ -20,22 +20,38 @@ public class MoveAvatar : MonoBehaviour
 
     void Start()
     {
+        if (!_avatar.IsMe)
+        {
+            return;
+        }
         avatarNumber = _avatar.Possessor.Index;
         Debug.Log("" + avatarNumber);
     }
 
     private void OnEnable()
     {
+        if (!_avatar.IsMe)
+        {
+            return;
+        }
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnDisable()
     {
+        if (!_avatar.IsMe)
+        {
+            return;
+        }
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        if (!_avatar.IsMe)
+        {
+            return;
+        }
         if (scene.name == "Koncert" && !hasMoved)
         {
             MoveAvatarPosition();

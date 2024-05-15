@@ -7,9 +7,9 @@ public class Timer : MonoBehaviour
 {
     public TMP_Text timerText;
     public float timerDuration = 60f;
-    private float currentTime;
+    private float currentTime = 300f;
     //private bool timesUp = false;
-    //private bool interactedWith = false;
+    private bool interactedWith = false;
 
     // Update is called once per frame
     void Update()
@@ -37,10 +37,11 @@ public class Timer : MonoBehaviour
     }
 
     public void StartTimer()
-    { 
-        if (BasketballManager.Instance.player1Finished == true && BasketballManager.Instance.player2Finished == true) 
+    {  
+        if (!interactedWith)
         {
             currentTime = timerDuration;
+            interactedWith = true;
         }
     }
 

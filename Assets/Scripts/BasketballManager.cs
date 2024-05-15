@@ -152,11 +152,8 @@ public class BasketballManager : MonoBehaviour
     // Method to check if both players have finished
     public void CheckBothPlayersFinished()
     {
-        if (player1Finished && player2Finished)
-        {
-            // Both players have finished, execute methods
-            StartCoroutine("BothPlayersFinishedCoroutine");
-        }
+        //if (player1Finished && player2Finished) // Both players have finished, execute methods
+        StartCoroutine("BothPlayersFinishedCoroutine");
     }
 
     public IEnumerator BothPlayersFinishedCoroutine()
