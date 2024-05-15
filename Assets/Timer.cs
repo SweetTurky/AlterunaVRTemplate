@@ -25,7 +25,7 @@ public class Timer : MonoBehaviour
         {
             currentTime = 0;
             //Do stuff when timer reaches 0
-            BasketballManager.Instance.CheckBothPlayersFinished();  
+            BasketballManager.Instance.BothPlayersFinished();
         }
     }
 

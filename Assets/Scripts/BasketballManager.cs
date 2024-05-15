@@ -7,25 +7,7 @@ using Alteruna;
 
 public class BasketballManager : MonoBehaviour
 {
-    private static BasketballManager _instance;
-
-    public static BasketballManager Instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                _instance = FindObjectOfType<BasketballManager>();
-                if (_instance == null)
-                {
-                    GameObject singletonObject = new GameObject(typeof(BasketballManager).Name);
-                    _instance = singletonObject.AddComponent<BasketballManager>();
-                    DontDestroyOnLoad(singletonObject);
-                }
-            }
-            return _instance;
-        }
-    }
+    public static BasketballManager Instance;
 
     [Header("Player1")]
     public int scorePlayer1 = 0; // Score to keep track of player 1's goals
@@ -150,30 +132,22 @@ public class BasketballManager : MonoBehaviour
     }
 
     // Method to check if both players have finished
-    public void CheckBothPlayersFinished()
+    /*public void CheckBothPlayersFinished()
     {
         //if (player1Finished && player2Finished) // Both players have finished, execute methods
         StartCoroutine("BothPlayersFinishedCoroutine");
-    }
+    }*/
 
-    public IEnumerator BothPlayersFinishedCoroutine()
+    public void BothPlayersFinished()
     {
         ////winCanvasPlayer1.SetActive(false);
-        countdownP1.SetActive(true);
-        countdownP2.SetActive(true);
+        //countdownP1.SetActive(true);
+        //countdownP2.SetActive(true);
         //multiplayerManager = GameObject.FindWithTag("MultiplayerManagerTag");
         //multiplayerManager.GetComponent<MultiplayerManager>();
         // Coroutine logic here
         Debug.Log("Both players finished!");
         //textToDisable.enabled = false;
-
-        // Countdown loop
-        while (countdownTimer > 0)
-        {
-            yield return null; // Wait for the next frame
-            countdownTimer -= Time.deltaTime; // Update the timer based on frame time
-        }
-
         Multiplayer.Instance.LoadScene("Koncert");
     }
 }

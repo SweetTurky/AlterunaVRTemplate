@@ -64,6 +64,17 @@ public class MenuManagerS1 : MonoBehaviour
         Debug.Log("Both players connected!");
         textToDisable.enabled = false;
 
+        GameObject obj = GameObject.Find("XRInteractionManager");
+        if (obj != null)
+        {
+            Multiplayer.DontDestroyOnLoad(obj);
+            Debug.Log("XR Interaction Manager added to Don'tDestroyOnLoad");
+        }
+        else
+        {
+            Debug.LogError("XR Interaction Manager not found!");
+        }
+
         // Countdown loop
         while (countdownTimer > 0)
         {
@@ -77,16 +88,6 @@ public class MenuManagerS1 : MonoBehaviour
 
     void LoadNextScene()
     {
-        GameObject obj = GameObject.Find("XRInteractionManager");
-        if (obj != null)
-        {
-            Multiplayer.DontDestroyOnLoad(obj);
-            Debug.Log("XR Interaction Manager added to Don'tDestroyOnLoad");
-        }
-        else
-        {
-            Debug.LogError("XR Interaction Manager not found!");
-        }
         // Load the next scene (you can specify the scene name or index here)
         Multiplayer.Instance.LoadScene(sceneToLoad);
     }
@@ -94,7 +95,6 @@ public class MenuManagerS1 : MonoBehaviour
     public void SetTag()
     {
         int userNumber = Multiplayer.Instance.GetUser().Index;
-        Debug.Log("" + userNumber);
-        
+        Debug.Log("" + userNumber); 
     }
 }

@@ -121,8 +121,8 @@ public class StoryManager : MonoBehaviour
 
     public void ReadyToPlayVO()
     {
-        p1Ready = true; // Slet mig
-        p2Ready = true; // Slet mig
+        //p1Ready = true; // Slet mig
+        //p2Ready = true; // Slet mig
         if (p1Ready && p2Ready)
         {
             magnusVoice3.MagnusSpeak(magnusVoice3.magnusEarpongVoicelines, 0);
