@@ -20,6 +20,7 @@ public class CupArrangement : MonoBehaviour
             CreateTriangleArrangement(startPointPlayer2, cupPrefabPlayer2, 6, false); // Passing false for Player 2
 
             startPointPlayer2.transform.localEulerAngles = new Vector3(0, -180, 0);
+            startPointPlayer1.transform.localEulerAngles = new Vector3(0, 180, 0);
 
         }
         else

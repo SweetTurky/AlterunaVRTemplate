@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class MagnusAISoff : MonoBehaviour
 {
-    private NavMeshAgent _agent;
+    public NavMeshAgent _agent;
     [SerializeField]
     private Transform[] _waypoints;
     public int _currentWaypointIndex = 0;
@@ -18,7 +18,7 @@ public class MagnusAISoff : MonoBehaviour
     public Animator _animator;
     public GameObject lookAtObject;
 
-    public bool _isWalking = false;
+    //public bool _isWalking = false;
     //public float voiceLineDuration = voiceLines[currentVoiceLineIndex].length;
     // Start is called before the first frame update
     public AudioSource magnusAudioSource;
@@ -33,7 +33,7 @@ public class MagnusAISoff : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if (_isWalking)
         {
@@ -62,12 +62,12 @@ public class MagnusAISoff : MonoBehaviour
             if (_animator != null)
             {
                 _animator.SetBool("IsWalking", false);
-                _animator.SetBool("IsTalking", true);
+                _animator.SetBool("IsTalking", false);
             }
         }
-    }
+    }*/
 
-    private void SetNextWaypoint()
+    public void SetNextWaypoint()
     {
         if (_waypoints.Length == 0)
         {
@@ -75,7 +75,7 @@ public class MagnusAISoff : MonoBehaviour
             return;
         }
 
-        if (_currentWaypointIndex + 1 == 5)
+        if (_currentWaypointIndex + 1 == 3)
         {
             _currentWaypointIndex = 0;
         }

@@ -54,6 +54,7 @@ public class StoryManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //StartCoroutine(nameof(PlayBeerPongVoiceLines)); //Out comment
         StartCoroutine(nameof(ActivateArtists));
         StartCoroutine(magnusVoice1.MagnusSpeakWithDelay(4f, magnusVoice1.magnusKoncertVoicelines, 0));
         StartCoroutine(magnusVoice1.MagnusSpeakWithDelay(8.5f, magnusVoice1.magnusKoncertVoicelines, 1));
@@ -161,17 +162,7 @@ public class StoryManager : MonoBehaviour
     {
         Debug.Log("Beerpongvoicelines activated");
         yield return new WaitForSeconds(11f);
-        int totalVoicelines = magnusVoice3.magnusEarpongVoicelines.Length;
-
-        // Ensure the agent is not walking initially
-        magnusAiSoff._isWalking = false;
-
-        // Initialize animation state
-        if (magnusAiSoff._animator != null)
-        {
-            magnusAiSoff._animator.SetBool("IsWalking", false);
-            magnusAiSoff._animator.SetBool("IsTalking", true);
-        }
+        //int totalVoicelines = magnusVoice3.magnusEarpongVoicelines.Length;
 
         foreach (AudioClip clip in magnusVoice3.magnusEarpongVoicelines)
         {
@@ -180,9 +171,6 @@ public class StoryManager : MonoBehaviour
             // Play the clip through the AudioSource
             magnusAudioSource.Play();
 
-            // Wait for the audio clip to start playing
-            yield return WaitForAudioClip(magnusAudioSource);
-
             // Play talking animation and remain stationary while the voice line is playing
             if (magnusAiSoff._animator != null)
             {
@@ -190,19 +178,41 @@ public class StoryManager : MonoBehaviour
                 magnusAiSoff._animator.SetBool("IsTalking", true);
             }
 
+            // Wait for the audio clip to start playing
+            //yield return WaitForAudioClip(magnusAudioSource);
+
             // Wait for the duration of the clip
             yield return new WaitForSeconds(clip.length);
 
             // Resume walking animation after the voice line is finished playing
             if (magnusAiSoff._animator != null)
             {
-                magnusAiSoff._animator.SetBool("IsWalking", true);
                 magnusAiSoff._animator.SetBool("IsTalking", false);
             }
 
-            // Resume walking
-            magnusAiSoff._isWalking = true;
+            // Call SetNextWaypoint to make the agent walk towards the next waypoint
+            magnusAiSoff.SetNextWaypoint();
+            // Resume walking during the 15-second pause
+            float elapsedTime = 0f;
+            while (elapsedTime < 15f)
+            {
+                // Update elapsed time
+                elapsedTime += Time.deltaTime;
+
+                if (magnusAiSoff._agent.remainingDistance > magnusAiSoff._agent.stoppingDistance)
+                {
+                    magnusAiSoff._animator.SetBool("IsWalking", true);
+                    magnusAiSoff._animator.SetBool("IsTalking", false);
+                }
+                else if (magnusAiSoff._agent.remainingDistance < magnusAiSoff._agent.stoppingDistance)
+                {
+                    magnusAiSoff._animator.SetBool("IsWalking", false);
+                }
+                yield return null; // Yielding here ensures the loop will continue in the next frame
+            }
+            magnusAiSoff.transform.LookAt(magnusAiSoff.lookAtObject.transform.position);
         }
+        EndGame();
     }
 
     private IEnumerator WaitForAudioClip(AudioSource audioSource)
@@ -213,8 +223,6 @@ public class StoryManager : MonoBehaviour
             yield return null;
         }
     }
-
-
 
     public void EndGame()
     {
