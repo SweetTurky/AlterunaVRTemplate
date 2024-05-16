@@ -22,7 +22,7 @@ public class RandomBounceSpeed : MonoBehaviour
         }
     }
 
-    void LateUpdate()
+    void Update()
     {
         Vector3 position = transform.localPosition;
         position.x = intialX;
