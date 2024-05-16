@@ -34,7 +34,7 @@ public class CupBehaviour : MonoBehaviour
                 // Play the particle effect
                 if (hitEffect != null)
                 {
-                    Instantiate(hitEffect, hitTransform.transform.position, Quaternion.identity);
+                    hitEffect.Play();
                 }
 
                 pongBallBehaviour.TeleportSphereTo(respawnPoint);

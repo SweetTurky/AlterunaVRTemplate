@@ -5,9 +5,8 @@ using System.Collections.Generic;
 using TMPro;
 using Alteruna;
 
-public class BasketballManager : MonoBehaviour
+public class BasketballManager : AttributesSync
 {
-    public static BasketballManager Instance;
 
     [Header("Player1")]
     public int scorePlayer1 = 0; // Score to keep track of player 1's goals
@@ -41,7 +40,7 @@ public class BasketballManager : MonoBehaviour
     public AudioClip winSound;
     private float countdownTimer = 10f; // Timer for the countdown
     public string sceneToLoad;
-    public MessageAllPlayers rpcObject;
+    private MessageAllPlayers messageAllPlayers;
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +50,7 @@ public class BasketballManager : MonoBehaviour
         winCanvasPlayer2.SetActive(false);
         infoCanvasPlayer1.SetActive(true);
         infoCanvasPlayer2.SetActive(true);
+        messageAllPlayers = GetComponent<MessageAllPlayers>();
     }
 
     private void Update()
@@ -87,17 +87,8 @@ public class BasketballManager : MonoBehaviour
                     lightComponent.enabled = true;
                 }
             }
-
-            // If player 1 reached the score to win
-            /*if (scorePlayer1 >= scoreToWin && !player1Finished)
-            {
-                infoCanvasPlayer1.SetActive(false);
-                winCanvasPlayer1.SetActive(true);
-                winAudioPlayer1.PlayOneShot(winSound);
-                player1Finished = true;
-                CheckBothPlayersFinished();
-            }*/
         }
+
         else if (playerTag == "Player2")
         {
             scorePlayer2++; // Increment player 2's score
@@ -118,16 +109,6 @@ public class BasketballManager : MonoBehaviour
                     lightComponent.enabled = true;
                 }
             }
-
-            // If player 2 reached the score to win
-            /*if (scorePlayer2 >= scoreToWin && !player2Finished)
-            {
-                infoCanvasPlayer2.SetActive(false);
-                winCanvasPlayer2.SetActive(true);
-                winAudioPlayer2.PlayOneShot(winSound);
-                player2Finished = true;
-                CheckBothPlayersFinished();
-            }*/
         }
     }
 
@@ -138,6 +119,7 @@ public class BasketballManager : MonoBehaviour
         StartCoroutine("BothPlayersFinishedCoroutine");
     }*/
 
+    [SynchronizableMethod]
     public void BothPlayersFinished()
     {
         ////winCanvasPlayer1.SetActive(false);
@@ -148,6 +130,6 @@ public class BasketballManager : MonoBehaviour
         // Coroutine logic here
         Debug.Log("Both players finished!");
         //textToDisable.enabled = false;
-        rpcObject.SendLoadSceneRPC(2);
+        messageAllPlayers.SendLoadSceneRPC(2);
     }
 }

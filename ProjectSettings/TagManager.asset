@@ -14,6 +14,7 @@ TagManager:
   - Player2Cup
   - Ball1
   - Ball2
+  - TableCollider
   layers:
   - Default
   - TransparentFX

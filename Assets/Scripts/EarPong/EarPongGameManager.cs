@@ -15,7 +15,7 @@ public class EarPongGameManager : MonoBehaviour
     public TMP_Text player2ScoreText;
 
     public AudioClip victorySound;
-    public GameObject winParticle;
+    public ParticleSystem winParticle;
 
     //public Transform[] player1CupOriginalPositions; // Assign in Inspector
     //public Transform[] player2CupOriginalPositions; // Assign in Inspector
@@ -97,7 +97,7 @@ public class EarPongGameManager : MonoBehaviour
         // Instantiate the particle effect
         if (winParticle != null)
         {
-            winParticle.SetActive(true);
+            winParticle.Play();
         }
 
         if(player1CupsDestroyed >= 6)

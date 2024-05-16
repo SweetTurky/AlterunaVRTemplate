@@ -137,7 +137,7 @@ public class StoryManager : MonoBehaviour
             // Convert list back to array
             magnusVoice3.magnusEarpongVoicelines = voicelinesList.ToArray();
 
-            StartCoroutine("PlayBeerPongVoiceLines");
+            StartCoroutine(nameof(PlayBeerPongVoiceLines));
 
         }
     }

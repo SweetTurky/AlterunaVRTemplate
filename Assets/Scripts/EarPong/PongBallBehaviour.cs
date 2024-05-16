@@ -6,9 +6,16 @@ public class PongBallBehaviour : MonoBehaviour
 {
     public Transform respawnPointPlayer1; // Set this in the Inspector for Player 1
     public Transform respawnPointPlayer2; // Set this in the Inspector for Player 2
+    public float respawnDelay = 2f; // Delay before respawning the ball
 
     void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("TableCollider")) // Check if collider around the table is hit
+        {
+            StartCoroutine(RespawnAfterDelay(respawnDelay));
+            return;
+        }
+
         CupBehaviour cup = other.GetComponent<CupBehaviour>();
 
         if (cup != null)
@@ -32,7 +39,6 @@ public class PongBallBehaviour : MonoBehaviour
         }
     }
 
-
     // Function to respawn the ball after a certain delay
     public IEnumerator RespawnAfterDelay(float delay)
     {
@@ -42,14 +48,11 @@ public class PongBallBehaviour : MonoBehaviour
         {
             TeleportSphereTo(respawnPointPlayer1);
         }
-        
         else if (gameObject.CompareTag("Ball2"))
         {
             TeleportSphereTo(respawnPointPlayer2);
         }
-
     }
-
 
     public void TeleportSphereTo(Transform targetPosition)
     {
