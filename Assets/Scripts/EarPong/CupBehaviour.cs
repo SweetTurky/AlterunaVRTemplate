@@ -22,10 +22,10 @@ public class CupBehaviour : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Ball"))
+        if (other.CompareTag("Ball1") || other.CompareTag("Ball2"))
         {
-            BallBehaviour ballBehaviour = other.GetComponent<BallBehaviour>();
-            if (ballBehaviour != null)
+            PongBallBehaviour pongBallBehaviour = other.GetComponent<PongBallBehaviour>();
+            if (pongBallBehaviour != null)
             {
                 // Randomly select a sound effect from an array
                 int randomIndex = Random.Range(0, soundEffects.Length);
@@ -37,7 +37,7 @@ public class CupBehaviour : MonoBehaviour
                     Instantiate(hitEffect, hitTransform.transform.position, Quaternion.identity);
                 }
 
-                ballBehaviour.TeleportSphereTo(respawnPoint);
+                pongBallBehaviour.TeleportSphereTo(respawnPoint);
 
                 // Remove the cup after the particle effect finishes
                 Invoke(nameof(DeactivateGameObject), 1.2f);

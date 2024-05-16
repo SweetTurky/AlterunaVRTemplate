@@ -10,11 +10,11 @@ public class MissCollider : MonoBehaviour
         {
             // Get the BasketballBehaviour component attached to the basketball GameObject
             BasketballBehaviour basketballBehaviour = other.GetComponent<BasketballBehaviour>();
-            BallBehaviour ballBehaviour = other.GetComponent<BallBehaviour>();
+            PongBallBehaviour pongBallBehaviour = other.GetComponent<PongBallBehaviour>();
 
-            if (ballBehaviour != null)
+            if (pongBallBehaviour != null)
             {
-                ballBehaviour.RespawnAfterDelay(2f);
+                pongBallBehaviour.RespawnAfterDelay(2f);
             }
             // Check if the basketballBehaviour is not null
             if (basketballBehaviour != null)

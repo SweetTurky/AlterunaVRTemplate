@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class BallBehaviour : MonoBehaviour
+public class PongBallBehaviour : MonoBehaviour
 {
     public Transform respawnPointPlayer1; // Set this in the Inspector for Player 1
     public Transform respawnPointPlayer2; // Set this in the Inspector for Player 2
