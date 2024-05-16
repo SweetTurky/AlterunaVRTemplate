@@ -364,6 +364,7 @@ GameObject:
   - component: {fileID: 744497054486432131}
   - component: {fileID: 501609635561267706}
   - component: {fileID: 7066888714083831047}
+  - component: {fileID: -7357529518969625116}
   m_Layer: 0
   m_Name: LeftHandCorrectedNEW
   m_TagString: Untagged
@@ -448,6 +449,23 @@ MonoBehaviour:
     m_Reference: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   handAnimation: {fileID: 501609635561267706}
+--- !u!114 &-7357529518969625116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5067842252874497853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -805392892, guid: 0ae8d181602a00248a82f64a684a1c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Multiplayer: {fileID: 0}
+  _uidString: cf60abb7-2366-4518-915a-e03cda7604e3
+  Reliability: 1
+  LocalMethodBehavior: 1
+  Animator: {fileID: 0}
 --- !u!1 &5786120091252357533
 GameObject:
   m_ObjectHideFlags: 0
