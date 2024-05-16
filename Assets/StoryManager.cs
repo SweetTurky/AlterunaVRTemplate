@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using System.Linq;
-
-public class StoryManager : MonoBehaviour
+using Alteruna;
+public class StoryManager : AttributesSync
 {
     public static StoryManager Instance { get; set; }
 
@@ -29,8 +29,8 @@ public class StoryManager : MonoBehaviour
     public List<GameObject> objectsToDeactivate;
 
     [Header("P1 and P2")]
-    private bool p1Ready;
-    private bool p2Ready;
+    public bool p1Ready;
+    public bool p2Ready;
 
     [Header("Magnus")]
     public GameObject magnus1;
@@ -43,6 +43,7 @@ public class StoryManager : MonoBehaviour
 
     [Header("Script References")]
     public MagnusAISoff magnusAiSoff;
+    private MessageAllPlayers messageAllPlayers;
 
     private void Awake()
     {
@@ -50,6 +51,7 @@ public class StoryManager : MonoBehaviour
         magnusVoice1 = magnus1.GetComponent<MagnusVoice>();
         magnusVoice2 = magnus2.GetComponent<MagnusVoice>();
         magnusVoice3 = magnus3.GetComponent<MagnusVoice>();
+        messageAllPlayers = GetComponent<MessageAllPlayers>();
     }
     // Start is called before the first frame update
     void Start()
@@ -110,6 +112,17 @@ public class StoryManager : MonoBehaviour
         p2Ready = true;
     }
 
+    public void PlayersReady()
+    {
+        BroadcastRemoteMethod(nameof(ClimbReadyVO));
+    }
+
+    public void PlayersReady2()
+    {
+        BroadcastRemoteMethod(nameof(ReadyToPlayVO));
+    }
+
+    [SynchronizableMethod]
     public void ClimbReadyVO()
     {
         if (p1Ready && p2Ready)
@@ -120,10 +133,9 @@ public class StoryManager : MonoBehaviour
         }
     }
 
+    [SynchronizableMethod]
     public void ReadyToPlayVO()
     {
-        //p1Ready = true; // Slet mig
-        //p2Ready = true; // Slet mig
         if (p1Ready && p2Ready)
         {
             magnusVoice3.MagnusSpeak(magnusVoice3.magnusEarpongVoicelines, 0);
@@ -139,6 +151,8 @@ public class StoryManager : MonoBehaviour
             magnusVoice3.magnusEarpongVoicelines = voicelinesList.ToArray();
 
             StartCoroutine(nameof(PlayBeerPongVoiceLines));
+            p1Ready = false;
+            p2Ready = false;
 
         }
     }
@@ -212,7 +226,7 @@ public class StoryManager : MonoBehaviour
             }
             magnusAiSoff.transform.LookAt(magnusAiSoff.lookAtObject.transform.position);
         }
-        EndGame();
+        EndGameTimer();
     }
 
     private IEnumerator WaitForAudioClip(AudioSource audioSource)
@@ -224,7 +238,13 @@ public class StoryManager : MonoBehaviour
         }
     }
 
-    public void EndGame()
+    public void EndGameTimer()
+    {
+        BroadcastRemoteMethod(nameof(EndGame));
+    }
+
+    [SynchronizableMethod]
+    private void EndGame()
     {
         Debug.Log("Spillet slutter nu");
         outroSpeak.Play();

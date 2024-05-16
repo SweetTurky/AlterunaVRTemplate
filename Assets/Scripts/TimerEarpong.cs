@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Alteruna;
 
-public class TimerEarpong : MonoBehaviour
+public class TimerEarpong : AttributesSync
 {
+    private StoryManager storyManager;
     public bool player1Ready = false;
     public bool player2Ready = false;
 
@@ -13,6 +15,11 @@ public class TimerEarpong : MonoBehaviour
     private bool timerStarted = false;
     private float timerDuration = 5 * 60; // 5 minutes in seconds
     private float elapsedTime = 0;
+
+    private void Start() 
+    {
+        storyManager = GetComponent<StoryManager>();
+    }
 
     void Update()
     {
@@ -25,17 +32,22 @@ public class TimerEarpong : MonoBehaviour
             UpdateTimerDisplay();
 
             // Check if both players are ready and the timer is up
-            if (player1Ready && player2Ready && elapsedTime >= timerDuration)
+            if (storyManager.p1Ready && storyManager.p2Ready && elapsedTime >= timerDuration)
             {
-                StoryManager.Instance.EndGame(); // Call the EndGame method from EndGameScript
+                storyManager.EndGameTimer(); // Call the EndGame method the StoryManager
             }
         }
     }
 
-    // Method to start the timer
-    public void StartTimer()
+    public void TimerStartRPC()
     {
-        if (!timerStarted && player1Ready && player2Ready)
+        BroadcastRemoteMethod(nameof(StartTimer));
+    }
+    
+    [SynchronizableMethod]
+    private void StartTimer()
+    {
+        if (!timerStarted && storyManager.p1Ready && storyManager.p2Ready)
         {
             timerStarted = true;
         }

@@ -5,16 +5,49 @@ using Alteruna;
 
 public class MessageAllPlayers : AttributesSync
 {
+    private StoryManager storyManager;
+    private TimerEarpong timerEarpong;
+
+    private void Start() 
+    {
+        storyManager = GetComponent<StoryManager>();
+        timerEarpong = GetComponent<TimerEarpong>();
+    }
     public void SendLoadSceneRPC(int sceneId)
     {
         // Invoke method by name for all players. alternatively, we can call by index.
-        BroadcastRemoteMethod(nameof(ReceiveRPC), sceneId);
+        BroadcastRemoteMethod(nameof(ReceiveLoadSceneRPC), sceneId);
     }
 
     // the SynchronizableMethod attribute marks methods available for remote invocation.
     [SynchronizableMethod]
-    private void ReceiveRPC(int sceneId)
+    private void ReceiveLoadSceneRPC(int sceneId)
     {
         Multiplayer.Instance.LoadScene(sceneId);
     }
+
+    public void SendBoolTrueFalseRPC(string boolName)
+    {
+        BroadcastRemoteMethod(nameof(ReceiveBoolTrueFalseRPC), boolName);
+    }
+
+    [SynchronizableMethod]
+    private void ReceiveBoolTrueFalseRPC(string boolName)
+    {
+        switch (boolName)
+        {
+            case "p1Ready":
+                storyManager.p1Ready = true;
+                break;
+            case "p2Ready":
+                storyManager.p2Ready = true;
+                break;
+            // Add cases for other boolean variables as needed
+            default:
+                Debug.LogWarning("Unknown boolean variable name: " + boolName);
+                break;
+        }
+    }
+
+
 }
