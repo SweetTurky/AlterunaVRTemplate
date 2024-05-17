@@ -22,6 +22,8 @@ public class CupBehaviour : AttributesSync
     {
         gameObject.SetActive(false);
     }
+    
+    [SynchronizableMethod]
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Ball1") || other.CompareTag("Ball2"))
@@ -42,8 +44,8 @@ public class CupBehaviour : AttributesSync
                 pongBallBehaviour.TeleportSphereTo(respawnPoint);
 
                 // Remove the cup after the particle effect finishes
-                Invoke(nameof(DeactivateGameObject), 1.2f);
-                EarPongGameManager.Instance.CheckWinCondition(owner);
+                InvokeRemoteMethod(nameof(DeactivateGameObject), UserId.All, 1.2f);
+                BroadcastRemoteMethod(nameof(EarPongGameManager.Instance.CheckWinCondition), owner);
                 HearingLossSimulation.Instance.lowPassFilter.cutoffFrequency += HearingLossSimulation.Instance.hearingLossIncreaseRate;
                 HearingLossSimulation.Instance.minimumRange += 0.1f;
                 HearingLossSimulation.Instance.maximumRange -= 0.2f;

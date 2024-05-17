@@ -7,6 +7,7 @@ public class MessageAllPlayers : AttributesSync
 {
     private StoryManager storyManager;
     private TimerEarpong timerEarpong;
+    private string sceneToLoad = "Koncert";
 
     private void Start() 
     {
@@ -23,7 +24,7 @@ public class MessageAllPlayers : AttributesSync
     [SynchronizableMethod]
     private void ReceiveLoadSceneRPC(int sceneId)
     {
-        Multiplayer.LoadScene(sceneId);
+        LoadNextScene();
     }
 
     public void SendBoolTrueFalseRPC(string boolName)
@@ -49,5 +50,10 @@ public class MessageAllPlayers : AttributesSync
         }
     }
 
+    [SynchronizableMethod]
+    public void LoadNextScene()
+    {
+        Multiplayer.Instance.LoadScene(sceneToLoad);
+    }
 
 }

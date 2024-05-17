@@ -3,8 +3,9 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Alteruna;
 
-public class EarPongGameManager : MonoBehaviour
+public class EarPongGameManager : AttributesSync
 {
     public static EarPongGameManager Instance { get; private set; }
 
@@ -44,6 +45,8 @@ public class EarPongGameManager : MonoBehaviour
 
     }
 
+
+    [SynchronizableMethod]
      public void CheckWinCondition(CupOwner owner)
     {
         if (owner == CupOwner.Player1)
@@ -69,6 +72,7 @@ public class EarPongGameManager : MonoBehaviour
         }
     }
 
+    [SynchronizableMethod]
     // Method to update the score on a TextMeshPro UI element
     void UpdateScore(TMP_Text scoreText, int score)
     {

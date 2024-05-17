@@ -29,16 +29,10 @@ public class Timer : AttributesSync
                 Debug.Log("Time's up!");
                 currentTime = 0;
                 //Do stuff when timer reaches 0
-                basketballManager.BothPlayersFinished();
+                BroadcastRemoteMethod(nameof(TutorialDone));
             }
             UpdateUIText();
         }
-    }
-
-    [SynchronizableMethod]
-    void UpdateTimer()
-    {
-
     }
 
     void UpdateUIText()
@@ -58,6 +52,12 @@ public class Timer : AttributesSync
     {
         timerStarted = true;
         currentTime = timerDuration;
+    }
+
+    [SynchronizableMethod]
+    private void TutorialDone()
+    {
+        Multiplayer.Instance.LoadScene("Koncert");
     }
 
     public void Player1Finished()

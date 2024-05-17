@@ -119,7 +119,7 @@ public class BasketballManager : AttributesSync
         StartCoroutine("BothPlayersFinishedCoroutine");
     }*/
 
-    [SynchronizableMethod]
+    /*[SynchronizableMethod]
     public void BothPlayersFinished()
     {
         ////winCanvasPlayer1.SetActive(false);
@@ -131,5 +131,5 @@ public class BasketballManager : AttributesSync
         Debug.Log("Both players finished!");
         //textToDisable.enabled = false;
         messageAllPlayers.SendLoadSceneRPC(2);
-    }
+    }*/
 }
