@@ -23,7 +23,7 @@ public class MessageAllPlayers : AttributesSync
     [SynchronizableMethod]
     private void ReceiveLoadSceneRPC(int sceneId)
     {
-        Multiplayer.Instance.LoadScene(sceneId);
+        Multiplayer.LoadScene(sceneId);
     }
 
     public void SendBoolTrueFalseRPC(string boolName)

@@ -12,10 +12,9 @@ public class HearingLossSimulation : AttributesSync
     public AudioSource tinnitusAudio;
     public bool hearinglossActivated = false;
     private bool tinnitusHasPlayed = false;
-    private AudioListener audioListener;
     public AudioLowPassFilter lowPassFilter;
     public AudioChorusFilter chorusFilter;  
-    public float hearingLossIncreaseRate = 150f;
+    public float hearingLossIncreaseRate = 500f;
     public float stereoPanningPositiveSkew = 0f;
     public float minimumRange = 0f;
     public float maximumRange = 3f;
@@ -43,14 +42,13 @@ public class HearingLossSimulation : AttributesSync
     [SynchronizableMethod]
     private void Start()
     {
-        audioListener = FindObjectOfType<AudioListener>(); // Find the AudioListener in the scene
-        lowPassFilter = audioListener.GetComponent<AudioLowPassFilter>();
-        chorusFilter = audioListener.GetComponent<AudioChorusFilter>();
+        lowPassFilter = Camera.main.GetComponent<AudioLowPassFilter>();
+        chorusFilter = Camera.main.GetComponent<AudioChorusFilter>();
     }
 
     private void Update()
     {
-        if (audioListener == null || lowPassFilter == null || chorusFilter == null)
+        if (lowPassFilter == null || chorusFilter == null)
         {
             Debug.LogError("One or more necessary components not found.");
             return;
