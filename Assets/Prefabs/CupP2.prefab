@@ -123,6 +123,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e8eac878a638d4e958be9bad232663, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Multiplayer: {fileID: 0}
+  _uidString: 9ff0fc69-ca9d-4615-b8dc-d264b7dc4170
+  Reliability: 1
+  LocalMethodBehavior: 1
   owner: 1
   respawnPoint: {fileID: 0}
   hitEffect: {fileID: 6803210446809643586}

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Alteruna;
 
 public enum CupOwner
 {
@@ -8,7 +9,7 @@ public enum CupOwner
     Player2
 }
 
-public class CupBehaviour : MonoBehaviour
+public class CupBehaviour : AttributesSync
 {
     public CupOwner owner; // Assign in Inspector
     public Transform respawnPoint; // Assign in Inspector
@@ -16,6 +17,7 @@ public class CupBehaviour : MonoBehaviour
     public AudioClip[] soundEffects;// Assign in Inspector
     public Transform hitTransform;
 
+    [SynchronizableMethod]
     void DeactivateGameObject()
     {
         gameObject.SetActive(false);

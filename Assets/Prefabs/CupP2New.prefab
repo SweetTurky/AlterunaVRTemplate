@@ -14565,6 +14565,7 @@ GameObject:
   - component: {fileID: 4216486438656088650}
   - component: {fileID: 8646039733338497130}
   - component: {fileID: 1075171089238197941}
+  - component: {fileID: 8422071881079761746}
   m_Layer: 0
   m_Name: CupP2New
   m_TagString: Player2Cup
@@ -14675,6 +14676,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e8eac878a638d4e958be9bad232663, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Multiplayer: {fileID: 0}
+  _uidString: abf5e44a-c1a2-4f90-8274-da58dbd4a5ab
+  Reliability: 1
+  LocalMethodBehavior: 1
   owner: 0
   respawnPoint: {fileID: 0}
   hitEffect: {fileID: 8439524318388291995}
@@ -14706,3 +14711,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1613275271250588456, guid: 35b2fbf1b84dbcf49a3767ad5a4d37ca, type: 3}
+--- !u!114 &8422071881079761746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4453599062468898073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 419518920, guid: 0ae8d181602a00248a82f64a684a1c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Multiplayer: {fileID: 0}
+  _uidString: 2a7791d2-e022-47b6-b933-70739e0e15e2
+  Reliability: 1
+  LocalMethodBehavior: 1

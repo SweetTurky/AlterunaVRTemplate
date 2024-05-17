@@ -1,13 +1,14 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.XR.Interaction.Toolkit;
-
-public class PongBallBehaviour : MonoBehaviour
+using Alteruna;
+public class PongBallBehaviour : AttributesSync
 {
     public Transform respawnPointPlayer1; // Set this in the Inspector for Player 1
     public Transform respawnPointPlayer2; // Set this in the Inspector for Player 2
     public float respawnDelay = 2f; // Delay before respawning the ball
 
+    [SynchronizableMethod]
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("TableCollider")) // Check if collider around the table is hit
@@ -40,6 +41,7 @@ public class PongBallBehaviour : MonoBehaviour
     }
 
     // Function to respawn the ball after a certain delay
+    [SynchronizableMethod]
     public IEnumerator RespawnAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
@@ -54,6 +56,7 @@ public class PongBallBehaviour : MonoBehaviour
         }
     }
 
+    [SynchronizableMethod]
     public void TeleportSphereTo(Transform targetPosition)
     {
         transform.position = targetPosition.position;

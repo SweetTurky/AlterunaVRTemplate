@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
-
-public class HearingLossSimulation : MonoBehaviour
+using Alteruna;
+public class HearingLossSimulation : AttributesSync
 {
     public static HearingLossSimulation Instance;
     // Adjust these variables as needed to control the rate of hearing loss
@@ -14,7 +14,7 @@ public class HearingLossSimulation : MonoBehaviour
     private bool tinnitusHasPlayed = false;
     private AudioListener audioListener;
     public AudioLowPassFilter lowPassFilter;
-    public AudioChorusFilter chorusFilter;
+    public AudioChorusFilter chorusFilter;  
     public float hearingLossIncreaseRate = 150f;
     public float stereoPanningPositiveSkew = 0f;
     public float minimumRange = 0f;
@@ -39,6 +39,8 @@ public class HearingLossSimulation : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    [SynchronizableMethod]
     private void Start()
     {
         audioListener = FindObjectOfType<AudioListener>(); // Find the AudioListener in the scene
@@ -94,7 +96,7 @@ public class HearingLossSimulation : MonoBehaviour
         }
 
     }
-
+    [SynchronizableMethod]
     private IEnumerator ChangeResonanceQSmoothly(float targetQ)
     {
         float startQ = lowPassFilter.lowpassResonanceQ;

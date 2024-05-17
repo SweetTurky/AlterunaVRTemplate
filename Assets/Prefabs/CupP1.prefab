@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 5312331549726609718}
   - component: {fileID: 7071058110498705642}
   - component: {fileID: 1213682598157284323}
+  - component: {fileID: 3710081222159280433}
   m_Layer: 0
   m_Name: CupP1
   m_TagString: Player1Cup
@@ -154,6 +155,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e8eac878a638d4e958be9bad232663, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Multiplayer: {fileID: 0}
+  _uidString: e89dbb36-5e0e-45c4-a0f3-ce057c83d354
+  Reliability: 1
+  LocalMethodBehavior: 1
   owner: 0
   respawnPoint: {fileID: 0}
   hitEffect: {fileID: 1118520474455550030}
@@ -163,6 +168,22 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4341976b1bbce3e41810909779591d32, type: 3}
   - {fileID: 8300000, guid: fa3a88645f07dc24fb3ce9e70b6b681c, type: 3}
   hitTransform: {fileID: 3597406251967790570}
+--- !u!114 &3710081222159280433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7134955015422934310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 419518920, guid: 0ae8d181602a00248a82f64a684a1c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Multiplayer: {fileID: 0}
+  _uidString: 940103fb-3a99-4690-a9a9-b239bc86b39a
+  Reliability: 1
+  LocalMethodBehavior: 1
 --- !u!1001 &1028596469040732721
 PrefabInstance:
   m_ObjectHideFlags: 0

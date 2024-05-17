@@ -151,8 +151,6 @@ public class StoryManager : AttributesSync
             magnusVoice3.magnusEarpongVoicelines = voicelinesList.ToArray();
 
             StartCoroutine(nameof(PlayBeerPongVoiceLines));
-            p1Ready = false;
-            p2Ready = false;
 
         }
     }

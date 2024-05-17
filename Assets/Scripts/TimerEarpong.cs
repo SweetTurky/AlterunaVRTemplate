@@ -13,12 +13,15 @@ public class TimerEarpong : AttributesSync
     public TextMeshProUGUI timerText; // Reference to the TextMeshPro UI element
 
     private bool timerStarted = false;
-    private float timerDuration = 5 * 60; // 5 minutes in seconds
+    private float timerDuration = 6 * 60; // 6 minutes in seconds
     private float elapsedTime = 0;
 
     private void Start() 
     {
         storyManager = GetComponent<StoryManager>();
+        //storyManager.p1Ready = true;
+        //storyManager.p2Ready = true;
+        //TimerStartRPC();
     }
 
     void Update()
@@ -34,7 +37,8 @@ public class TimerEarpong : AttributesSync
             // Check if both players are ready and the timer is up
             if (storyManager.p1Ready && storyManager.p2Ready && elapsedTime >= timerDuration)
             {
-                storyManager.EndGameTimer(); // Call the EndGame method the StoryManager
+                //storyManager.EndGameTimer(); // Call the EndGame method the StoryManager
+                elapsedTime = 0;
             }
         }
     }
@@ -50,6 +54,8 @@ public class TimerEarpong : AttributesSync
         if (!timerStarted && storyManager.p1Ready && storyManager.p2Ready)
         {
             timerStarted = true;
+            storyManager.p1Ready = false;
+            storyManager.p2Ready = false;
         }
     }
 
@@ -61,14 +67,6 @@ public class TimerEarpong : AttributesSync
         int seconds = Mathf.FloorToInt(timeRemaining % 60);
         string timerString = string.Format("{0:00}:{1:00}", minutes, seconds);
         timerText.text = timerString;
-    }
-    public void P1Ready()
-    {
-        player1Ready = true;
-    }
-    public void P2Ready()
-    {
-        player2Ready = true;
     }
 }
 
