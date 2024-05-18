@@ -57,7 +57,7 @@ public class Timer : AttributesSync
     [SynchronizableMethod]
     private void TutorialDone()
     {
-        Multiplayer.Instance.LoadScene("Koncert");
+        Multiplayer.LoadScene("Koncert");
     }
 
     public void Player1Finished()

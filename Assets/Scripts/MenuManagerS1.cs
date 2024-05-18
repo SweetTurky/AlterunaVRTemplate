@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Alteruna;
 
-public class MenuManagerS1 : MonoBehaviour
+public class MenuManagerS1 : AttributesSync
 {
     public string sceneToLoad;
     //public Multiplayer instance;
@@ -83,18 +83,19 @@ public class MenuManagerS1 : MonoBehaviour
         }
 
         // When the countdown is finished, load the next scene
-        LoadNextScene();
+        BroadcastRemoteMethod(nameof(LoadNextScene));
     }
 
+    [SynchronizableMethod]
     void LoadNextScene()
     {
         // Load the next scene (you can specify the scene name or index here)
-        Multiplayer.Instance.LoadScene(sceneToLoad);
+        Multiplayer.LoadScene(sceneToLoad);
     }
 
-    public void SetTag()
+    /*public void SetTag()
     {
         int userNumber = Multiplayer.Instance.GetUser().Index;
         Debug.Log("" + userNumber); 
-    }
+    }*/
 }

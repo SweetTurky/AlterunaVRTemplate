@@ -7,14 +7,14 @@ public class HearingLossSimulation : AttributesSync
     // Adjust these variables as needed to control the rate of hearing loss
     public float hearingLossRate = 0.01f; // Rate at which hearing loss occurs per second
     public float stereoPanningSkew = 0.5f; // Skew of stereo panning towards one ear
-    public float minCutoffFrequency = 500f; // Minimum cutoff frequency for low pass filter
+    public float minCutoffFrequency = 800f; // Minimum cutoff frequency for low pass filter
     public float minDryMix = 0.1f; // Minimum dry mix for chorus filter
     public AudioSource tinnitusAudio;
     public bool hearinglossActivated = false;
     private bool tinnitusHasPlayed = false;
     public AudioLowPassFilter lowPassFilter;
     public AudioChorusFilter chorusFilter;  
-    public float hearingLossIncreaseRate = 500f;
+    public float hearingLossIncreaseRate = 800f;
     public float stereoPanningPositiveSkew = 0f;
     public float minimumRange = 0f;
     public float maximumRange = 3f;

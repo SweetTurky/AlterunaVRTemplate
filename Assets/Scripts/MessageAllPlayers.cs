@@ -24,7 +24,7 @@ public class MessageAllPlayers : AttributesSync
     [SynchronizableMethod]
     private void ReceiveLoadSceneRPC(int sceneId)
     {
-        Multiplayer.Instance.LoadScene(sceneId);
+        Multiplayer.LoadScene("EarPong");
     }
 
     public void SendBoolTrueFalseRPC(string boolName)
