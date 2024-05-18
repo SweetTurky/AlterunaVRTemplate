@@ -211,7 +211,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.5
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1160,6 +1160,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 23800000, guid: 01ae3dc5f91e9134da387936517122f5,
         type: 2}
+    - target: {fileID: 1643131169272420766, guid: c9072e337684cde40928042edf27eca2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643131169272420766, guid: c9072e337684cde40928042edf27eca2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643131169272420766, guid: c9072e337684cde40928042edf27eca2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643131169272420766, guid: c9072e337684cde40928042edf27eca2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1971466245873025267, guid: c9072e337684cde40928042edf27eca2,
         type: 3}
       propertyPath: m_Center.y
@@ -3073,8 +3093,8 @@ Transform:
   m_GameObject: {fileID: 1841697865}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -58.881145, y: 12.748082, z: -4.997577}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -57.631145, y: 12.748082, z: -4.997577}
+  m_LocalScale: {x: 7.850767, y: 7.850767, z: 7.850767}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
