@@ -1,8 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.XR.Interaction.Toolkit;
-using Alteruna;
-public class PongBallBehaviour : AttributesSync
+public class PongBallBehaviour : MonoBehaviour
 {
     public Transform respawnPointPlayer1; // Set this in the Inspector for Player 1
     public Transform respawnPointPlayer2; // Set this in the Inspector for Player 2
@@ -13,7 +12,8 @@ public class PongBallBehaviour : AttributesSync
     {
         if (other.CompareTag("TableCollider")) // Check if collider around the table is hit
         {
-            BroadcastRemoteMethod(nameof(RespawnAfterDelay), respawnDelay);
+            Debug.Log("Hit Table");
+            StartCoroutine(RespawnAfterDelay(respawnDelay));
             return;
         }
 
@@ -23,40 +23,45 @@ public class PongBallBehaviour : AttributesSync
         {
             if (cup.owner == CupOwner.Player1 && gameObject.CompareTag("Ball1"))
             {
-                BroadcastRemoteMethod(nameof(TeleportSphereTo), respawnPointPlayer1);
+                Debug.Log("Hit Cup");
+                TeleportSphereTo(respawnPointPlayer1);
             }
             else if (cup.owner == CupOwner.Player2 && gameObject.CompareTag("Ball1"))
             {
-                BroadcastRemoteMethod(nameof(TeleportSphereTo), respawnPointPlayer1);
+                Debug.Log("Hit Cup");
+                TeleportSphereTo(respawnPointPlayer2);
             }
-            else if (cup.owner == CupOwner.Player1 && gameObject.CompareTag("Ball2"))
+            /*else if (cup.owner == CupOwner.Player1 && gameObject.CompareTag("Ball2"))
             {
-                BroadcastRemoteMethod(nameof(TeleportSphereTo), respawnPointPlayer2);
+                Debug.Log("Hit Cup");
+                TeleportSphereTo(respawnPointPlayer2);
             }
             else if (cup.owner == CupOwner.Player2 && gameObject.CompareTag("Ball2"))
             {
-                BroadcastRemoteMethod(nameof(TeleportSphereTo), respawnPointPlayer2);
-            }
+                Debug.Log("Hit Cup");
+                TeleportSphereTo(respawnPointPlayer2);
+            }*/
         }
     }
 
     // Function to respawn the ball after a certain delay
-    [SynchronizableMethod]
     public IEnumerator RespawnAfterDelay(float delay)
     {
+        Debug.Log("Waiting");
         yield return new WaitForSeconds(delay);
 
         if (gameObject.CompareTag("Ball1"))
         {
+            Debug.Log("TP to P1");
             TeleportSphereTo(respawnPointPlayer1);
         }
         else if (gameObject.CompareTag("Ball2"))
         {
+            Debug.Log("TP to P2");
             TeleportSphereTo(respawnPointPlayer2);
         }
     }
 
-    [SynchronizableMethod]
     public void TeleportSphereTo(Transform targetPosition)
     {
         transform.position = targetPosition.position;

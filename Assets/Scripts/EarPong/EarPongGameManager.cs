@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using TMPro;
 using Alteruna;
 
-public class EarPongGameManager : AttributesSync
+public class EarPongGameManager : MonoBehaviour
 {
     public static EarPongGameManager Instance { get; private set; }
 
@@ -46,7 +46,7 @@ public class EarPongGameManager : AttributesSync
     }
 
 
-    [SynchronizableMethod]
+    
      public void CheckWinCondition(CupOwner owner)
     {
         if (owner == CupOwner.Player1)
@@ -72,7 +72,6 @@ public class EarPongGameManager : AttributesSync
         }
     }
 
-    [SynchronizableMethod]
     // Method to update the score on a TextMeshPro UI element
     void UpdateScore(TMP_Text scoreText, int score)
     {
@@ -93,7 +92,6 @@ public class EarPongGameManager : AttributesSync
             ResetGame();
         }
     }*/
-
     private void PlayVictoryEffects()
     {
         AudioSource.PlayClipAtPoint(victorySound, Camera.main.transform.position);

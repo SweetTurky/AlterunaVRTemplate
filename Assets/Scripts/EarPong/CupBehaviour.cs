@@ -9,7 +9,7 @@ public enum CupOwner
     Player2
 }
 
-public class CupBehaviour : AttributesSync
+public class CupBehaviour : MonoBehaviour
 {
     public CupOwner owner; // Assign in Inspector
     public Transform respawnPoint; // Assign in Inspector
@@ -17,13 +17,13 @@ public class CupBehaviour : AttributesSync
     public AudioClip[] soundEffects;// Assign in Inspector
     public Transform hitTransform;
 
-    [SynchronizableMethod]
+    
     void DeactivateGameObject()
     {
         gameObject.SetActive(false);
     }
     
-    [SynchronizableMethod]
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Ball1") || other.CompareTag("Ball2"))
@@ -44,8 +44,8 @@ public class CupBehaviour : AttributesSync
                 pongBallBehaviour.TeleportSphereTo(respawnPoint);
 
                 // Remove the cup after the particle effect finishes
-                InvokeRemoteMethod(nameof(DeactivateGameObject), UserId.All, 1.2f);
-                BroadcastRemoteMethod(nameof(EarPongGameManager.Instance.CheckWinCondition), owner);
+                Invoke(nameof(DeactivateGameObject), 1.2f);
+                EarPongGameManager.Instance.CheckWinCondition(owner);
                 HearingLossSimulation.Instance.lowPassFilter.cutoffFrequency += HearingLossSimulation.Instance.hearingLossIncreaseRate;
                 HearingLossSimulation.Instance.minimumRange += 0.1f;
                 HearingLossSimulation.Instance.maximumRange -= 0.2f;

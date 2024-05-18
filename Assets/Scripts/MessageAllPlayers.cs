@@ -6,13 +6,13 @@ using Alteruna;
 public class MessageAllPlayers : AttributesSync
 {
     private StoryManager storyManager;
-    private TimerEarpong timerEarpong;
-    private string sceneToLoad = "Koncert";
+    //private TimerEarpong timerEarpong;
+    //private string sceneToLoad = "Koncert";
 
     private void Start() 
     {
         storyManager = GetComponent<StoryManager>();
-        timerEarpong = GetComponent<TimerEarpong>();
+        //timerEarpong = GetComponent<TimerEarpong>();
     }
     public void SendLoadSceneRPC(int sceneId)
     {
@@ -24,7 +24,7 @@ public class MessageAllPlayers : AttributesSync
     [SynchronizableMethod]
     private void ReceiveLoadSceneRPC(int sceneId)
     {
-        LoadNextScene();
+        Multiplayer.Instance.LoadScene(sceneId);
     }
 
     public void SendBoolTrueFalseRPC(string boolName)
@@ -39,9 +39,11 @@ public class MessageAllPlayers : AttributesSync
         {
             case "p1Ready":
                 storyManager.p1Ready = true;
+                Debug.Log("P1 ready!");
                 break;
             case "p2Ready":
                 storyManager.p2Ready = true;
+                Debug.Log("P2 ready!");
                 break;
             // Add cases for other boolean variables as needed
             default:
@@ -50,10 +52,10 @@ public class MessageAllPlayers : AttributesSync
         }
     }
 
-    [SynchronizableMethod]
-    public void LoadNextScene()
+    
+    /*public void LoadNextScene()
     {
-        Multiplayer.Instance.LoadScene(sceneToLoad);
-    }
+        Multiplayer.Instance.LoadScene(sceneId);
+    }*/
 
 }

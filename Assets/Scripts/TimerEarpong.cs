@@ -6,7 +6,7 @@ using Alteruna;
 
 public class TimerEarpong : AttributesSync
 {
-    private StoryManager storyManager;
+    private LastSceneManager lastSceneManager;
     public bool player1Ready = false;
     public bool player2Ready = false;
 
@@ -18,10 +18,11 @@ public class TimerEarpong : AttributesSync
 
     private void Start() 
     {
-        storyManager = GetComponent<StoryManager>();
+        lastSceneManager = GetComponent<LastSceneManager>();
         //storyManager.p1Ready = true;
         //storyManager.p2Ready = true;
         //TimerStartRPC();
+        Invoke("StartTimer", 2f);
     }
 
     void Update()
@@ -35,7 +36,7 @@ public class TimerEarpong : AttributesSync
             UpdateTimerDisplay();
 
             // Check if both players are ready and the timer is up
-            if (storyManager.p1Ready && storyManager.p2Ready && elapsedTime >= timerDuration)
+            if (lastSceneManager.p1Ready && lastSceneManager.p2Ready && elapsedTime >= timerDuration)
             {
                 //storyManager.EndGameTimer(); // Call the EndGame method the StoryManager
                 elapsedTime = 0;
@@ -43,19 +44,11 @@ public class TimerEarpong : AttributesSync
         }
     }
 
-    public void TimerStartRPC()
+    public void StartTimer()
     {
-        BroadcastRemoteMethod(nameof(StartTimer));
-    }
-    
-    [SynchronizableMethod]
-    private void StartTimer()
-    {
-        if (!timerStarted && storyManager.p1Ready && storyManager.p2Ready)
+        if (!timerStarted && lastSceneManager.p1Ready && lastSceneManager.p2Ready)
         {
             timerStarted = true;
-            storyManager.p1Ready = false;
-            storyManager.p2Ready = false;
         }
     }
 

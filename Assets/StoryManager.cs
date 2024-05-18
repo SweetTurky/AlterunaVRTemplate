@@ -15,13 +15,12 @@ public class StoryManager : AttributesSync
     public AudioSource mainSong;
     public AudioSource announcerBefore;
     public AudioSource announcerAfter;
-    public AudioSource outroSpeak;
     public AudioSource crowdAudio1;
     public AudioSource crowdAudio2;
     public AudioSource crowdAudio3;
     public AudioSource crowdMumble;
     public AudioSource crowdMumble1;
-    public AudioSource magnusAudioSource;
+    
 
     [Header("Lists & Arrays")]
     public List<GameObject> artistsToActivate;
@@ -35,22 +34,20 @@ public class StoryManager : AttributesSync
     [Header("Magnus")]
     public GameObject magnus1;
     public GameObject magnus2;
-    public GameObject magnus3;
+    
 
     private MagnusVoice magnusVoice1;
     private MagnusVoice magnusVoice2;
-    private MagnusVoice magnusVoice3;
+    
 
     [Header("Script References")]
-    public MagnusAISoff magnusAiSoff;
     private MessageAllPlayers messageAllPlayers;
 
     private void Awake()
     {
         // Get MagnusVoice components from GameObjects and store references
-        magnusVoice1 = magnus1.GetComponent<MagnusVoice>();
         magnusVoice2 = magnus2.GetComponent<MagnusVoice>();
-        magnusVoice3 = magnus3.GetComponent<MagnusVoice>();
+        magnusVoice1 = magnus1.GetComponent<MagnusVoice>();
         messageAllPlayers = GetComponent<MessageAllPlayers>();
     }
     // Start is called before the first frame update
@@ -119,7 +116,26 @@ public class StoryManager : AttributesSync
 
     public void PlayersReady2()
     {
-        BroadcastRemoteMethod(nameof(ReadyToPlayVO));
+        if (p1Ready && p2Ready)
+        {
+            BroadcastRemoteMethod(nameof(LoadNextScene));
+        }
+    }
+
+    [SynchronizableMethod]
+    private void LoadNextScene()
+    {
+        GameObject obj = GameObject.Find("HearingLossSimulator");
+        if (obj != null)
+        {
+            Multiplayer.DontDestroyOnLoad(obj);
+            Debug.Log("XR Interaction Manager added to Don'tDestroyOnLoad");
+        }
+        else
+        {
+            Debug.LogError("HearingLossSimulator not found!");
+        }
+        Multiplayer.LoadScene(3);
     }
 
     [SynchronizableMethod]
@@ -128,32 +144,10 @@ public class StoryManager : AttributesSync
         if (p1Ready && p2Ready)
         {
             magnusVoice2.MagnusSpeak(magnusVoice2.magnusKlatreVoicelines, 0);
-            p1Ready = false;
-            p2Ready = false;
         }
     }
 
     [SynchronizableMethod]
-    public void ReadyToPlayVO()
-    {
-        if (p1Ready && p2Ready)
-        {
-            magnusVoice3.MagnusSpeak(magnusVoice3.magnusEarpongVoicelines, 0);
-            //magnusVoice3.MagnusSpeakWithDelay(14f, magnusVoice3.magnusEarpongVoicelines, 1);
-
-            // Convert array to a list
-            List<AudioClip> voicelinesList = new List<AudioClip>(magnusVoice3.magnusEarpongVoicelines);
-
-            // Remove the first two elements
-            voicelinesList.RemoveRange(0, 1);
-
-            // Convert list back to array
-            magnusVoice3.magnusEarpongVoicelines = voicelinesList.ToArray();
-
-            StartCoroutine(nameof(PlayBeerPongVoiceLines));
-
-        }
-    }
     public void Activate()
     {
         foreach (var GameObject in objectsToActivate)
@@ -168,90 +162,5 @@ public class StoryManager : AttributesSync
             GameObject.SetActive(false);
         }
     }
-
-
-    private IEnumerator PlayBeerPongVoiceLines()
-    {
-        Debug.Log("Beerpongvoicelines activated");
-        yield return new WaitForSeconds(11f);
-        //int totalVoicelines = magnusVoice3.magnusEarpongVoicelines.Length;
-
-        foreach (AudioClip clip in magnusVoice3.magnusEarpongVoicelines)
-        {
-            // Set the clip to be played by the AudioSource
-            magnusAudioSource.clip = clip;
-            // Play the clip through the AudioSource
-            magnusAudioSource.Play();
-
-            // Play talking animation and remain stationary while the voice line is playing
-            if (magnusAiSoff._animator != null)
-            {
-                magnusAiSoff._animator.SetBool("IsWalking", false);
-                magnusAiSoff._animator.SetBool("IsTalking", true);
-            }
-
-            // Wait for the audio clip to start playing
-            //yield return WaitForAudioClip(magnusAudioSource);
-
-            // Wait for the duration of the clip
-            yield return new WaitForSeconds(clip.length);
-
-            // Resume walking animation after the voice line is finished playing
-            if (magnusAiSoff._animator != null)
-            {
-                magnusAiSoff._animator.SetBool("IsTalking", false);
-            }
-
-            // Call SetNextWaypoint to make the agent walk towards the next waypoint
-            magnusAiSoff.SetNextWaypoint();
-            // Resume walking during the 15-second pause
-            float elapsedTime = 0f;
-            while (elapsedTime < 15f)
-            {
-                // Update elapsed time
-                elapsedTime += Time.deltaTime;
-
-                if (magnusAiSoff._agent.remainingDistance > magnusAiSoff._agent.stoppingDistance)
-                {
-                    magnusAiSoff._animator.SetBool("IsWalking", true);
-                    magnusAiSoff._animator.SetBool("IsTalking", false);
-                }
-                else if (magnusAiSoff._agent.remainingDistance < magnusAiSoff._agent.stoppingDistance)
-                {
-                    magnusAiSoff._animator.SetBool("IsWalking", false);
-                }
-                yield return null; // Yielding here ensures the loop will continue in the next frame
-            }
-            magnusAiSoff.transform.LookAt(magnusAiSoff.lookAtObject.transform.position);
-        }
-        EndGameTimer();
-    }
-
-    private IEnumerator WaitForAudioClip(AudioSource audioSource)
-    {
-        // Wait until the audio clip starts playing
-        while (!audioSource.isPlaying)
-        {
-            yield return null;
-        }
-    }
-
-    public void EndGameTimer()
-    {
-        BroadcastRemoteMethod(nameof(EndGame));
-    }
-
-    [SynchronizableMethod]
-    private void EndGame()
-    {
-        Debug.Log("Spillet slutter nu");
-        outroSpeak.Play();
-        StartCoroutine("QuitGame");
-    }
-
-    public IEnumerator QuitGame()
-    {
-        yield return new WaitForSeconds(10f);
-        Application.Quit();
-    }
+    
 }
