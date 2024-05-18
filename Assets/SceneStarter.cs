@@ -7,6 +7,10 @@ public class SceneStarter : AttributesSync
 {
     private LastSceneManager lastSceneManager;
     public TimerEarpong timerEarpong;
+
+    private bool sceneStarted = false; // Flag to track if the scene has started
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +23,13 @@ public class SceneStarter : AttributesSync
         timerEarpong = GetComponent<TimerEarpong>();
         lastSceneManager.p1Ready = true;
         lastSceneManager.p2Ready = true;
-        BroadcastRemoteMethod(nameof(StartScene));
+
+        // Only start the scene if it hasn't already started
+        if (!sceneStarted)
+        {
+            sceneStarted = true; // Set the flag to true to indicate the scene has started
+            BroadcastRemoteMethod(nameof(StartScene));
+        }
     }
 
     [SynchronizableMethod]

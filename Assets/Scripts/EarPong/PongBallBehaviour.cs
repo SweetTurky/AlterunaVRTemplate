@@ -6,8 +6,9 @@ public class PongBallBehaviour : MonoBehaviour
     public Transform respawnPointPlayer1; // Set this in the Inspector for Player 1
     public Transform respawnPointPlayer2; // Set this in the Inspector for Player 2
     public float respawnDelay = 2f; // Delay before respawning the ball
+    private bool respawnAtPlayer1 = true; // Flag to track respawn position
 
-    
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("TableCollider")) // Check if collider around the table is hit
@@ -50,17 +51,21 @@ public class PongBallBehaviour : MonoBehaviour
         Debug.Log("Waiting");
         yield return new WaitForSeconds(delay);
 
-        if (gameObject.CompareTag("Ball1"))
+        // Alternate respawn points
+        if (respawnAtPlayer1)
         {
             Debug.Log("TP to P1");
             TeleportSphereTo(respawnPointPlayer1);
         }
-        else if (gameObject.CompareTag("Ball2"))
+        else
         {
             Debug.Log("TP to P2");
             TeleportSphereTo(respawnPointPlayer2);
         }
+
+        respawnAtPlayer1 = !respawnAtPlayer1; // Toggle respawn position
     }
+
 
     public void TeleportSphereTo(Transform targetPosition)
     {
