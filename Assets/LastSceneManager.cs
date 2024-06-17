@@ -24,29 +24,33 @@ public class LastSceneManager : AttributesSync
         if (p1Ready && p2Ready)
         {
             Debug.Log("Starting Speak...");
-            magnusVoice3.MagnusSpeak(magnusVoice3.magnusEarpongVoicelines, 0);
-            //magnusVoice3.MagnusSpeakWithDelay(14f, magnusVoice3.magnusEarpongVoicelines, 1);
-
-            // Convert array to a list
-            List<AudioClip> voicelinesList = new List<AudioClip>(magnusVoice3.magnusEarpongVoicelines);
-
-            // Remove the first two elements
-            voicelinesList.RemoveRange(0, 1);
-
-            // Convert list back to array
-            magnusVoice3.magnusEarpongVoicelines = voicelinesList.ToArray();
-
-            StartCoroutine(nameof(PlayBeerPongVoiceLines));
+            StartCoroutine(PlayAllVoiceLines());
         }
     }
 
-    private IEnumerator PlayBeerPongVoiceLines()
+    private IEnumerator PlayAllVoiceLines()
     {
+        yield return new WaitForSeconds(2f);
+        // Play the first voiceline
+        magnusVoice3.MagnusSpeak(magnusVoice3.magnusEarpongVoicelines, 0);
+        yield return new WaitForSeconds(magnusVoice3.magnusEarpongVoicelines[0].length);
+
+        // Wait for 2 seconds before playing the second voiceline
+        yield return new WaitForSeconds(2f);
+
+        // Play the second voiceline
+        magnusVoice3.MagnusSpeak(magnusVoice3.magnusEarpongVoicelines, 1);
+        yield return new WaitForSeconds(magnusVoice3.magnusEarpongVoicelines[1].length);
+
+        // Convert array to a list and remove the first two elements
+        List<AudioClip> voicelinesList = new List<AudioClip>(magnusVoice3.magnusEarpongVoicelines);
+        voicelinesList.RemoveRange(0, 2);
+        AudioClip[] remainingVoicelines = voicelinesList.ToArray();
+
         Debug.Log("Beerpongvoicelines activated");
         yield return new WaitForSeconds(11f);
-        //int totalVoicelines = magnusVoice3.magnusEarpongVoicelines.Length;
 
-        foreach (AudioClip clip in magnusVoice3.magnusEarpongVoicelines)
+        foreach (AudioClip clip in remainingVoicelines)
         {
             // Set the clip to be played by the AudioSource
             magnusAudioSource.clip = clip;
@@ -60,9 +64,6 @@ public class LastSceneManager : AttributesSync
                 magnusAiSoff._animator.SetBool("IsTalking", true);
             }
 
-            // Wait for the audio clip to start playing
-            //yield return WaitForAudioClip(magnusAudioSource);
-
             // Wait for the duration of the clip
             yield return new WaitForSeconds(clip.length);
 
@@ -74,6 +75,7 @@ public class LastSceneManager : AttributesSync
 
             // Call SetNextWaypoint to make the agent walk towards the next waypoint
             magnusAiSoff.SetNextWaypoint();
+
             // Resume walking during the 15-second pause
             float elapsedTime = 0f;
             while (elapsedTime < 15f)
@@ -90,12 +92,15 @@ public class LastSceneManager : AttributesSync
                 {
                     magnusAiSoff._animator.SetBool("IsWalking", false);
                 }
+
                 yield return null; // Yielding here ensures the loop will continue in the next frame
             }
+
             magnusAiSoff.transform.LookAt(magnusAiSoff.lookAtObject.transform.position);
         }
         EndGameTimer();
     }
+
 
     public void EndGameTimer()
     {
@@ -110,10 +115,10 @@ public class LastSceneManager : AttributesSync
         StartCoroutine("QuitGame");
     }
 
-    
+
     public IEnumerator QuitGame()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(12f);
         Application.Quit();
     }
 

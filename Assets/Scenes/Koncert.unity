@@ -47541,7 +47541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magnusKoncertVoicelines: []
   magnusKlatreVoicelines:
-  - {fileID: 8300000, guid: ea13163fa2835b849b7675cfc7785f1c, type: 3}
+  - {fileID: 8300000, guid: 64522c4d4ff26044c86cebdf1e267d7a, type: 3}
   magnusEarpongVoicelines: []
 --- !u!4 &1931577048 stripped
 Transform:
@@ -51172,11 +51172,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magnusKoncertVoicelines:
-  - {fileID: 8300000, guid: 6a6493b8238f8724baf3fb0f54bca435, type: 3}
-  - {fileID: 8300000, guid: b271f8d7a68538e478d3cf65a61e49fc, type: 3}
-  - {fileID: 8300000, guid: d38b3e4decdaea54abf99d207d96aec8, type: 3}
-  - {fileID: 8300000, guid: 9bea1e9f4e545574f96cb54dcadfb7af, type: 3}
-  - {fileID: 8300000, guid: 71d589a6a7c9b7248b488fff8b58bc75, type: 3}
+  - {fileID: 8300000, guid: 12a948cb34e526d4d9499d2adca07e31, type: 3}
+  - {fileID: 8300000, guid: c54d3b4fa824c444e90e78dc7c863e26, type: 3}
+  - {fileID: 8300000, guid: d248b96270812a24f80cea060de667a0, type: 3}
+  - {fileID: 8300000, guid: b0835bd1cd02a2a4fb788ec06accb70c, type: 3}
+  - {fileID: 8300000, guid: 647606b8f94678d4a8eb6a6ef99909da, type: 3}
   magnusKlatreVoicelines: []
   magnusEarpongVoicelines: []
 --- !u!1001 &1980787205
