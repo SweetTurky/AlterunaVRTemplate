@@ -4,9 +4,13 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Linq;
 using Alteruna;
+using UnityEngine.SceneManagement;
+
 public class StoryManager : AttributesSync
 {
     public static StoryManager Instance { get; set; }
+
+    public bool readyForBeerpong = false;
 
     [Header("Wait Times")]
     public float waitTimeFromSceneStart = 10f;
@@ -20,25 +24,18 @@ public class StoryManager : AttributesSync
     public AudioSource crowdAudio3;
     public AudioSource crowdMumble;
     public AudioSource crowdMumble1;
-    
 
     [Header("Lists & Arrays")]
     public List<GameObject> artistsToActivate;
     public List<GameObject> objectsToActivate;
     public List<GameObject> objectsToDeactivate;
 
-    [Header("P1 and P2")]
-    public bool p1Ready;
-    public bool p2Ready;
-
     [Header("Magnus")]
     public GameObject magnus1;
     public GameObject magnus2;
-    
 
     private MagnusVoice magnusVoice1;
     private MagnusVoice magnusVoice2;
-    
 
     [Header("Script References")]
     private MessageAllPlayers messageAllPlayers;
@@ -50,10 +47,11 @@ public class StoryManager : AttributesSync
         magnusVoice1 = magnus1.GetComponent<MagnusVoice>();
         messageAllPlayers = GetComponent<MessageAllPlayers>();
     }
+
     // Start is called before the first frame update
     void Start()
     {
-        //StartCoroutine(nameof(PlayBeerPongVoiceLines)); //Out comment
+        // Start various coroutines for the concert scene
         StartCoroutine(nameof(ActivateArtists));
         StartCoroutine(magnusVoice1.MagnusSpeakWithDelay(4f, magnusVoice1.magnusKoncertVoicelines, 0));
         StartCoroutine(magnusVoice1.MagnusSpeakWithDelay(8.5f, magnusVoice1.magnusKoncertVoicelines, 1));
@@ -70,12 +68,21 @@ public class StoryManager : AttributesSync
         StartCoroutine(PlayAudioSource(32f, crowdAudio3));
         StartCoroutine(PlayAudioSource(203f, announcerAfter));
 
-        //ReadyToPlayVO(); // SKAL FJERNES IGEN!
+        // Automatically trigger the climb voice over after the concert ends
+        StartCoroutine(TriggerClimbReadyVOAfterDelay(250f)); // Adjust the delay as needed
+    }
+
+    void Update()
+    {
+        if (readyForBeerpong == true)
+        {
+            SceneManager.LoadScene(2); // Load the next scene specified in sceneToLoad
+        }
     }
 
     public IEnumerator ActivateArtists()
     {
-        //Wait for a specified duration before firing methods below
+        // Wait for a specified duration before firing methods below
         yield return new WaitForSeconds(waitTimeFromSceneStart);
 
         StartConcertSong();
@@ -99,31 +106,19 @@ public class StoryManager : AttributesSync
         audioSource.Play();
     }
 
-    public void P1Ready()
+    private IEnumerator TriggerClimbReadyVOAfterDelay(float delay)
     {
-        p1Ready = true;
+        yield return new WaitForSeconds(delay);
+        ClimbReadyVO();
     }
 
-    public void P2Ready()
-    {
-        p2Ready = true;
-    }
 
-    public void PlayersReady()
+    public void LastScene()
     {
-        BroadcastRemoteMethod(nameof(ClimbReadyVO));
+        readyForBeerpong = true;
     }
-
-    public void PlayersReady2()
-    {
-        if (p1Ready && p2Ready)
-        {
-            BroadcastRemoteMethod(nameof(LoadNextScene));
-        }
-    }
-
     [SynchronizableMethod]
-    private void LoadNextScene()
+    public void LoadNextScene()
     {
         GameObject obj = GameObject.Find("HearingLossSimulator");
         if (obj != null)
@@ -135,32 +130,30 @@ public class StoryManager : AttributesSync
         {
             Debug.LogError("HearingLossSimulator not found!");
         }
-        Multiplayer.LoadScene(3);
+        Debug.LogError("Loader næste scene");
+        Multiplayer.LoadScene(3); // er ændret til index 2 fra 3. Ændr tilbage, hvis det ikke virker.
     }
 
     [SynchronizableMethod]
     public void ClimbReadyVO()
     {
-        if (p1Ready && p2Ready)
-        {
-            magnusVoice2.MagnusSpeak(magnusVoice2.magnusKlatreVoicelines, 0);
-        }
+        magnusVoice2.MagnusSpeak(magnusVoice2.magnusKlatreVoicelines, 0);
     }
 
     [SynchronizableMethod]
     public void Activate()
     {
-        foreach (var GameObject in objectsToActivate)
+        foreach (var gameObject in objectsToActivate)
         {
-            GameObject.SetActive(true);
+            gameObject.SetActive(true);
         }
     }
+
     public void Deactivate()
     {
-        foreach (var GameObject in objectsToDeactivate)
+        foreach (var gameObject in objectsToDeactivate)
         {
-            GameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
     }
-    
 }

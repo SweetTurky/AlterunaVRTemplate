@@ -8,7 +8,6 @@ public class TimerEarpong : AttributesSync
 {
     private LastSceneManager lastSceneManager;
     public bool player1Ready = false;
-    public bool player2Ready = false;
 
     public TextMeshProUGUI timerText; // Reference to the TextMeshPro UI element
 
@@ -19,9 +18,6 @@ public class TimerEarpong : AttributesSync
     private void Start() 
     {
         lastSceneManager = GetComponent<LastSceneManager>();
-        //storyManager.p1Ready = true;
-        //storyManager.p2Ready = true;
-        //TimerStartRPC();
         Invoke("StartTimer", 2f);
     }
 
@@ -35,10 +31,9 @@ public class TimerEarpong : AttributesSync
             // Update the timer display
             UpdateTimerDisplay();
 
-            // Check if both players are ready and the timer is up
-            if (lastSceneManager.p1Ready && lastSceneManager.p2Ready && elapsedTime >= timerDuration)
+            // Check if player1 is ready and the timer is up
+            if (lastSceneManager.p1Ready && elapsedTime >= timerDuration)
             {
-                //storyManager.EndGameTimer(); // Call the EndGame method the StoryManager
                 elapsedTime = 0;
             }
         }
@@ -46,7 +41,7 @@ public class TimerEarpong : AttributesSync
 
     public void StartTimer()
     {
-        if (!timerStarted && lastSceneManager.p1Ready && lastSceneManager.p2Ready)
+        if (!timerStarted && lastSceneManager.p1Ready)
         {
             timerStarted = true;
         }
@@ -62,4 +57,3 @@ public class TimerEarpong : AttributesSync
         timerText.text = timerString;
     }
 }
-

@@ -11,17 +11,26 @@ public class LastSceneManager : AttributesSync
     public AudioSource magnusAudioSource;
     public AudioSource outroSpeak;
 
-    public bool p1Ready;
-    public bool p2Ready;
+    public bool p1Ready = true; // Assume single-player ready state
+
     // Start is called before the first frame update
     void Start()
     {
         magnusVoice3 = magnus3.GetComponent<MagnusVoice>();
+
+        // Start the sequence after 1 seconds
+        StartCoroutine(StartSequenceAfterDelay(1f));
+    }
+
+    private IEnumerator StartSequenceAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        ReadyToPlayVO();
     }
 
     public void ReadyToPlayVO()
     {
-        if (p1Ready && p2Ready)
+        if (p1Ready)
         {
             Debug.Log("Starting Speak...");
             StartCoroutine(PlayAllVoiceLines());
@@ -101,7 +110,6 @@ public class LastSceneManager : AttributesSync
         EndGameTimer();
     }
 
-
     public void EndGameTimer()
     {
         BroadcastRemoteMethod(nameof(EndGame));
@@ -115,11 +123,9 @@ public class LastSceneManager : AttributesSync
         StartCoroutine("QuitGame");
     }
 
-
     public IEnumerator QuitGame()
     {
         yield return new WaitForSeconds(12f);
         Application.Quit();
     }
-
 }

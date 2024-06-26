@@ -6,56 +6,32 @@ using Alteruna;
 public class MessageAllPlayers : AttributesSync
 {
     private StoryManager storyManager;
-    //private TimerEarpong timerEarpong;
-    //private string sceneToLoad = "Koncert";
 
-    private void Start() 
+    void Start()
     {
-        storyManager = GetComponent<StoryManager>();
-        //timerEarpong = GetComponent<TimerEarpong>();
-    }
-    public void SendLoadSceneRPC(int sceneId)
-    {
-        // Invoke method by name for all players. alternatively, we can call by index.
-        BroadcastRemoteMethod(nameof(ReceiveLoadSceneRPC), sceneId);
-    }
-
-    // the SynchronizableMethod attribute marks methods available for remote invocation.
-    [SynchronizableMethod]
-    private void ReceiveLoadSceneRPC(int sceneId)
-    {
-        Multiplayer.LoadScene("EarPong");
-    }
-
-    public void SendBoolTrueFalseRPC(string boolName)
-    {
-        BroadcastRemoteMethod(nameof(ReceiveBoolTrueFalseRPC), boolName);
-    }
-
-    [SynchronizableMethod]
-    private void ReceiveBoolTrueFalseRPC(string boolName)
-    {
-        switch (boolName)
+        storyManager = FindObjectOfType<StoryManager>();
+        if (storyManager == null)
         {
-            case "p1Ready":
-                storyManager.p1Ready = true;
-                Debug.Log("P1 ready!");
-                break;
-            case "p2Ready":
-                storyManager.p2Ready = true;
-                Debug.Log("P2 ready!");
-                break;
-            // Add cases for other boolean variables as needed
-            default:
-                Debug.LogWarning("Unknown boolean variable name: " + boolName);
-                break;
+            Debug.LogError("StoryManager component not found in the scene.");
         }
     }
 
-    
-    /*public void LoadNextScene()
+    // Example method that previously might have checked p1Ready and p2Ready
+    public void ExampleMethod()
     {
-        Multiplayer.Instance.LoadScene(sceneId);
-    }*/
+        if (storyManager != null)
+        {
+            // Perform actions here based on the new single-player setup
+            // For instance, directly calling methods or starting coroutines
 
+            // Example action:
+            storyManager.ClimbReadyVO();
+        }
+        else
+        {
+            Debug.LogError("StoryManager not found.");
+        }
+    }
+
+    // Any other methods or logic can be updated similarly
 }

@@ -31,11 +31,8 @@ public class BasketballBehaviour : MonoBehaviour
         // Check if scoring is allowed (not in cooldown) and if the collided object has the BasketballManager script attached
         if (canScore && other.gameObject.GetComponent<BasketballManager>() != null)
         {
-            // Determine which player scored based on the ball's tag
-            string playerTag = DeterminePlayerTag(gameObject);
-
-            // Call ScoredGoal method of BasketballManager with the player's tag
-            basketballManager.ScoredGoal(playerTag);
+            // Call ScoredGoal method of BasketballManager
+            basketballManager.ScoredGoal();
             isScored = true;
             Debug.Log("You scored!");
 
@@ -44,24 +41,6 @@ public class BasketballBehaviour : MonoBehaviour
 
             // Reset the ball to its spawn point
             StartCoroutine(RespawnAfterDelay(2f));
-        }
-    }
-
-    // Method to determine which player scored based on the ball's tag
-    private string DeterminePlayerTag(GameObject basketball)
-    {
-        if (basketball.CompareTag("Player1Basketball"))
-        {
-            return "Player1";
-        }
-        else if (basketball.CompareTag("Player2Basketball"))
-        {
-            return "Player2";
-        }
-        else
-        {
-            // Default to player 1 if the ball doesn't have a specific player tag
-            return "Player1";
         }
     }
 

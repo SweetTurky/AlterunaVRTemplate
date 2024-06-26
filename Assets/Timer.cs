@@ -1,74 +1,60 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Alteruna;
 
-public class Timer : AttributesSync
+public class Timer : MonoBehaviour
 {
-    public TMP_Text timerText;
-    public float timerDuration = 60f;
-    private float currentTime;
-    private bool timerStarted = false;
+    public float timeRemaining = 10f; // Set the countdown time
+    public bool timerIsRunning = false;
+    public TMP_Text timeText;
     private BasketballManager basketballManager;
 
     private void Start()
     {
-        // Find the GameObject with the name "BasketballManager" and get its BasketBallManager component
-        basketballManager = GameObject.Find("BallGameManager").GetComponent<BasketballManager>();
+        // Start the timer automatically
+        timerIsRunning = true;
+        basketballManager = FindObjectOfType<BasketballManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (timerStarted)
+        if (timerIsRunning)
         {
-            currentTime -= Time.deltaTime;
-            if (currentTime <= 0)
+            if (timeRemaining > 0)
             {
-                Debug.Log("Time's up!");
-                currentTime = 0;
-                //Do stuff when timer reaches 0
-                BroadcastRemoteMethod(nameof(TutorialDone));
+                timeRemaining -= Time.deltaTime;
+                DisplayTime(timeRemaining);
             }
-            UpdateUIText();
+            else
+            {
+                Debug.Log("Time has run out!");
+                timeRemaining = 0;
+                timerIsRunning = false;
+                OnTimerEnd();
+            }
         }
     }
 
-    void UpdateUIText()
+    void DisplayTime(float timeToDisplay)
     {
-        int minutes = Mathf.FloorToInt(currentTime / 60f);
-        int seconds = Mathf.FloorToInt(currentTime % 60f);
-        timerText.text = string.Format("{1:00}", minutes, seconds);
+        timeToDisplay += 1;
+
+        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
+        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+
+        timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
-    public void SendTimerStartRPC()
+    void OnTimerEnd()
     {
-        BroadcastRemoteMethod("StartTimer");
-    }
-
-    [SynchronizableMethod]
-    public void StartTimer()
-    {
-        timerStarted = true;
-        currentTime = timerDuration;
-    }
-
-    [SynchronizableMethod]
-    private void TutorialDone()
-    {
-        Multiplayer.LoadScene("Koncert");
-    }
-
-    public void Player1Finished()
-    {
-        basketballManager.player1Finished = true;
-        Debug.Log("Player 1 Finished");
-    }
-    public void Player2Finished()
-    {
-        basketballManager.player2Finished = true;
-        Debug.Log("Player 2 Finished");
+        // Check if the game has finished
+        if (basketballManager.playerFinished)
+        {
+            Debug.Log("Player has finished the game.");
+        }
+        else
+        {
+            Debug.Log("Player did not finish in time.");
+            // You can add additional logic here if needed
+        }
     }
 }
-
